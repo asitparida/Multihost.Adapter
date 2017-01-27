@@ -8,76 +8,76 @@ angular.module('Multihost.Host.Controllers')
     self.notifications = [
         {
             id: _.uniqueId('_note_'),
-            text: "Release team would be performing deployment on Field Experience Portal. RM operations would be down from Jan 04, 2017 16:00 to Jan 04, 2017 21:00.",
-            host: 'EscalateNow'
+            text: "We would be adding new fetaures to maximize your productivity. Sync operations would be down from Jan 04, 2017 16:00 to Jan 04, 2017 21:00.",
+            host: 'AdminNow'
         },
         {
             id: _.uniqueId('_note_'),
-            text: "You have a new resource request assignment for the project AXXS79-576-FFTTY. You have an option to decline.",
-            host: 'GCM'
+            text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+            host: 'MI6'
         },
         {
             id: _.uniqueId('_note_'),
-            text: "You have a new resource request assignment for the project AXXS79-576-FFTTY. You have an option to decline.",
-            host: 'GCM',
+            text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+            host: 'MI6',
             action: 'submit'
         },
         {
             id: _.uniqueId('_note_'),
-            text: "You have a new resource request assignment for the project AXXS79-576-FFTTY. You have an option to decline.",
-            host: 'GCM'
+            text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+            host: 'MI6'
         },
         {
             id: _.uniqueId('_note_'),
-            text: "You have a new resource request assignment for the project AXXS79-576-FFTTY. You have an option to decline.",
-            host: 'GCM'
+            text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+            host: 'MI6'
         },
         {
             id: _.uniqueId('_note_'),
-            text: "You have a new resource request assignment for the project AXXS79-576-FFTTY. You have an option to decline.",
-            host: 'GCM'
+            text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+            host: 'MI6'
         },
         {
             id: _.uniqueId('_note_'),
-            text: "You have a new resource request assignment for the project AXXS79-576-FFTTY. You have an option to decline.",
-            host: 'GCM',
+            text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+            host: 'MI6',
             action: 'submit'
         },
         {
             id: _.uniqueId('_note_'),
-            text: "You have a new resource request assignment for the project AXXS79-576-FFTTY. You have an option to decline.",
-            host: 'GCM'
+            text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+            host: 'MI6'
         },
         {
             id: _.uniqueId('_note_'),
-            text: "You have a new resource request assignment for the project AXXS79-576-FFTTY. You have an option to decline.",
-            host: 'GCM'
+            text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+            host: 'MI6'
         },
         {
             id: _.uniqueId('_note_'),
-            text: "You have a new resource request assignment for the project AXXS79-576-FFTTY. You have an option to decline.",
-            host: 'GCM'
+            text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+            host: 'MI6'
         },
         {
             id: _.uniqueId('_note_'),
-            text: "You have a new resource request assignment for the project AXXS79-576-FFTTY. You have an option to decline.",
-            host: 'GCM',
+            text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+            host: 'MI6',
             action: 'submit'
         },
         {
             id: _.uniqueId('_note_'),
-            text: "You have a new resource request assignment for the project AXXS79-576-FFTTY. You have an option to decline.",
-            host: 'GCM'
+            text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+            host: 'MI6'
         },
         {
             id: _.uniqueId('_note_'),
-            text: "You have a new resource request assignment for the project AXXS79-576-FFTTY. You have an option to decline.",
-            host: 'GCM'
+            text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+            host: 'MI6'
         },
         {
             id: _.uniqueId('_note_'),
-            text: "You have a new resource request assignment for the project AXXS79-576-FFTTY. You have an option to decline.",
-            host: 'GCM'
+            text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+            host: 'MI6'
         }
     ];
     _.each(self.notifications, function (_note, _iter) {
