@@ -1,0 +1,45 @@
+﻿<div ng-controller="Multihost.Host.Controllers.NotificationsController as notifications">
+    <dv class="hostmast-header pull-left">
+        <label class="hostmast-header-title" hide-cordova-ios-only>Notifications</label>        
+    </dv>
+    <md-toolbar class="md-theme-light">
+        <div class="pull-right">
+            <div class="icon-container host-notifications-action active">
+                <i class="icon icon-home"></i>
+            </div>
+            <div class="icon-container host-notifications-action ">
+                <i class="icon icon-glyph-74C"></i>
+            </div>
+            <div class="icon-container host-notifications-action">
+                <i class="icon icon-box"></i>
+            </div>
+            <div class="icon-container host-notifications-action search">
+                <input />
+                <i class="icon icon-glyph-1A3"></i>
+            </div>
+            <div class="icon-container host-notifications-action close active" ng-click="notifications.closeNotifications()">
+                <i class="icon icon-arrowHTMLMirroredLegacy"></i>
+            </div>
+        </div>
+    </md-toolbar>
+    <md-content layout-padding="">
+        <div class="host-notifications-bar">
+            <div class="host-notifications-bar-item-holder" ng-repeat="item in notifications.notifications">
+                <div class="host-notifications-bar-item {{item.status}}" ng-class="{'highlighted' : item.highlighted, 'system': item.system}">
+                    <div class="host-notifications-bar-item-logo">
+                        <div class="host-notifications-bar-item-logo-circle">
+                            <span class="hostapp" ng-bind="item.host"></span>
+                            <span class="time-elapsed" ng-bind="item.timeElapsed"></span>
+                        </div>
+                    </div>
+                    <div class="host-notifications-bar-item-content">
+                        <div class="host-notifications-bar-item-content-text">
+                            <p ng-bind="item.text"></p>
+                        </div>
+                        <button class="host-notifications-bar-item-content-action" ng-bind="item.action" ng-show="item.action"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </md-content>
+</div>

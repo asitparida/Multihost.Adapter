@@ -1,0 +1,29 @@
+﻿<md-bottom-sheet class="md-list md-has-header host-view-contextmenu">
+    <md-subheader ng-cloak>Choose an action</md-subheader>
+    <md-list ng-cloak>
+        <md-list-item ng-click="host.changeCardSubscriptions()">
+            <div class="icon-container adjustCordova">
+                <i class="icon icon-phone-1C9"></i>
+            </div>
+            <div class="icon-container-label ">
+                <span>Manage Cards Subscriptions</span>
+            </div>
+        </md-list-item>
+        <md-list-item ng-click="host.changeAppSettings()">
+            <div class="icon-container adjustCordova">
+                <i class="icon icon-settings"></i>
+            </div>
+            <div class="icon-container-label ">
+                <span>App Settings</span>
+            </div>
+        </md-list-item>
+        <md-list-item ng-click="host.logOut()">
+            <div class="icon-container adjustCordova">
+                <i class="icon icon-glyph-7E8"></i>
+            </div>
+            <div class="icon-container-label ">
+                <span>Log Out</span>
+            </div>
+        </md-list-item>
+    </md-list>
+</md-bottom-sheet>

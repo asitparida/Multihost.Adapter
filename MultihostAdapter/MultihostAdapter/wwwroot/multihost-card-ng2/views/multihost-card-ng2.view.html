@@ -1,0 +1,60 @@
+﻿<div class="quick-access-cards">
+    <div class="quick-access-cards-card">
+        <div class="quick-access-cards-card-custom-progress" [hidden]="hideProgress">
+            <div class="overlay"></div>
+            <div class="spinner">
+                <div class="dot1"></div>
+                <div class="dot2"></div>
+            </div>
+        </div>
+        <div class="quick-access-cards-card-title" [hidden]="!showPanel">
+            <div class="quick-access-cards-card-title-text">
+                <span class="md-headline">{{card.title}}</span>
+                <span class="quick-access-cards-card-hostapp">{{card.hostApp}}</span>
+            </div>
+        </div>
+        <div class="quick-access-cards-card-content" [hidden]="!showPanel">
+            <div class="assignment-card-content-item">
+                <div class="assignment-card-content-item-header">Name</div>
+                <div class="assignment-card-content-item-value">Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
+            </div>
+            <div class="assignment-card-content-item w50">
+                <div class="assignment-card-content-item-header">Start Date</div>
+                <div class="assignment-card-content-item-value">XX/XX/XXXX</div>
+            </div>
+            <div class="assignment-card-content-item w50">
+                <div class="assignment-card-content-item-header">End Date</div>
+                <div class="assignment-card-content-item-value">XX/XX/XXXX</div>
+            </div>
+            <div class="assignment-card-content-item w50">
+                <div class="assignment-card-content-item-header">Type</div>
+                <div class="assignment-card-content-item-value">XXX-XX</div>
+            </div>
+            <div class="assignment-card-content-item w50">
+                <div class="assignment-card-content-item-header">Time Rem.</div>
+                <div class="assignment-card-content-item-value">XX:XX</div>
+            </div>
+            <div [hidden]="card.$show != true">
+                <div class="assignment-card-content-item">
+                    <div class="assignment-card-content-item-header">Customer</div>
+                    <div class="assignment-card-content-item-value">XXXXXX XXX XXXXXXXX</div>
+                </div>
+                <div class="assignment-card-content-item">
+                    <div class="assignment-card-content-item-header">Company</div>
+                    <div class="assignment-card-content-item-value">XXXX XXX XXXXXXXXXX</div>
+                </div>
+                <div class="assignment-card-content-item">
+                    <div class="assignment-card-content-item-header">Product</div>
+                    <div class="assignment-card-content-item-value">XXXX XXXX XXXX XXXX</div>
+                </div>
+            </div>
+            <div class="quick-access-cards-card-content-action-container">
+                <button class="quick-access-cards-card-action pull-left">Remove Card</button>
+                <div class="icon-container quick-access-cards-card-showmore pull-right" (click)="card.$show = !card.$show">
+                    <span [hidden]="card.$show == true"><i class="icon icon-scrollChevronDownLegacy"></i></span>
+                    <span [hidden]="card.$show != true"><i class="icon icon-scrollChevronUpLegacy"></i></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

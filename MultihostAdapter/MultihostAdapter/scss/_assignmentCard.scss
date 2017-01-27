@@ -1,0 +1,346 @@
+﻿@import 'vars';
+
+.assignment-card {
+    margin: 10px 10px 0 10px;
+    position: relative;
+    min-height: 289px;
+
+    md-card-custom-progress {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 40;
+
+        .overlay {
+            background-color: lighten($bgColor, 55);
+            opacity: 0.60;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 41;
+        }
+
+        md-progress-circular {
+            z-index: 999;
+            width: 50px;
+            height: 50px;
+            margin-top: calc((100% - 50px) * 0.50);
+
+            path {
+                stroke: $bgColor;
+            }
+        }
+    }
+
+    &-hostapp {
+        display: block;
+        position: absolute;
+        right: -1px;
+        top: 0;
+        background: $quick-access-bg;
+        color: #fff;
+        padding: 4px;
+        font-family: SegoeUI;
+        font-size: x-small;
+        letter-spacing: 1px;
+        border-top-right-radius: 2px;
+    }
+
+    md-card-title,
+    &-title {
+        background-color: lighten($bgColor, 55);
+        color: #000000;
+        padding: 10px;
+        position: relative;
+
+        .md-headline {
+            font-family: Quicksand;
+            font-size: medium;
+            font-weight: bold;
+        }
+    }
+
+    md-card-content {
+        padding: 10px 10px 0 10px;
+        font-family: SegoeUI;
+        font-size: medium;
+    }
+
+    md-card-actions {
+        padding: 10px;
+        margin: 0;
+    }
+
+    &-action {
+        border: 2px solid lighten($bgColor, 55);
+        line-height: 44px;
+        height: 48px;
+        min-width: 100px;
+        font-family: SegoeUI;
+        font-size: small;
+        padding: 0 10px;
+        text-align: center;
+        -moz-transition: all 0.3s linear;
+        -o-transition: all 0.3s linear;
+        -webkit-transition: all 0.3s linear;
+        transition: all 0.3s linear;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        border-radius: 2px;
+        background: transparent;
+        text-transform: uppercase;
+
+        span {
+            width: 100%;
+        }
+
+        &:hover {
+            background-color: lighten($bgColor, 55);
+            color: #303030;
+        }
+    }
+
+    &-content {
+        width: 100%;
+        background-color: #fff;
+
+        &-item {
+            width: 100%;
+            padding-bottom: 10px;
+            display: inline-block;
+
+            &.w50 {
+                width: 49%;
+            }
+
+            &-header {
+                font-family: SegoeUI;
+                font-size: small;
+                font-weight: 500;
+                color: #909090;
+            }
+
+            &-value {
+                font-family: SegoeUI;
+                font-size: large;
+            }
+        }
+
+        &-action-container {
+            padding: 10px 0;
+            width: 100%;
+            height: 68px;
+        }
+    }
+}
+
+.quick-access-cards {
+    margin: 10px 10px 0 10px;
+    position: relative;
+    min-height: 289px;
+
+    &-card {
+        margin: 10px 0 0 0;
+        position: relative;
+        min-height: 289px;
+        box-shadow: 0 1px 3px 0 rgba(0,0,0,.2),0 1px 1px 0 rgba(0,0,0,.14),0 2px 1px -1px rgba(0,0,0,.12);
+
+        &-hostapp {
+            display: block;
+            position: absolute;
+            right: 0;
+            top: 0;
+            background: $quick-access-bg;
+            color: #fff;
+            padding: 4px;
+            font-family: SegoeUI;
+            font-size: x-small;
+            letter-spacing: 1px;
+            border-top-right-radius: 2px;
+        }
+
+        &-title {
+            background-color: lighten($bgColor, 55);
+            color: #000000;
+            padding: 10px;
+            position: relative;
+
+            .md-headline {
+                font-family: Quicksand;
+                font-size: medium;
+                font-weight: bold;
+            }
+        }
+
+        &-content {
+            width: 100%;
+            padding: 10px 10px 0 10px;
+            font-family: SegoeUI;
+            font-size: medium;
+            background-color: #fff;
+
+            &-item {
+                width: 100%;
+                padding-bottom: 10px;
+                display: inline-block;
+
+                &.w50 {
+                    width: 49%;
+                }
+
+                &-header {
+                    font-family: SegoeUI;
+                    font-size: small;
+                    font-weight: 500;
+                    color: #909090;
+                }
+
+                &-value {
+                    font-family: SegoeUI;
+                    font-size: large;
+                }
+            }
+
+            &-action-container {
+                padding: 10px 0;
+                width: 100%;
+                height: 68px;
+            }
+        }
+
+        &-action {
+            border: 2px solid lighten($bgColor, 55);
+            line-height: 44px;
+            height: 48px;
+            min-width: 100px;
+            font-family: SegoeUI;
+            font-size: small;
+            padding: 0 10px;
+            text-align: center;
+            -moz-transition: all 0.3s linear;
+            -o-transition: all 0.3s linear;
+            -webkit-transition: all 0.3s linear;
+            transition: all 0.3s linear;
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            border-radius: 2px;
+            background: transparent;
+            text-transform: uppercase;
+
+            span {
+                width: 100%;
+            }
+
+            &:hover {
+                background-color: lighten($bgColor, 55);
+                color: #303030;
+            }
+        }
+
+        &-custom-progress {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 40;
+
+            .overlay {
+                background-color: lighten($bgColor, 55);
+                opacity: 0.60;
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 41;
+            }
+
+            .spinner {
+                width: 40px;
+                height: 40px;
+                display: block;
+                margin: 0 auto;
+                top: 125px;
+                position: relative;
+                z-index: 42;
+                text-align: center;
+                -webkit-animation: sk-quickaccess-rotate 2.0s infinite linear;
+                -moz-animation: sk-quickaccess-rotate 2.0s infinite linear;
+                -o-animation: sk-quickaccess-rotate 2.0s infinite linear;
+                animation: sk-quickaccess-rotate 2.0s infinite linear;
+            }
+
+            .dot1,
+            .dot2 {
+                width: 60%;
+                height: 60%;
+                display: inline-block;
+                position: absolute;
+                top: 0;
+                background-color: $quick-access-bg;
+                border-radius: 100%;
+                -webkit-animation: sk-quickaccess-bounce 2.0s infinite ease-in-out;
+                -moz-animation: sk-quickaccess-bounce 2.0s infinite ease-in-out;
+                -o-animation: sk-quickaccess-bounce 2.0s infinite ease-in-out;
+                animation: sk-quickaccess-bounce 2.0s infinite ease-in-out;
+            }
+
+            .dot2 {
+                top: auto;
+                bottom: 0;
+                -webkit-animation-delay: -1.0s;
+                -moz-animation-delay: -1.0s;
+                -o-animation-delay: -1.0s;
+                animation-delay: -1.0s;
+            }
+        }
+    }
+
+    md-card-actions {
+        padding: 10px;
+        margin: 0;
+    }
+}
+
+@keyframes sk-quickaccess-rotate {
+    0% {
+        -moz-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+    }
+
+    100% {
+        -moz-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+        transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes sk-quickaccess-bounce {
+    0%, 100% {
+        -moz-transform: scale(0.0);
+        -ms-transform: scale(0.0);
+        -o-transform: scale(0.0);
+        transform: scale(0.0);
+        -webkit-transform: scale(0.0);
+    }
+
+    50% {
+        -moz-transform: scale(1.0);
+        -ms-transform: scale(1.0);
+        -o-transform: scale(1.0);
+        transform: scale(1.0);
+        -webkit-transform: scale(1.0);
+    }
+}

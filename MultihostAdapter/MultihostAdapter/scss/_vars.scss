@@ -1,0 +1,309 @@
+﻿$header-background: #303030;
+$header-background-hover: #000000;
+$header-subtle: #6fb28a;
+$header-foreground: #c0c0c0;
+$app-theme: #1ca32d;
+$base-font-size: 16px;
+$success: #67B745;
+$info: #9b59b6;
+$warning: #E59200;
+$danger: #B84C4C;
+$error: #e74c3c;
+$modal-background: #3abb9e;
+
+$progress-bounce: #ffb532;
+
+$bgColor: #0073c6;
+$starWarsTheme: #fff;
+
+$sidebar-background: #111c26;
+$sidebar-foreground: #fff;
+$sidebar-subtle-background: #454d56;
+$sidebar-subtle-foreground: #9fa1a3;
+$sidebar-active-background: #0760a7;
+$sidebar-active-foreground: #FFFFFF;
+$sidebar-active-action: #0760a7;
+
+$content-subtle-foreground: #666666;
+$content-subtle-background: #EFEFEF;
+$color-tile-id: #8e8e8e;
+$color-tile-name: #4d4d4d;
+$content-highlight-foreground: #0078d7;
+
+
+$content-background: #fff;
+$content-foreground: #222222;
+
+$quick-access-bg: darken(#29b6f6, 5);
+
+@function em($px, $base: $base-font-size) {
+    @return ($px / $base) * 1em;
+}
+
+@mixin shadow-shim {
+    -webkit-box-shadow: 0 3px 6px rgba(0,0,0,.10),0 3px 6px rgba(0,0,0,.15);
+    -moz-box-shadow: 0 3px 6px rgba(0,0,0,.10),0 3px 6px rgba(0,0,0,.15);
+    box-shadow: 0 3px 6px rgba(0,0,0,.10),0 3px 6px rgba(0,0,0,.15);
+}
+
+@mixin _CORDOVA_ONLY($name) {
+    @at-root html._CORDOVA #{$name} {
+        @content;
+    }
+}
+
+@mixin _CORDOVA_IOS_ONLY($name) {
+    @at-root html._CORDOVA._IOS #{$name} {
+        @content;
+    }
+}
+
+@mixin _CORDOVA_EXCEPT_IOS($name) {
+    @at-root html._CORDOVA:not(._IOS) #{$name} {
+        @content;
+    }
+}
+
+html._CORDOVA [HIDE-CORDOVA], 
+html._CORDOVA [hide-cordova],
+html._CORDOVA._IOS [hide-cordova-ios-only],
+html._CORDOVA._IOS [HIDE-CORDOVA-IOS-ONLY],
+html._CORDOVA:not(._IOS) [HIDE-CORDOVA-EXCEPT-IOS],
+html._CORDOVA:not(._IOS) [hide-cordova-except-ios]{
+    display: none;
+}
+
+@mixin focus-states($color: null) {
+    @if($color) {
+        &:active, &:hover {
+            background: $color;
+            cursor: pointer;
+        }
+
+        &:active {
+            background: $color;
+            -moz-transform: scale(0.98, 0.98);
+            -ms-transform: scale(0.98, 0.98);
+            -o-transform: scale(0.98, 0.98);
+            -webkit-transform: scale(0.98, 0.98);
+            transform: scale(0.98, 0.98);
+        }
+
+        &.disabled,
+        &[disabled] {
+            opacity: 0.6;
+
+            &:active, &:hover {
+                background: transparent;
+            }
+
+            &:active {
+                -moz-transform: none;
+                -ms-transform: none;
+                -o-transform: none;
+                -webkit-transform: none;
+                transform: none;
+            }
+        }
+    }
+    @else {
+        &:active, &:hover {
+            background: rgba(0,0,0,0.05);
+            cursor: pointer;
+        }
+
+        &:focus {
+            outline: 1px dotted #303030;
+        }
+
+        &:active {
+            background: rgba(0,0,0,0.1);
+            -moz-transform: scale(0.98, 0.98);
+            -ms-transform: scale(0.98, 0.98);
+            -o-transform: scale(0.98, 0.98);
+            -webkit-transform: scale(0.98, 0.98);
+            transform: scale(0.98, 0.98);
+        }
+
+        &.disabled,
+        &[disabled] {
+            opacity: 0.80;
+
+            &:active, &:hover {
+                background: transparent;
+                cursor: default;
+            }
+
+            &:active {
+                -moz-transform: none;
+                -ms-transform: none;
+                -o-transform: none;
+                -webkit-transform: none;
+                transform: none;
+            }
+        }
+    }
+}
+
+$screen-xs-max: 768px;
+$screen-sm-min: 769px;
+$screen-sm-max: 992px;
+$screen-md-min: 993px;
+$screen-md-max: 1200px;
+$screen-tablet-min: 1201px;
+$screen-tablet-max: 1366px;
+$screen-desktop-min: 1367px;
+$screen-desktop-max: 1600px;
+$screen-lg-min: 1601px;
+
+
+$break-mob: 320px;
+$break-tablet: 768px;
+$break-desktop: 1024px;
+
+
+@mixin respond-to($media) {
+    @if $media == tablet {
+        @media only screen and (min-width:$break-tablet) and (max-width:$break-desktop - 1) {
+            @content;
+        }
+    }
+    @else if $media == mobile {
+        @media only screen and (min-width:$break-mob) and (max-width:$break-tablet - 1) {
+            @content;
+        }
+    }
+}
+
+$spacer: 5px !default;
+$spacer-x: $spacer !default;
+$spacer-y: $spacer !default;
+$spacers: ( 0: ( x: 0, y: 0 ), auto: ( x: auto, y: auto ), 5: ( x: $spacer-x, y: $spacer-y ), 10: ( x: ($spacer-x * 2), y: ($spacer-y * 2) ), 15: ( x: ($spacer-x * 3), y: ($spacer-y * 3) ), 20: ( x: ($spacer-x * 4), y: ($spacer-y * 4)), 30: ( x: ($spacer-x * 6), y: ($spacer-y * 6)) ) !default;
+
+@each $prop, $abbrev in (margin: m, padding: p) {
+    @each $size, $lengths in $spacers {
+        $length-x: map-get($lengths, x);
+        $length-y: map-get($lengths, y);
+
+        .#{$abbrev}-a-#{$size} {
+            #{$prop}: $length-y $length-x !important;
+        }
+
+        .#{$abbrev}-t-#{$size} {
+            #{$prop}-top: $length-y !important;
+        }
+
+        .#{$abbrev}-r-#{$size} {
+            #{$prop}-right: $length-x !important;
+        }
+
+        .#{$abbrev}-b-#{$size} {
+            #{$prop}-bottom: $length-y !important;
+        }
+
+        .#{$abbrev}-l-#{$size} {
+            #{$prop}-left: $length-x !important;
+        }
+
+        // Axes
+        .#{$abbrev}-x-#{$size} {
+            #{$prop}-right: $length-x !important;
+            #{$prop}-left: $length-x !important;
+        }
+
+        .#{$abbrev}-y-#{$size} {
+            #{$prop}-top: $length-y !important;
+            #{$prop}-bottom: $length-y !important;
+        }
+    }
+}
+
+.d-b {
+    display: block;
+}
+
+.d-ib {
+    display: inline-block;
+}
+
+.d-i {
+    display: inline;
+}
+
+.p-s {
+    position: static;
+}
+
+.p-a {
+    position: absolute;
+}
+
+.p-r {
+    position: relative;
+}
+
+.p-f {
+    position: fixed;
+}
+
+@font-face {
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 300;
+    src: url('../../dist/fonts/quicksand/Quicksand-Light.eot');
+    src: url('../../dist/fonts/quicksand/Quicksand-Light.woff') format('woff'), url('../../dist/fonts/quicksand/Quicksand-Light.ttf') format('truetype'), url('../../dist/fonts/quicksand/Quicksand-Light.svg') format('svg'), url('../../dist/fonts/quicksand/qhfoJiLu10kFjChCCTvGlOgdm0LZdjqr5-oayXSOefg.woff2') format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+
+@font-face {
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../../dist/fonts/quicksand/Quicksand-Regular.eot');
+    src: url('../../dist/fonts/quicksand/Quicksand-Regular.woff') format('woff'), url('../../dist/fonts/quicksand/Quicksand-Regular.ttf') format('truetype'), url('../../dist/fonts/quicksand/Quicksand-Regular.svg') format('svg'), url('../../dist/fonts/quicksand/sKd0EMYPAh5PYCRKSryvW1tXRa8TVwTICgirnJhmVJw.woff2') format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+
+@font-face {
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../../dist/fonts/quicksand/Quicksand-Bold.eot');
+    src: url('../../dist/fonts/quicksand/Quicksand-Bold.woff') format('woff'), url('../../dist/fonts/quicksand/Quicksand-Bold.ttf') format('truetype'), url('../../dist/fonts/quicksand/Quicksand-Bold.svg') format('svg'), url('../../dist/fonts/quicksand/32nyIRHyCu6iqEka_hbKsugdm0LZdjqr5-oayXSOefg.woff2') format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+
+@font-face {
+    font-family: 'SegoeMDL';
+    src: url('../../dist/fonts/segmdl2/SEGMDL2.eot');
+    src: url('../../dist/fonts/segmdl2/SEGMDL2.woff') format('woff'), url('../../dist/fonts/segmdl2/SEGMDL2.ttf') format('truetype'), url('../../dist/fonts/segmdl2/SEGMDL2.svg') format('svg');
+}
+
+@font-face {
+    font-family: Office365Icons;
+    src: url('../../dist/fonts/office365/office365icons.eot');
+    src: url('../../dist/fonts/office365/office365icons.eot?#iefix') format('embedded-opentype'),
+         url('../../dist/fonts/office365/office365icons.woff') format('woff'),
+         url('../../dist/fonts/office365/office365icons.ttf') format('truetype'),
+         url('../../dist/fonts/office365/office365icons.svg?#office365icons') format('svg');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SegoeUI';
+    font-weight:300;
+    src: url('../../dist/fonts/light/segoeui.eot') format('embedded-opentype'),
+         url('../../dist/fonts/light/segoeui.woff') format('woff'),         
+         url('../../dist/fonts/light/segoeui.svg') format('svg'),
+         url('../../dist/fonts/light/segoeui.TTF') format('truetype');
+}
+
+@font-face {
+    font-family: 'SegoeUI';
+    font-weight:400;
+    src: url('../../dist/fonts/regular/segoeui.eot') format('embedded-opentype'),
+         url('../../dist/fonts/regular/segoeui.woff') format('woff'),         
+         url('../../dist/fonts/regular/segoeui.svg') format('svg'),
+         url('../../dist/fonts/regular/segoeui.TTF') format('truetype');
+}

@@ -1,0 +1,19 @@
+﻿<div style="width:100%;height:100%;" ng-controller="Multihost.Launch.Controllers.MainContoller as launch" ng-class="{'hide-launch': launch.showHostAdapter}">
+    <div class="icon-container launch-minimize" ng-click="launch.minimizeHostWindow()" ng-show="!launch.inProcessed">
+        <i class="icon icon-glyph-921"></i>
+    </div>
+    <div class="launch-img-container">
+        <img src="dist/images/multi-adapter-demo.png" />
+    </div>
+    <label ng-bind="launch.appName"></label>
+    <div class="spinner-holder-launch">
+        <div class="spinner" ng-show="launch.inProcessed">
+            <div class="bounce1"></div>
+            <div class="bounce2"></div>
+            <div class="bounce3"></div>
+        </div>
+    </div>    
+    <div class="launch-btn-holder">
+        <button class="launch-btn" ng-show="launch.ready" ng-click="launch.sendSampleNotifications()">Start</button>
+    </div>    
+</div>

@@ -1,0 +1,35 @@
+﻿@charset "UTF-8";
+
+.util {
+    &-uppercase {
+        text-transform: uppercase;
+    }
+
+    &-w100 {
+        width: 100%;
+    }
+
+    &-xxlarge{
+        font-size:xx-large;
+    }
+
+    &-xlarge{
+        font-size:x-large;
+    }
+
+    &-large{
+        font-size:large;
+    }
+
+    &-medium{
+        font-size:medium;
+    }
+
+    &-small{
+        font-size:small;
+    }
+
+    &-xsmall{
+        font-size:x-small;
+    }
+}

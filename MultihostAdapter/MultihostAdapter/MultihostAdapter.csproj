@@ -1,0 +1,268 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0163F74B-8D5E-4AED-907A-77025EC6C7B3}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MultihostAdapter</RootNamespace>
+    <AssemblyName>MultihostAdapter</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="dist\css\lib.min.css" />
+    <Content Include="dist\fonts\light\segoeui.svg" />
+    <Content Include="dist\fonts\office365\office365icons.svg" />
+    <Content Include="dist\fonts\regular\segoeui.svg" />
+    <Content Include="dist\images\multi-adapter-demo.png" />
+    <Content Include="dist\images\multi-host-adapter-x64.png" />
+    <Content Include="dist\min\base.lib.min.js" />
+    <Content Include="dist\min\multihost-card-ng1.min.js" />
+    <Content Include="dist\min\multihost-card-ng2.min.js" />
+    <Content Include="dist\min\multihost-card-react.min.js" />
+    <Content Include="lib\base\TweenMax.min.js" />
+    <Content Include="lib\css\angular-material.min.css" />
+    <Content Include="lib\css\anim-in-out.css" />
+    <Content Include="dist\css\app.min.css" />
+    <Content Include="lib\css\bootstrap-theme.min.css" />
+    <Content Include="lib\css\bootstrap.min.css" />
+    <Content Include="lib\css\fabric.min.css" />
+    <Content Include="dist\fonts\segmdl2\SEGMDL2.svg" />
+    <Content Include="dist\js\directives\app-action.directive.js" />
+    <Content Include="dist\js\directives\ng-long-hover.directive.js" />
+    <Content Include="dist\js\directives\ng-mousewheel-down.directive.js" />
+    <Content Include="dist\js\directives\ng-mousewheel-up.directive.js" />
+    <Content Include="dist\js\directives\ng-long-press.directive.js" />
+    <Content Include="dist\min\%40angular1.lib.min.js" />
+    <Content Include="dist\min\%40angular2.lib.min.js" />
+    <Content Include="dist\min\host.min.js" />
+    <Content Include="dist\min\launch.min.js" />
+    <Content Include="dist\fonts\quicksand\Quicksand-Bold.svg" />
+    <Content Include="dist\fonts\quicksand\Quicksand-Light.svg" />
+    <Content Include="dist\fonts\quicksand\Quicksand-Regular.svg" />
+    <Content Include="dist\min\react.lib.min.js" />
+    <Content Include="gulpfile.js" />
+    <Content Include="lib\%40angular2\extensions\material.umd.js" />
+    <Content Include="lib\adal.min.js" />
+    <Content Include="lib\anim-in-out.js" />
+    <Content Include="lib\buffaudio.js" />
+    <Content Include="lib\d3.min.js" />
+    <Content Include="lib\base\hammer.min.js" />
+    <Content Include="lib\base\jquery-2.2.4.min.js" />
+    <Content Include="lib\jquery.svgInject.js" />
+    <Content Include="lib\base\moment.js" />
+    <Content Include="lib\%40angular1\extensions\adal-angular.min.js" />
+    <Content Include="lib\%40angular1\extensions\angular-animate.min.js" />
+    <Content Include="lib\%40angular1\extensions\angular-aria.min.js" />
+    <Content Include="lib\%40angular1\extensions\angular-material.js" />
+    <Content Include="lib\%40angular1\extensions\angular-material.min.js" />
+    <Content Include="lib\%40angular1\extensions\angular-resource.min.js" />
+    <Content Include="lib\%40angular1\extensions\angular-sanitize.min.js" />
+    <Content Include="lib\%40angular1\extensions\angular-ui-router.min.js" />
+    <Content Include="lib\%40angular1\extensions\angular.hammer.min.js" />
+    <Content Include="lib\%40angular1\angular.min.js" />
+    <Content Include="lib\%40angular2\extensions\common.umd.min.js" />
+    <Content Include="lib\%40angular2\extensions\compiler.umd.min.js" />
+    <Content Include="lib\%40angular2\extensions\core.umd.min.js" />
+    <Content Include="lib\%40angular2\extensions\forms.umd.min.js" />
+    <Content Include="lib\%40angular2\extensions\http.umd.min.js" />
+    <Content Include="lib\%40angular2\extensions\platform-browser-dynamic.umd.min.js" />
+    <Content Include="lib\%40angular2\extensions\platform-browser.umd.min.js" />
+    <Content Include="lib\%40angular2\Reflect.js" />
+    <Content Include="lib\%40angular2\extensions\router.umd.min.js" />
+    <Content Include="lib\%40angular2\Rx.min.js" />
+    <Content Include="lib\%40angular2\shim.min.js" />
+    <Content Include="lib\%40angular2\zone.min.js" />
+    <Content Include="lib\react\react-dom.min.js" />
+    <Content Include="lib\react\react.min.js" />
+    <Content Include="lib\ui-bootstrap-tpls-1.1.1.min.js" />
+    <Content Include="lib\base\underscore-min.js" />
+    <Content Include="packages.config" />
+    <Content Include="package.json" />
+    <Content Include="host-launch.html" />
+    <Content Include="scss\_page.scss" />
+    <Content Include="scss\_utils.scss" />
+    <Content Include="scss\_vars.scss" />
+    <Content Include="dist\fonts\quicksand\Quicksand-Bold.eot" />
+    <Content Include="dist\fonts\quicksand\Quicksand-Bold.ttf" />
+    <Content Include="dist\fonts\quicksand\Quicksand-Bold.woff" />
+    <Content Include="dist\fonts\quicksand\Quicksand-Light.eot" />
+    <Content Include="dist\fonts\quicksand\Quicksand-Light.ttf" />
+    <Content Include="dist\fonts\quicksand\Quicksand-Light.woff" />
+    <Content Include="dist\fonts\quicksand\Quicksand-Regular.eot" />
+    <Content Include="dist\fonts\quicksand\Quicksand-Regular.ttf" />
+    <Content Include="dist\fonts\quicksand\Quicksand-Regular.woff" />
+    <Content Include="scss\app.scss" />
+    <Content Include="scss\_launchWindow.scss" />
+    <Content Include="dist\fonts\light\segoeui.eot" />
+    <Content Include="dist\fonts\light\segoeui.svgz" />
+    <Content Include="dist\fonts\light\segoeui.ttf" />
+    <Content Include="dist\fonts\light\segoeui.woff" />
+    <Content Include="dist\fonts\office365\office365icons.eot" />
+    <Content Include="dist\fonts\office365\office365icons.ttf" />
+    <Content Include="dist\fonts\office365\office365icons.woff" />
+    <Content Include="dist\fonts\regular\segoeui.eot" />
+    <Content Include="dist\fonts\regular\segoeui.svgz" />
+    <Content Include="dist\fonts\regular\segoeui.ttf" />
+    <Content Include="dist\fonts\regular\segoeui.woff" />
+    <None Include="wwwroot\multihost-card-react\modules\multihost-card-react.module.jsx" />
+    <Content Include="wwwroot\multihost-card-react\babelled\multihost-card-react-babel.js" />
+    <Content Include="wwwroot\multihost-card-ng1\configs\multihost-card-ng1.config.js" />
+    <Content Include="wwwroot\multihost-card-ng1\controllers\multihost-card-ng1.controller.js" />
+    <Content Include="wwwroot\multihost-card-ng1\services\multihost-card-ng1.service.js" />
+    <Content Include="wwwroot\multihost-card-ng1\views\multihost-card-ng1.view.html" />
+    <Content Include="wwwroot\multihost-card-ng2\modules\multihost-card-ng2.module.js" />
+    <Content Include="wwwroot\multihost-card-ng2\components\multihost-card-ng2.component.js" />
+    <Content Include="wwwroot\multihost-card-ng2\services\multihost-card-ng2.service.js" />
+    <Content Include="wwwroot\multihost-card-ng2\views\multihost-card-ng2.view.html" />
+    <Content Include="wwwroot\host\configs\host.loader.js" />
+    <Content Include="wwwroot\host\controllers\host.context.controller.js" />
+    <Content Include="wwwroot\host\controllers\host.notifications.controller.js" />
+    <Content Include="wwwroot\host\controllers\host._.controller.js" />
+    <Content Include="wwwroot\host\templates\host.context.bottomsheet.html" />
+    <Content Include="wwwroot\host\templates\host.context.tmpl.html" />
+    <Content Include="wwwroot\host\templates\host.notifications.tmpl.html" />
+    <Content Include="wwwroot\host\templates\host.profile.tmpl.html" />
+    <Content Include="wwwroot\launch\configs\launch.config.js" />
+    <Content Include="wwwroot\launch\controllers\launch.controller.js" />
+    <Content Include="wwwroot\launch\services\launch.service.js" />
+    <Content Include="wwwroot\launch\views\launch.view.html" />
+    <Content Include="wwwroot\host\configs\host.config.js" />
+    <Content Include="wwwroot\host\controllers\host.main.controller.js" />
+    <Content Include="wwwroot\host\services\host.service.js" />
+    <Content Include="wwwroot\host\views\host.view.html" />
+    <Content Include="scss\_hostWindow.scss" />
+    <Content Include="dist\fonts\segmdl2\SEGMDL2.eot" />
+    <Content Include="dist\fonts\segmdl2\SEGMDL2.TTF" />
+    <Content Include="dist\fonts\segmdl2\SEGMDL2.woff" />
+    <Content Include="scss\_icons.scss" />
+    <Content Include="scss\_assignmentCard.scss" />
+    <Content Include="dist\configs\client-configs.json" />
+    <Content Include="scss\_notifications.scss" />
+    <Content Include=".babelrc" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="main.js" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="wwwroot\host\directives\" />
+    <Folder Include="wwwroot\host\jsons\" />
+    <Folder Include="wwwroot\launch\directives\" />
+    <Folder Include="wwwroot\launch\templates\" />
+    <Folder Include="wwwroot\multihost-card-ng1\directives\" />
+    <Folder Include="wwwroot\multihost-card-ng1\jsons\" />
+    <Folder Include="wwwroot\multihost-card-ng1\templates\" />
+    <Folder Include="wwwroot\multihost-card-ng2\directives\" />
+    <Folder Include="wwwroot\multihost-card-ng2\jsons\" />
+    <Folder Include="wwwroot\multihost-card-ng2\templates\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>45654</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:45654/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

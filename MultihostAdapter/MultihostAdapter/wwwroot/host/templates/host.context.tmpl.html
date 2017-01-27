@@ -1,0 +1,46 @@
+﻿<div ng-controller="Multihost.Host.Controllers.MainContoller as host">
+    <div class="hostmast-header pull-left" hide-cordova-except-ios>
+        <label class="hostmast-header-title" hide-cordova>Multihost Adapter</label>
+        <div class="pull-right">
+            <div class="icon-container hostmast-header-minimize" ng-click="host.minimizeApp()">
+                <i class="icon icon-glyph-921"></i>
+            </div>
+            <div class="icon-container hostmast-header-close" ng-click="host.closeApp()">
+                <i class="icon icon-cancel"></i>
+            </div>
+        </div>
+    </div>
+    <div class="pull-left">
+        <div class="icon-container host-view-contact" ng-click="host.openProile()">
+            <i class="icon icon-contact"></i>
+        </div>
+    </div>
+    <div class="pull-right">
+        <div class="icon-container host-view-notification-holder adjustCordova" ng-click="host.openNotifications()">
+            <i class="icon icon-comment-outline" style="display:none"></i>
+            <i class="icon icon-comment-7E7"></i>
+            <span class="notification-number" style="display:none;">09</span>
+        </div>
+        <div class="icon-container" ng-click="host.hostService.minimizeHostWindow()" hide-cordova>
+            <i class="icon icon-glyph-1D8"></i>
+        </div>
+        <div class="icon-container host-view-move-around" hide-cordova>
+            <i class="icon icon-glyph-759"></i>
+        </div>
+        <div class="icon-container adjustCordova" ng-click="host.openContextMenu()">
+            <i class="icon icon-menu"></i>
+        </div>
+    </div>
+    <section layout="row" flex="" class="host-notifications">
+        <md-sidenav class="md-sidenav-right md-whiteframe-4dp" md-component-id="host_notifications_pane">
+            <ng-include src="'templates/host/host.notifications.tmpl.html'"></ng-include>            
+        </md-sidenav>
+    </section>
+    <section layout="row" flex="" class="host-profile">
+        <md-sidenav class="md-sidenav-right md-whiteframe-4dp" md-component-id="host_profile_pane">
+            <md-content layout-padding="">
+                <ng-include src="'templates/host/host.profile.tmpl.html'"></ng-include>
+            </md-content>
+        </md-sidenav>
+    </section>
+</div>

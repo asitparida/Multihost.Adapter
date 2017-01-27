@@ -1,0 +1,4354 @@
+﻿.icon-container {
+    outline: none;
+    display: block;
+    float: left;
+    min-width: 0;
+    min-height: 0;
+    font-size: large;
+    padding: 0;
+    height: 48px;
+    width: 48px;
+    line-height: 48px;
+    text-align: center;
+    background-color: transparent;
+
+    @include _CORDOVA_ONLY(&) {
+
+        &.adjustCordova {
+            width: 60px;
+            height: 60px;
+            line-height: 60px;
+        }
+    }
+
+    &.h36 {
+        height: 36px;
+        width: 36px;
+        line-height: 36px;
+    }
+
+    span {
+        margin-left: 10px;
+        position: relative;
+        top: -3px; /* fix for improper positioning */
+    }
+
+    &.icon-combine {
+        position: relative;
+
+        .icon-p {
+            position: absolute;
+            top: 7px;
+            left: 5px;
+        }
+
+        .icon-s {
+            position: absolute;
+            left: 19px;
+            top: 19px;
+            font-size: small;
+        }
+    }
+
+    @include focus-states();
+}
+
+.icon {
+    font-family: "SegoeMDL";
+    font-weight: normal;
+    font-style: normal;
+    position: relative;
+    top: 1px;
+    display: inline-block;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    &.icon-accept:before { /* KEYWORDS - Check */
+        content: "\E8FB";
+    }
+
+    &.icon-accounts:before { /* KEYWORDS - at, email */
+        content: "\E910";
+    }
+
+    &.icon-add:before { /* KEYWORDS - plus, math */
+        content: "\E710";
+    }
+
+    &.icon-addFriend:before { /* KEYWORDS - add, plus, account */
+        content: "\E8FA";
+    }
+
+    &.icon-admin:before { /* KEYWORDS - sheild, textfield, textbox */
+        content: "\E7EF";
+    }
+
+    &.icon-airplane:before { /* KEYWORDS - DUP airplane, plane */
+        content: "\E122";
+    }
+
+    &.icon-alert:before { /* KEYWORDS - DUP alert */
+        content: "\E171";
+    }
+
+    &.icon-alignCenter:before { /* KEYWORDS - align, center, format */
+        content: "\E8E3";
+    }
+
+    &.icon-alignLeft:before { /* KEYWORDS - align, left, format */
+        content: "\E8E4";
+    }
+
+    &.icon-alignRight:before { /* KEYWORDS - align, right, format */
+        content: "\E8E2";
+    }
+
+    &.icon-allApps:before { /* KEYWORDS - checkbox, list */
+        content: "\E71D";
+    }
+
+    &.icon-arrowHTMLLegacy:before { /* KEYWORDS - legacy */
+        content: "\E0D5";
+    }
+
+    &.icon-arrowHTMLMirroredLegacy:before { /* KEYWORDS - legacy */
+        content: "\E0AE";
+    }
+
+    &.icon-attach:before { /* KEYWORDS - paperclip */
+        content: "\E723";
+    }
+
+    &.icon-attachCamera:before { /* KEYWORDS - camera, trigger */
+        content: "\E8A2";
+    }
+
+    &.icon-audio-142:before { /* KEYWORDS - DUP audio, playlist, music */
+        content: "\E142";
+    }
+
+    &.icon-audio-14B:before { /* KEYWORDS - DUP audio, music */
+        content: "\E14B";
+    }
+
+    &.icon-audio-15D:before { /* KEYWORDS - DUP audio */
+        content: "\E15D";
+    }
+
+    &.icon-audio-8D6:before { /* KEYWORDS - music */
+        content: "\E8D6";
+    }
+
+    &.icon-audio-A69:before { /* KEYWORDS - DUP audio, video, film */
+        content: "\EA69";
+    }
+
+    &.icon-back:before { /* KEYWORDS - back, arrow, left */
+        content: "\E72B";
+    }
+
+    &.icon-backBttnArrow20Legacy:before { /* KEYWORDS - legacy */
+        content: "\E0C4";
+    }
+
+    &.icon-backBttnArrow42Legacy:before { /* KEYWORDS - legacy */
+        content: "\E0A6";
+    }
+
+    &.icon-backBttnMirroredArrow20Legacy:before { /* KEYWORDS - legacy */
+        content: "\E0AD";
+    }
+
+    &.icon-backBttnMirroredArrow42Legacy:before { /* KEYWORDS - legacy */
+        content: "\E0AB";
+    }
+
+    &.icon-backToWindow:before { /* KEYWORDS - collapse */
+        content: "\E73F";
+    }
+
+    &.icon-battery0:before { /* KEYWORDS -  */
+        content: "\E850";
+    }
+
+    &.icon-battery1:before { /* KEYWORDS -  */
+        content: "\E851";
+    }
+
+    &.icon-battery10:before { /* KEYWORDS -  */
+        content: "\E83F";
+    }
+
+    &.icon-battery2:before { /* KEYWORDS -  */
+        content: "\E852";
+    }
+
+    &.icon-battery3:before { /* KEYWORDS -  */
+        content: "\E853";
+    }
+
+    &.icon-battery4:before { /* KEYWORDS -  */
+        content: "\E854";
+    }
+
+    &.icon-battery5:before { /* KEYWORDS -  */
+        content: "\E855";
+    }
+
+    &.icon-battery6:before { /* KEYWORDS -  */
+        content: "\E856";
+    }
+
+    &.icon-battery7:before { /* KEYWORDS -  */
+        content: "\E857";
+    }
+
+    &.icon-battery8:before { /* KEYWORDS -  */
+        content: "\E858";
+    }
+
+    &.icon-battery9:before { /* KEYWORDS -  */
+        content: "\E859";
+    }
+
+    &.icon-batteryCharging0:before { /* KEYWORDS -  */
+        content: "\E85A";
+    }
+
+    &.icon-batteryCharging1:before { /* KEYWORDS -  */
+        content: "\E85B";
+    }
+
+    &.icon-batteryCharging10:before { /* KEYWORDS -  */
+        content: "\EA93";
+    }
+
+    &.icon-batteryCharging2:before { /* KEYWORDS -  */
+        content: "\E85C";
+    }
+
+    &.icon-batteryCharging3:before { /* KEYWORDS -  */
+        content: "\E85D";
+    }
+
+    &.icon-batteryCharging4:before { /* KEYWORDS -  */
+        content: "\E85E";
+    }
+
+    &.icon-batteryCharging5:before { /* KEYWORDS -  */
+        content: "\E85F";
+    }
+
+    &.icon-batteryCharging6:before { /* KEYWORDS -  */
+        content: "\E860";
+    }
+
+    &.icon-batteryCharging7:before { /* KEYWORDS -  */
+        content: "\E861";
+    }
+
+    &.icon-batteryCharging8:before { /* KEYWORDS -  */
+        content: "\E862";
+    }
+
+    &.icon-batteryCharging9:before { /* KEYWORDS -  */
+        content: "\E83E";
+    }
+
+    &.icon-batterySaver0:before { /* KEYWORDS -  */
+        content: "\E863";
+    }
+
+    &.icon-batterySaver1:before { /* KEYWORDS -  */
+        content: "\E864";
+    }
+
+    &.icon-batterySaver10:before { /* KEYWORDS -  */
+        content: "\EA95";
+    }
+
+    &.icon-batterySaver2:before { /* KEYWORDS -  */
+        content: "\E865";
+    }
+
+    &.icon-batterySaver3:before { /* KEYWORDS -  */
+        content: "\E866";
+    }
+
+    &.icon-batterySaver4:before { /* KEYWORDS -  */
+        content: "\E867";
+    }
+
+    &.icon-batterySaver5:before { /* KEYWORDS -  */
+        content: "\E868";
+    }
+
+    &.icon-batterySaver6:before { /* KEYWORDS -  */
+        content: "\E869";
+    }
+
+    &.icon-batterySaver7:before { /* KEYWORDS -  */
+        content: "\E86A";
+    }
+
+    &.icon-batterySaver8:before { /* KEYWORDS -  */
+        content: "\E86B";
+    }
+
+    &.icon-batterySaver9:before { /* KEYWORDS -  */
+        content: "\EA94";
+    }
+
+    &.icon-batteryUnknown:before { /* KEYWORDS -  */
+        content: "\E996";
+    }
+
+    &.icon-blockContact:before { /* KEYWORDS - block, account, contact */
+        content: "\E8F8";
+    }
+
+    &.icon-blockedLegacy:before { /* KEYWORDS - legacy */
+        content: "\E25B";
+    }
+
+    &.icon-bold:before { /* KEYWORDS - strong, format */
+        content: "\E8DD";
+    }
+
+    &.icon-book-add:before { /* KEYWORDS - DUP book-add, report-add */
+        content: "\E82E";
+    }
+
+    &.icon-bookmarks:before { /* KEYWORDS - outline */
+        content: "\E8A4";
+    }
+
+    &.icon-books:before { /* KEYWORDS - DUP books */
+        content: "\E1D3";
+    }
+
+    &.icon-bow:before { /* KEYWORDS - DUP bow, compass */
+        content: "\E1D1";
+    }
+
+    &.icon-box:before { /* KEYWORDS - DUP box */
+        content: "\E7B8";
+    }
+
+    &.icon-brick:before { /* KEYWORDS - DUP brick, castle */
+        content: "\E83D";
+    }
+
+    &.icon-browsePhotos:before { /* KEYWORDS - photos, search */
+        content: "\E7C5";
+    }
+
+    &.icon-bullet:before { /* KEYWORDS - DUP bullet */
+        content: "\E292";
+    }
+
+    &.icon-bulletedList:before { /* KEYWORDS - bullet, list */
+        content: "\E8FD";
+    }
+
+    &.icon-cC:before { /* KEYWORDS - media, controls */
+        content: "\E7F0";
+    }
+
+    &.icon-calculator:before { /* KEYWORDS - math */
+        content: "\E8EF";
+    }
+
+    &.icon-calendar:before { /* KEYWORDS - date */
+        content: "\E787";
+    }
+
+    &.icon-calendarDay:before { /* KEYWORDS - calendar, day, date */
+        content: "\E8BF";
+    }
+
+    &.icon-calendarWeek:before { /* KEYWORDS - calendar, week, date */
+        content: "\E8F5";
+    }
+
+    &.icon-camera:before { /* KEYWORDS - photo */
+        content: "\E722";
+    }
+
+    &.icon-cancel:before { /* KEYWORDS -  */
+        content: "\E711";
+    }
+
+    &.icon-cap:before { /* KEYWORDS - DUP cap, school */
+        content: "\E7BE";
+    }
+
+    &.icon-caption:before { /* KEYWORDS - media, text */
+        content: "\E8BA";
+    }
+
+    &.icon-cellphone:before { /* KEYWORDS -  */
+        content: "\E8EA";
+    }
+
+    &.icon-characters:before { /* KEYWORDS -  */
+        content: "\E8C1";
+    }
+
+    &.icon-checkList:before { /* KEYWORDS - undocumented */
+        content: "\E133";
+    }
+
+    &.icon-checkMark:before { /* KEYWORDS -  */
+        content: "\E73E";
+    }
+
+    &.icon-checkMarkLegacy:before { /* KEYWORDS - legacy, checkmark, check, mark */
+        content: "\E001";
+    }
+
+    &.icon-checkMarkZeroWidthLegacy:before { /* KEYWORDS - legacy */
+        content: "\E008";
+    }
+
+    &.icon-checkbox:before { /* KEYWORDS -  */
+        content: "\E739";
+    }
+
+    &.icon-checkboxComposite:before { /* KEYWORDS -  */
+        content: "\E73A";
+    }
+
+    &.icon-checkboxCompositeLegacy:before { /* KEYWORDS - legacy */
+        content: "\E0A2";
+    }
+
+    &.icon-checkboxCompositeReversed:before { /* KEYWORDS -  */
+        content: "\E73D";
+    }
+
+    &.icon-checkboxCompositeReversedLegacy:before { /* KEYWORDS - legacy */
+        content: "\E005";
+    }
+
+    &.icon-checkboxFill:before { /* KEYWORDS -  */
+        content: "\E73B";
+    }
+
+    &.icon-checkboxFillLegacy:before { /* KEYWORDS - legacy, solid, box */
+        content: "\E002";
+    }
+
+    &.icon-checkboxFillZeroWidthLegacy:before { /* KEYWORDS - legacy, zero-width */
+        content: "\E009";
+    }
+
+    &.icon-checkboxIndeterminate:before { /* KEYWORDS -  */
+        content: "\E73C";
+    }
+
+    &.icon-checkboxIndeterminateLegacy:before { /* KEYWORDS - legacy */
+        content: "\E004";
+    }
+
+    &.icon-checkboxLegacy:before { /* KEYWORDS - legacy */
+        content: "\E003";
+    }
+
+    &.icon-chromeBack:before { /* KEYWORDS -  */
+        content: "\E830";
+    }
+
+    &.icon-chromeBackMirrored:before { /* KEYWORDS -  */
+        content: "\EA47";
+    }
+
+    &.icon-clear:before { /* KEYWORDS - close */
+        content: "\E894";
+    }
+
+    &.icon-clearSelection:before { /* KEYWORDS -  */
+        content: "\E8E6";
+    }
+
+    &.icon-clip:before { /* KEYWORDS - DUP clip */
+        content: "\E16C";
+    }
+
+    &.icon-closePane:before { /* KEYWORDS -  */
+        content: "\E89F";
+    }
+
+    &.icon-cloud:before { /* KEYWORDS - weather */
+        content: "\E753";
+    }
+
+    &.icon-cog:before { /* KEYWORDS - DUP cog */
+        content: "\E115";
+    }
+
+    &.icon-comment-7E7:before { /* KEYWORDS - DUP comment */
+        content: "\E7E7";
+    }
+
+    &.icon-comment-90A:before { /* KEYWORDS - quotes */
+        content: "\E90A";
+    }
+
+    &.icon-comment-outline:before { /* KEYWORDS - DUP comment-outline */
+        content: "\E91C";
+    }
+
+    &.icon-commentLegacy:before { /* KEYWORDS - legacy */
+        content: "\E134";
+    }
+
+    &.icon-computer-tower:before { /* KEYWORDS - DUP computer-tower */
+        content: "\E83B";
+    }
+
+    &.icon-connect:before { /* KEYWORDS - DUP connect */
+        content: "\E17B";
+    }
+
+    &.icon-console:before { /* KEYWORDS - DUP console, one */
+        content: "\E990";
+    }
+
+    &.icon-construction:before { /* KEYWORDS - DUP construction */
+        content: "\E98F";
+    }
+
+    &.icon-contact:before { /* KEYWORDS - account */
+        content: "\E77B";
+    }
+
+    &.icon-contact2:before { /* KEYWORDS - account */
+        content: "\E8D4";
+    }
+
+    &.icon-contactInfo:before { /* KEYWORDS - account, information */
+        content: "\E779";
+    }
+
+    &.icon-contactPresence:before { /* KEYWORDS - account */
+        content: "\E8CF";
+    }
+
+    &.icon-contacts:before { /* KEYWORDS - DUP contacts */
+        content: "\E1D4";
+    }
+
+    &.icon-controller:before { /* KEYWORDS - DUP controller, processor */
+        content: "\E964";
+    }
+
+    &.icon-coordinate:before { /* KEYWORDS - DUP coordinate */
+        content: "\E1D2";
+    }
+
+    &.icon-copy:before { /* KEYWORDS - pages, content */
+        content: "\E8C8";
+    }
+
+    &.icon-crop:before { /* KEYWORDS -  */
+        content: "\E7A8";
+    }
+
+    &.icon-cut:before { /* KEYWORDS - cut, content */
+        content: "\E8C6";
+    }
+
+    &.icon-day:before { /* KEYWORDS - DUP day */
+        content: "\E706";
+    }
+
+    &.icon-delete:before { /* KEYWORDS - trash, remove, content */
+        content: "\E74D";
+    }
+
+    &.icon-directions:before { /* KEYWORDS -  */
+        content: "\E8F0";
+    }
+
+    &.icon-disableUpdates:before { /* KEYWORDS -  */
+        content: "\E8D8";
+    }
+
+    &.icon-disconnect:before { /* KEYWORDS - DUP disconnect */
+        content: "\E17A";
+    }
+
+    &.icon-disconnectDrive:before { /* KEYWORDS - drive, network */
+        content: "\E8CD";
+    }
+
+    &.icon-disk:before { /* KEYWORDS - DUP disk */
+        content: "\E958";
+    }
+
+    &.icon-dislike:before { /* KEYWORDS -  */
+        content: "\E8E0";
+    }
+
+    &.icon-dislikeLegacy:before { /* KEYWORDS - legacy */
+        content: "\E19E";
+    }
+
+    &.icon-dockBottom:before { /* KEYWORDS -  */
+        content: "\E90E";
+    }
+
+    &.icon-dockLeft:before { /* KEYWORDS -  */
+        content: "\E90C";
+    }
+
+    &.icon-dockRight:before { /* KEYWORDS -  */
+        content: "\E90D";
+    }
+
+    &.icon-document:before { /* KEYWORDS -  */
+        content: "\E8A5";
+    }
+
+    &.icon-download:before { /* KEYWORDS -  */
+        content: "\E896";
+    }
+
+    &.icon-dropdown-collapse:before { /* KEYWORDS - DUP dropdown-collapse */
+        content: "\E16A";
+    }
+
+    &.icon-dropdown-expand:before { /* KEYWORDS - DUP dropdown-expand */
+        content: "\E169";
+    }
+
+    &.icon-earth-128:before { /* KEYWORDS - DUP earth */
+        content: "\E128";
+    }
+
+    &.icon-earth-12B:before { /* KEYWORDS - DUP earth, web, wire */
+        content: "\E12B";
+    }
+
+    &.icon-edit:before { /* KEYWORDS - pencil */
+        content: "\E70F";
+    }
+
+    &.icon-email-read:before { /* KEYWORDS - DUP email-read */
+        content: "\E166";
+    }
+
+    &.icon-emoji:before { /* KEYWORDS -  */
+        content: "\E899";
+    }
+
+    &.icon-emoji2:before { /* KEYWORDS -  */
+        content: "\E76E";
+    }
+
+    &.icon-favorite2Legacy:before { /* KEYWORDS - legacy */
+        content: "\E249";
+    }
+
+    &.icon-favoriteLegacy:before { /* KEYWORDS - legacy */
+        content: "\E113";
+    }
+
+    &.icon-favoriteList:before { /* KEYWORDS - list */
+        content: "\E728";
+    }
+
+    &.icon-favoriteStar:before { /* KEYWORDS -  */
+        content: "\E734";
+    }
+
+    &.icon-favoriteStarFill:before { /* KEYWORDS -  */
+        content: "\E735";
+    }
+
+    &.icon-ferry:before { /* KEYWORDS - DUP ferry */
+        content: "\EB48";
+    }
+
+    &.icon-ferry-outline:before { /* KEYWORDS - DUP ferry-outline */
+        content: "\E7E3";
+    }
+
+    &.icon-filter:before { /* KEYWORDS -  */
+        content: "\E71C";
+    }
+
+    &.icon-findLegacy:before { /* KEYWORDS - legacy */
+        content: "\E11A";
+    }
+
+    &.icon-flag:before { /* KEYWORDS -  */
+        content: "\E7C1";
+    }
+
+    &.icon-flashdrive:before { /* KEYWORDS - DUP flashdrive */
+        content: "\E88E";
+    }
+
+    &.icon-folder:before { /* KEYWORDS -  */
+        content: "\E8B7";
+    }
+
+    &.icon-font:before { /* KEYWORDS - font, format */
+        content: "\E8D2";
+    }
+
+    &.icon-fontDecrease:before { /* KEYWORDS - text, format */
+        content: "\E8E7";
+    }
+
+    &.icon-fontIncrease:before { /* KEYWORDS - text, format */
+        content: "\E8E8";
+    }
+
+    &.icon-fontSize:before { /* KEYWORDS - text, format */
+        content: "\E8E9";
+    }
+
+    &.icon-fontcolor:before { /* KEYWORDS - format, font */
+        content: "\E8D3";
+    }
+
+    &.icon-forward:before { /* KEYWORDS - arrow, right */
+        content: "\E72A";
+    }
+
+    &.icon-forward-slash:before { /* KEYWORDS - DUP forward-slash */
+        content: "\E199";
+    }
+
+    &.icon-fourBars:before { /* KEYWORDS - wifi, signal */
+        content: "\E908";
+    }
+
+    &.icon-fullScreen:before { /* KEYWORDS - expand */
+        content: "\E740";
+    }
+
+    &.icon-globe:before { /* KEYWORDS - world */
+        content: "\E774";
+    }
+
+    &.icon-glyph-012:before { /* KEYWORDS - DUP  */
+        content: "\E012";
+    }
+
+    &.icon-glyph-013:before { /* KEYWORDS - DUP  */
+        content: "\E013";
+    }
+
+    &.icon-glyph-014:before { /* KEYWORDS - DUP  */
+        content: "\E014";
+    }
+
+    &.icon-glyph-015:before { /* KEYWORDS - DUP  */
+        content: "\E015";
+    }
+
+    &.icon-glyph-052:before { /* KEYWORDS - DUP  */
+        content: "\E052";
+    }
+
+    &.icon-glyph-07F:before { /* KEYWORDS - DUP  */
+        content: "\E07F";
+    }
+
+    &.icon-glyph-081:before { /* KEYWORDS - DUP  */
+        content: "\E081";
+    }
+
+    &.icon-glyph-087:before { /* KEYWORDS - DUP  */
+        content: "\E087";
+    }
+
+    &.icon-glyph-094:before { /* KEYWORDS - DUP  */
+        content: "\E094";
+    }
+
+    &.icon-glyph-096:before { /* KEYWORDS - DUP  */
+        content: "\E096";
+    }
+
+    &.icon-glyph-097:before { /* KEYWORDS - DUP  */
+        content: "\E097";
+    }
+
+    &.icon-glyph-098:before { /* KEYWORDS - DUP  */
+        content: "\E098";
+    }
+
+    &.icon-glyph-099:before { /* KEYWORDS - DUP  */
+        content: "\E099";
+    }
+
+    &.icon-glyph-09A:before { /* KEYWORDS - DUP  */
+        content: "\E09A";
+    }
+
+    &.icon-glyph-09B:before { /* KEYWORDS - DUP  */
+        content: "\E09B";
+    }
+
+    &.icon-glyph-09C:before { /* KEYWORDS - DUP  */
+        content: "\E09C";
+    }
+
+    &.icon-glyph-09D:before { /* KEYWORDS - DUP  */
+        content: "\E09D";
+    }
+
+    &.icon-glyph-09E:before { /* KEYWORDS - DUP  */
+        content: "\E09E";
+    }
+
+    &.icon-glyph-09F:before { /* KEYWORDS - DUP  */
+        content: "\E09F";
+    }
+
+    &.icon-glyph-0A0:before { /* KEYWORDS - DUP  */
+        content: "\E0A0";
+    }
+
+    &.icon-glyph-0A1:before { /* KEYWORDS - DUP  */
+        content: "\E0A1";
+    }
+
+    &.icon-glyph-0B8:before { /* KEYWORDS - DUP  */
+        content: "\E0B8";
+    }
+
+    &.icon-glyph-0E2:before { /* KEYWORDS - DUP  */
+        content: "\E0E2";
+    }
+
+    &.icon-glyph-0E3:before { /* KEYWORDS - DUP  */
+        content: "\E0E3";
+    }
+
+    &.icon-glyph-0E4:before { /* KEYWORDS - DUP  */
+        content: "\E0E4";
+    }
+
+    &.icon-glyph-0E5:before { /* KEYWORDS - DUP  */
+        content: "\E0E5";
+    }
+
+    &.icon-glyph-0E7:before { /* KEYWORDS - DUP  */
+        content: "\E0E7";
+    }
+
+    &.icon-glyph-100:before { /* KEYWORDS - DUP  */
+        content: "\E100";
+    }
+
+    &.icon-glyph-101:before { /* KEYWORDS - DUP  */
+        content: "\E101";
+    }
+
+    &.icon-glyph-102:before { /* KEYWORDS - DUP  */
+        content: "\E102";
+    }
+
+    &.icon-glyph-103:before { /* KEYWORDS - DUP  */
+        content: "\E103";
+    }
+
+    &.icon-glyph-106:before { /* KEYWORDS - DUP  */
+        content: "\E106";
+    }
+
+    &.icon-glyph-10A:before { /* KEYWORDS - DUP  */
+        content: "\E10A";
+    }
+
+    &.icon-glyph-10B:before { /* KEYWORDS - DUP  */
+        content: "\E10B";
+    }
+
+    &.icon-glyph-10D:before { /* KEYWORDS - DUP  */
+        content: "\E10D";
+    }
+
+    &.icon-glyph-10E:before { /* KEYWORDS - DUP  */
+        content: "\E10E";
+    }
+
+    &.icon-glyph-10F:before { /* KEYWORDS - DUP  */
+        content: "\E10F";
+    }
+
+    &.icon-glyph-110:before { /* KEYWORDS - DUP  */
+        content: "\E110";
+    }
+
+    &.icon-glyph-111:before { /* KEYWORDS - DUP  */
+        content: "\E111";
+    }
+
+    &.icon-glyph-112:before { /* KEYWORDS - DUP  */
+        content: "\E112";
+    }
+
+    &.icon-glyph-114:before { /* KEYWORDS - DUP  */
+        content: "\E114";
+    }
+
+    &.icon-glyph-117:before { /* KEYWORDS - DUP  */
+        content: "\E117";
+    }
+
+    &.icon-glyph-118:before { /* KEYWORDS - DUP  */
+        content: "\E118";
+    }
+
+    &.icon-glyph-119:before { /* KEYWORDS - DUP  */
+        content: "\E119";
+    }
+
+    &.icon-glyph-11C:before { /* KEYWORDS - DUP  */
+        content: "\E11C";
+    }
+
+    &.icon-glyph-11D:before { /* KEYWORDS - DUP  */
+        content: "\E11D";
+    }
+
+    &.icon-glyph-11E:before { /* KEYWORDS - DUP  */
+        content: "\E11E";
+    }
+
+    &.icon-glyph-11F:before { /* KEYWORDS - DUP  */
+        content: "\E11F";
+    }
+
+    &.icon-glyph-120:before { /* KEYWORDS - DUP  */
+        content: "\E120";
+    }
+
+    &.icon-glyph-121:before { /* KEYWORDS - DUP  */
+        content: "\E121";
+    }
+
+    &.icon-glyph-123:before { /* KEYWORDS - DUP  */
+        content: "\E123";
+    }
+
+    &.icon-glyph-124:before { /* KEYWORDS - DUP  */
+        content: "\E124";
+    }
+
+    &.icon-glyph-126:before { /* KEYWORDS - DUP  */
+        content: "\E126";
+    }
+
+    &.icon-glyph-127:before { /* KEYWORDS - DUP  */
+        content: "\E127";
+    }
+
+    &.icon-glyph-129:before { /* KEYWORDS - DUP  */
+        content: "\E129";
+    }
+
+    &.icon-glyph-12C:before { /* KEYWORDS - DUP  */
+        content: "\E12C";
+    }
+
+    &.icon-glyph-12D:before { /* KEYWORDS - DUP  */
+        content: "\E12D";
+    }
+
+    &.icon-glyph-130:before { /* KEYWORDS - DUP  */
+        content: "\E130";
+    }
+
+    &.icon-glyph-131:before { /* KEYWORDS - DUP  */
+        content: "\E131";
+    }
+
+    &.icon-glyph-132:before { /* KEYWORDS - DUP  */
+        content: "\E132";
+    }
+
+    &.icon-glyph-135:before { /* KEYWORDS - DUP  */
+        content: "\E135";
+    }
+
+    &.icon-glyph-136:before { /* KEYWORDS - DUP  */
+        content: "\E136";
+    }
+
+    &.icon-glyph-137:before { /* KEYWORDS - DUP  */
+        content: "\E137";
+    }
+
+    &.icon-glyph-138:before { /* KEYWORDS - DUP  */
+        content: "\E138";
+    }
+
+    &.icon-glyph-139:before { /* KEYWORDS - DUP  */
+        content: "\E139";
+    }
+
+    &.icon-glyph-13A:before { /* KEYWORDS - DUP  */
+        content: "\E13A";
+    }
+
+    &.icon-glyph-13B:before { /* KEYWORDS - DUP  */
+        content: "\E13B";
+    }
+
+    &.icon-glyph-13C:before { /* KEYWORDS - DUP  */
+        content: "\E13C";
+    }
+
+    &.icon-glyph-13D:before { /* KEYWORDS - DUP  */
+        content: "\E13D";
+    }
+
+    &.icon-glyph-13E:before { /* KEYWORDS - DUP  */
+        content: "\E13E";
+    }
+
+    &.icon-glyph-13F:before { /* KEYWORDS - DUP  */
+        content: "\E13F";
+    }
+
+    &.icon-glyph-140:before { /* KEYWORDS - DUP  */
+        content: "\E140";
+    }
+
+    &.icon-glyph-141:before { /* KEYWORDS - DUP  */
+        content: "\E141";
+    }
+
+    &.icon-glyph-143:before { /* KEYWORDS - DUP  */
+        content: "\E143";
+    }
+
+    &.icon-glyph-144:before { /* KEYWORDS - DUP  */
+        content: "\E144";
+    }
+
+    &.icon-glyph-145:before { /* KEYWORDS - DUP  */
+        content: "\E145";
+    }
+
+    &.icon-glyph-146:before { /* KEYWORDS - DUP  */
+        content: "\E146";
+    }
+
+    &.icon-glyph-147:before { /* KEYWORDS - DUP  */
+        content: "\E147";
+    }
+
+    &.icon-glyph-148:before { /* KEYWORDS - DUP  */
+        content: "\E148";
+    }
+
+    &.icon-glyph-149:before { /* KEYWORDS - DUP  */
+        content: "\E149";
+    }
+
+    &.icon-glyph-14A:before { /* KEYWORDS - DUP  */
+        content: "\E14A";
+    }
+
+    &.icon-glyph-14C:before { /* KEYWORDS - DUP  */
+        content: "\E14C";
+    }
+
+    &.icon-glyph-150:before { /* KEYWORDS - DUP  */
+        content: "\E150";
+    }
+
+    &.icon-glyph-151:before { /* KEYWORDS - DUP  */
+        content: "\E151";
+    }
+
+    &.icon-glyph-152:before { /* KEYWORDS - DUP  */
+        content: "\E152";
+    }
+
+    &.icon-glyph-153:before { /* KEYWORDS - DUP  */
+        content: "\E153";
+    }
+
+    &.icon-glyph-154:before { /* KEYWORDS - DUP  */
+        content: "\E154";
+    }
+
+    &.icon-glyph-155:before { /* KEYWORDS - DUP  */
+        content: "\E155";
+    }
+
+    &.icon-glyph-156:before { /* KEYWORDS - DUP  */
+        content: "\E156";
+    }
+
+    &.icon-glyph-158:before { /* KEYWORDS - DUP  */
+        content: "\E158";
+    }
+
+    &.icon-glyph-159:before { /* KEYWORDS - DUP  */
+        content: "\E159";
+    }
+
+    &.icon-glyph-15A:before { /* KEYWORDS - DUP  */
+        content: "\E15A";
+    }
+
+    &.icon-glyph-15B:before { /* KEYWORDS - DUP  */
+        content: "\E15B";
+    }
+
+    &.icon-glyph-15C:before { /* KEYWORDS - DUP  */
+        content: "\E15C";
+    }
+
+    &.icon-glyph-15E:before { /* KEYWORDS - DUP  */
+        content: "\E15E";
+    }
+
+    &.icon-glyph-15F:before { /* KEYWORDS - DUP  */
+        content: "\E15F";
+    }
+
+    &.icon-glyph-160:before { /* KEYWORDS - DUP  */
+        content: "\E160";
+    }
+
+    &.icon-glyph-161:before { /* KEYWORDS - DUP  */
+        content: "\E161";
+    }
+
+    &.icon-glyph-162:before { /* KEYWORDS - DUP  */
+        content: "\E162";
+    }
+
+    &.icon-glyph-163:before { /* KEYWORDS - DUP  */
+        content: "\E163";
+    }
+
+    &.icon-glyph-165:before { /* KEYWORDS - DUP  */
+        content: "\E165";
+    }
+
+    &.icon-glyph-16B:before { /* KEYWORDS - DUP  */
+        content: "\E16B";
+    }
+
+    &.icon-glyph-16D:before { /* KEYWORDS - DUP  */
+        content: "\E16D";
+    }
+
+    &.icon-glyph-16E:before { /* KEYWORDS - DUP  */
+        content: "\E16E";
+    }
+
+    &.icon-glyph-172:before { /* KEYWORDS - DUP  */
+        content: "\E172";
+    }
+
+    &.icon-glyph-173:before { /* KEYWORDS - DUP  */
+        content: "\E173";
+    }
+
+    &.icon-glyph-174:before { /* KEYWORDS - DUP  */
+        content: "\E174";
+    }
+
+    &.icon-glyph-176:before { /* KEYWORDS - DUP  */
+        content: "\E176";
+    }
+
+    &.icon-glyph-177:before { /* KEYWORDS - DUP  */
+        content: "\E177";
+    }
+
+    &.icon-glyph-178:before { /* KEYWORDS - DUP  */
+        content: "\E178";
+    }
+
+    &.icon-glyph-179:before { /* KEYWORDS - DUP  */
+        content: "\E179";
+    }
+
+    &.icon-glyph-17C:before { /* KEYWORDS - DUP  */
+        content: "\E17C";
+    }
+
+    &.icon-glyph-17D:before { /* KEYWORDS - DUP  */
+        content: "\E17D";
+    }
+
+    &.icon-glyph-182:before { /* KEYWORDS - DUP  */
+        content: "\E182";
+    }
+
+    &.icon-glyph-183:before { /* KEYWORDS - DUP  */
+        content: "\E183";
+    }
+
+    &.icon-glyph-184:before { /* KEYWORDS - DUP  */
+        content: "\E184";
+    }
+
+    &.icon-glyph-185:before { /* KEYWORDS - DUP  */
+        content: "\E185";
+    }
+
+    &.icon-glyph-186:before { /* KEYWORDS - DUP  */
+        content: "\E186";
+    }
+
+    &.icon-glyph-187:before { /* KEYWORDS - DUP  */
+        content: "\E187";
+    }
+
+    &.icon-glyph-188:before { /* KEYWORDS - DUP  */
+        content: "\E188";
+    }
+
+    &.icon-glyph-189:before { /* KEYWORDS - DUP  */
+        content: "\E189";
+    }
+
+    &.icon-glyph-18A:before { /* KEYWORDS - DUP  */
+        content: "\E18A";
+    }
+
+    &.icon-glyph-18B:before { /* KEYWORDS - DUP  */
+        content: "\E18B";
+    }
+
+    &.icon-glyph-18C:before { /* KEYWORDS - DUP  */
+        content: "\E18C";
+    }
+
+    &.icon-glyph-18D:before { /* KEYWORDS - DUP  */
+        content: "\E18D";
+    }
+
+    &.icon-glyph-18E:before { /* KEYWORDS - LANG  */
+        content: "\E18E";
+    }
+
+    &.icon-glyph-18F:before { /* KEYWORDS - DUP  */
+        content: "\E18F";
+    }
+
+    &.icon-glyph-191:before { /* KEYWORDS - DUP  */
+        content: "\E191";
+    }
+
+    &.icon-glyph-192:before { /* KEYWORDS - DUP  */
+        content: "\E192";
+    }
+
+    &.icon-glyph-193:before { /* KEYWORDS - DUP  */
+        content: "\E193";
+    }
+
+    &.icon-glyph-194:before { /* KEYWORDS - DUP  */
+        content: "\E194";
+    }
+
+    &.icon-glyph-196:before { /* KEYWORDS - DUP  */
+        content: "\E196";
+    }
+
+    &.icon-glyph-197:before { /* KEYWORDS - DUP  */
+        content: "\E197";
+    }
+
+    &.icon-glyph-198:before { /* KEYWORDS - DUP  */
+        content: "\E198";
+    }
+
+    &.icon-glyph-19A:before { /* KEYWORDS - DUP  */
+        content: "\E19A";
+    }
+
+    &.icon-glyph-19B:before { /* KEYWORDS - DUP  */
+        content: "\E19B";
+    }
+
+    &.icon-glyph-19C:before { /* KEYWORDS - DUP  */
+        content: "\E19C";
+    }
+
+    &.icon-glyph-1A0:before { /* KEYWORDS - DUP  */
+        content: "\E1A0";
+    }
+
+    &.icon-glyph-1A1:before { /* KEYWORDS - DUP  */
+        content: "\E1A1";
+    }
+
+    &.icon-glyph-1A2:before { /* KEYWORDS - DUP  */
+        content: "\E1A2";
+    }
+
+    &.icon-glyph-1A3:before { /* KEYWORDS - DUP  */
+        content: "\E1A3";
+    }
+
+    &.icon-glyph-1A5:before { /* KEYWORDS - DUP  */
+        content: "\E1A5";
+    }
+
+    &.icon-glyph-1A6:before { /* KEYWORDS - DUP  */
+        content: "\E1A6";
+    }
+
+    &.icon-glyph-1A7:before { /* KEYWORDS - DUP  */
+        content: "\E1A7";
+    }
+
+    &.icon-glyph-1A8:before { /* KEYWORDS - DUP  */
+        content: "\E1A8";
+    }
+
+    &.icon-glyph-1AA:before { /* KEYWORDS - DUP  */
+        content: "\E1AA";
+    }
+
+    &.icon-glyph-1AB:before { /* KEYWORDS - DUP  */
+        content: "\E1AB";
+    }
+
+    &.icon-glyph-1AC:before { /* KEYWORDS - DUP  */
+        content: "\E1AC";
+    }
+
+    &.icon-glyph-1AD:before { /* KEYWORDS - DUP  */
+        content: "\E1AD";
+    }
+
+    &.icon-glyph-1AE:before { /* KEYWORDS - DUP  */
+        content: "\E1AE";
+    }
+
+    &.icon-glyph-1AF:before { /* KEYWORDS - DUP  */
+        content: "\E1AF";
+    }
+
+    &.icon-glyph-1B0:before { /* KEYWORDS - DUP  */
+        content: "\E1B0";
+    }
+
+    &.icon-glyph-1B1:before { /* KEYWORDS - DUP  */
+        content: "\E1B1";
+    }
+
+    &.icon-glyph-1B2:before { /* KEYWORDS - DUP  */
+        content: "\E1B2";
+    }
+
+    &.icon-glyph-1B3:before { /* KEYWORDS - DUP  */
+        content: "\E1B3";
+    }
+
+    &.icon-glyph-1B4:before { /* KEYWORDS - DUP  */
+        content: "\E1B4";
+    }
+
+    &.icon-glyph-1B5:before { /* KEYWORDS - DUP  */
+        content: "\E1B5";
+    }
+
+    &.icon-glyph-1B6:before { /* KEYWORDS - DUP  */
+        content: "\E1B6";
+    }
+
+    &.icon-glyph-1B7:before { /* KEYWORDS - DUP  */
+        content: "\E1B7";
+    }
+
+    &.icon-glyph-1B8:before { /* KEYWORDS - DUP  */
+        content: "\E1B8";
+    }
+
+    &.icon-glyph-1B9:before { /* KEYWORDS - LANG  */
+        content: "\E1B9";
+    }
+
+    &.icon-glyph-1BA:before { /* KEYWORDS - LANG  */
+        content: "\E1BA";
+    }
+
+    &.icon-glyph-1BB:before { /* KEYWORDS - LANG  */
+        content: "\E1BB";
+    }
+
+    &.icon-glyph-1BC:before { /* KEYWORDS - LANG  */
+        content: "\E1BC";
+    }
+
+    &.icon-glyph-1BD:before { /* KEYWORDS - LANG  */
+        content: "\E1BD";
+    }
+
+    &.icon-glyph-1BE:before { /* KEYWORDS - LANG  */
+        content: "\E1BE";
+    }
+
+    &.icon-glyph-1BF:before { /* KEYWORDS - DUP  */
+        content: "\E1BF";
+    }
+
+    &.icon-glyph-1C0:before { /* KEYWORDS - DUP  */
+        content: "\E1C0";
+    }
+
+    &.icon-glyph-1C2:before { /* KEYWORDS - DUP  */
+        content: "\E1C2";
+    }
+
+    &.icon-glyph-1C6:before { /* KEYWORDS - DUP  */
+        content: "\E1C6";
+    }
+
+    &.icon-glyph-1C7:before { /* KEYWORDS - DUP  */
+        content: "\E1C7";
+    }
+
+    &.icon-glyph-1C8:before { /* KEYWORDS - DUP  */
+        content: "\E1C8";
+    }
+
+    &.icon-glyph-1CB:before { /* KEYWORDS - DUP  */
+        content: "\E1CB";
+    }
+
+    &.icon-glyph-1CC:before { /* KEYWORDS - DUP  */
+        content: "\E1CC";
+    }
+
+    &.icon-glyph-1D5:before { /* KEYWORDS - DUP  */
+        content: "\E1D5";
+    }
+
+    &.icon-glyph-1D6:before { /* KEYWORDS - DUP  */
+        content: "\E1D6";
+    }
+
+    &.icon-glyph-1D7:before { /* KEYWORDS - DUP  */
+        content: "\E1D7";
+    }
+
+    &.icon-glyph-1D8:before { /* KEYWORDS - DUP  */
+        content: "\E1D8";
+    }
+
+    &.icon-glyph-1D9:before { /* KEYWORDS - DUP  */
+        content: "\E1D9";
+    }
+
+    &.icon-glyph-1DA:before { /* KEYWORDS - DUP  */
+        content: "\E1DA";
+    }
+
+    &.icon-glyph-1DB:before { /* KEYWORDS - DUP  */
+        content: "\E1DB";
+    }
+
+    &.icon-glyph-1DD:before { /* KEYWORDS - DUP  */
+        content: "\E1DD";
+    }
+
+    &.icon-glyph-1DE:before { /* KEYWORDS - DUP  */
+        content: "\E1DE";
+    }
+
+    &.icon-glyph-1DF:before { /* KEYWORDS - DUP  */
+        content: "\E1DF";
+    }
+
+    &.icon-glyph-1E0:before { /* KEYWORDS - DUP  */
+        content: "\E1E0";
+    }
+
+    &.icon-glyph-1E1:before { /* KEYWORDS - DUP  */
+        content: "\E1E1";
+    }
+
+    &.icon-glyph-1E2:before { /* KEYWORDS - DUP  */
+        content: "\E1E2";
+    }
+
+    &.icon-glyph-1E5:before { /* KEYWORDS - DUP  */
+        content: "\E1E5";
+    }
+
+    &.icon-glyph-1E6:before { /* KEYWORDS - DUP  */
+        content: "\E1E6";
+    }
+
+    &.icon-glyph-1E7:before { /* KEYWORDS - DUP  */
+        content: "\E1E7";
+    }
+
+    &.icon-glyph-1E8:before { /* KEYWORDS - DUP  */
+        content: "\E1E8";
+    }
+
+    &.icon-glyph-1E9:before { /* KEYWORDS - DUP  */
+        content: "\E1E9";
+    }
+
+    &.icon-glyph-1EA:before { /* KEYWORDS - DUP  */
+        content: "\E1EA";
+    }
+
+    &.icon-glyph-1EE:before { /* KEYWORDS - DUP  */
+        content: "\E1EE";
+    }
+
+    &.icon-glyph-1EF:before { /* KEYWORDS - DUP  */
+        content: "\E1EF";
+    }
+
+    &.icon-glyph-1F1:before { /* KEYWORDS - DUP  */
+        content: "\E1F1";
+    }
+
+    &.icon-glyph-1F2:before { /* KEYWORDS - DUP  */
+        content: "\E1F2";
+    }
+
+    &.icon-glyph-1F4:before { /* KEYWORDS - DUP  */
+        content: "\E1F4";
+    }
+
+    &.icon-glyph-1F5:before { /* KEYWORDS - DUP  */
+        content: "\E1F5";
+    }
+
+    &.icon-glyph-1F6:before { /* KEYWORDS - DUP  */
+        content: "\E1F6";
+    }
+
+    &.icon-glyph-1F7:before { /* KEYWORDS - DUP  */
+        content: "\E1F7";
+    }
+
+    &.icon-glyph-1FD:before { /* KEYWORDS - DUP  */
+        content: "\E1FD";
+    }
+
+    &.icon-glyph-206:before { /* KEYWORDS - DUP  */
+        content: "\E206";
+    }
+
+    &.icon-glyph-208:before { /* KEYWORDS - DUP  */
+        content: "\E208";
+    }
+
+    &.icon-glyph-209:before { /* KEYWORDS - DUP  */
+        content: "\E209";
+    }
+
+    &.icon-glyph-20A:before { /* KEYWORDS - DUP  */
+        content: "\E20A";
+    }
+
+    &.icon-glyph-211:before { /* KEYWORDS - DUP  */
+        content: "\E211";
+    }
+
+    &.icon-glyph-228:before { /* KEYWORDS - DUP  */
+        content: "\E228";
+    }
+
+    &.icon-glyph-24A:before { /* KEYWORDS - DUP  */
+        content: "\E24A";
+    }
+
+    &.icon-glyph-26B:before { /* KEYWORDS - DUP  */
+        content: "\E26B";
+    }
+
+    &.icon-glyph-26C:before { /* KEYWORDS - DUP  */
+        content: "\E26C";
+    }
+
+    &.icon-glyph-28F:before { /* KEYWORDS - DUP  */
+        content: "\E28F";
+    }
+
+    &.icon-glyph-290:before { /* KEYWORDS - DUP  */
+        content: "\E290";
+    }
+
+    &.icon-glyph-291:before { /* KEYWORDS - DUP  */
+        content: "\E291";
+    }
+
+    &.icon-glyph-295:before { /* KEYWORDS - DUP  */
+        content: "\E295";
+    }
+
+    &.icon-glyph-297:before { /* KEYWORDS - DUP  */
+        content: "\E297";
+    }
+
+    &.icon-glyph-298:before { /* KEYWORDS - DUP  */
+        content: "\E298";
+    }
+
+    &.icon-glyph-299:before { /* KEYWORDS - DUP  */
+        content: "\E299";
+    }
+
+    &.icon-glyph-29B:before { /* KEYWORDS - DUP  */
+        content: "\E29B";
+    }
+
+    &.icon-glyph-2AC:before { /* KEYWORDS - DUP  */
+        content: "\E2AC";
+    }
+
+    &.icon-glyph-2AD:before { /* KEYWORDS - DUP  */
+        content: "\E2AD";
+    }
+
+    &.icon-glyph-2AE:before { /* KEYWORDS - DUP  */
+        content: "\E2AE";
+    }
+
+    &.icon-glyph-2AF:before { /* KEYWORDS - DUP  */
+        content: "\E2AF";
+    }
+
+    &.icon-glyph-2B0:before { /* KEYWORDS - DUP  */
+        content: "\E2B0";
+    }
+
+    &.icon-glyph-2B1:before { /* KEYWORDS - DUP  */
+        content: "\E2B1";
+    }
+
+    &.icon-glyph-2B2:before { /* KEYWORDS - DUP  */
+        content: "\E2B2";
+    }
+
+    &.icon-glyph-2B3:before { /* KEYWORDS - DUP  */
+        content: "\E2B3";
+    }
+
+    &.icon-glyph-2B4:before { /* KEYWORDS - DUP  */
+        content: "\E2B4";
+    }
+
+    &.icon-glyph-2F6:before { /* KEYWORDS - DUP  */
+        content: "\E2F6";
+    }
+
+    &.icon-glyph-2F7:before { /* KEYWORDS - DUP  */
+        content: "\E2F7";
+    }
+
+    &.icon-glyph-701:before { /* KEYWORDS - DUP  */
+        content: "\E701";
+    }
+
+    &.icon-glyph-702:before { /* KEYWORDS - DUP  */
+        content: "\E702";
+    }
+
+    &.icon-glyph-703:before { /* KEYWORDS - DUP  */
+        content: "\E703";
+    }
+
+    &.icon-glyph-704:before { /* KEYWORDS - DUP  */
+        content: "\E704";
+    }
+
+    &.icon-glyph-705:before { /* KEYWORDS - DUP  */
+        content: "\E705";
+    }
+
+    &.icon-glyph-709:before { /* KEYWORDS - DUP  */
+        content: "\E709";
+    }
+
+    &.icon-glyph-70B:before { /* KEYWORDS - DUP  */
+        content: "\E70B";
+    }
+
+    &.icon-glyph-70C:before { /* KEYWORDS - DUP  */
+        content: "\E70C";
+    }
+
+    &.icon-glyph-70D:before { /* KEYWORDS - DUP  */
+        content: "\E70D";
+    }
+
+    &.icon-glyph-70E:before { /* KEYWORDS - DUP  */
+        content: "\E70E";
+    }
+
+    &.icon-glyph-721:before { /* KEYWORDS - DUP  */
+        content: "\E721";
+    }
+
+    &.icon-glyph-725:before { /* KEYWORDS - DUP  */
+        content: "\E725";
+    }
+
+    &.icon-glyph-726:before { /* KEYWORDS - DUP  */
+        content: "\E726";
+    }
+
+    &.icon-glyph-727:before { /* KEYWORDS - DUP  */
+        content: "\E727";
+    }
+
+    &.icon-glyph-729:before { /* KEYWORDS - DUP  */
+        content: "\E729";
+    }
+
+    &.icon-glyph-72E:before { /* KEYWORDS - DUP  */
+        content: "\E72E";
+    }
+
+    &.icon-glyph-741:before { /* KEYWORDS - DUP  */
+        content: "\E741";
+    }
+
+    &.icon-glyph-742:before { /* KEYWORDS - DUP  */
+        content: "\E742";
+    }
+
+    &.icon-glyph-743:before { /* KEYWORDS - DUP  */
+        content: "\E743";
+    }
+
+    &.icon-glyph-744:before { /* KEYWORDS - DUP  */
+        content: "\E744";
+    }
+
+    &.icon-glyph-745:before { /* KEYWORDS - DUP  */
+        content: "\E745";
+    }
+
+    &.icon-glyph-746:before { /* KEYWORDS - DUP  */
+        content: "\E746";
+    }
+
+    &.icon-glyph-747:before { /* KEYWORDS - DUP  */
+        content: "\E747";
+    }
+
+    &.icon-glyph-748:before { /* KEYWORDS - DUP  */
+        content: "\E748";
+    }
+
+    &.icon-glyph-749:before { /* KEYWORDS - DUP  */
+        content: "\E749";
+    }
+
+    &.icon-glyph-74B:before { /* KEYWORDS - DUP  */
+        content: "\E74B";
+    }
+
+    &.icon-glyph-74C:before { /* KEYWORDS - DUP  */
+        content: "\E74C";
+    }
+
+    &.icon-glyph-750:before { /* KEYWORDS - DUP  */
+        content: "\E750";
+    }
+
+    &.icon-glyph-751:before { /* KEYWORDS - DUP  */
+        content: "\E751";
+    }
+
+    &.icon-glyph-752:before { /* KEYWORDS - DUP  */
+        content: "\E752";
+    }
+
+    &.icon-glyph-754:before { /* KEYWORDS - DUP  */
+        content: "\E754";
+    }
+
+    &.icon-glyph-755:before { /* KEYWORDS - DUP  */
+        content: "\E755";
+    }
+
+    &.icon-glyph-756:before { /* KEYWORDS - DUP  */
+        content: "\E756";
+    }
+
+    &.icon-glyph-759:before { /* KEYWORDS - DUP  */
+        content: "\E759";
+    }
+
+    &.icon-glyph-75A:before { /* KEYWORDS - DUP  */
+        content: "\E75A";
+    }
+
+    &.icon-glyph-75B:before { /* KEYWORDS - DUP  */
+        content: "\E75B";
+    }
+
+    &.icon-glyph-75C:before { /* KEYWORDS - DUP  */
+        content: "\E75C";
+    }
+
+    &.icon-glyph-75D:before { /* KEYWORDS - DUP  */
+        content: "\E75D";
+    }
+
+    &.icon-glyph-75E:before { /* KEYWORDS - DUP  */
+        content: "\E75E";
+    }
+
+    &.icon-glyph-75F:before { /* KEYWORDS - DUP  */
+        content: "\E75F";
+    }
+
+    &.icon-glyph-760:before { /* KEYWORDS - DUP  */
+        content: "\E760";
+    }
+
+    &.icon-glyph-761:before { /* KEYWORDS - DUP  */
+        content: "\E761";
+    }
+
+    &.icon-glyph-762:before { /* KEYWORDS - DUP  */
+        content: "\E762";
+    }
+
+    &.icon-glyph-763:before { /* KEYWORDS - DUP  */
+        content: "\E763";
+    }
+
+    &.icon-glyph-764:before { /* KEYWORDS - DUP  */
+        content: "\E764";
+    }
+
+    &.icon-glyph-766:before { /* KEYWORDS - DUP  */
+        content: "\E766";
+    }
+
+    &.icon-glyph-76B:before { /* KEYWORDS - DUP  */
+        content: "\E76B";
+    }
+
+    &.icon-glyph-76C:before { /* KEYWORDS - DUP  */
+        content: "\E76C";
+    }
+
+    &.icon-glyph-76D:before { /* KEYWORDS - DUP  */
+        content: "\E76D";
+    }
+
+    &.icon-glyph-76F:before { /* KEYWORDS - DUP  */
+        content: "\E76F";
+    }
+
+    &.icon-glyph-770:before { /* KEYWORDS - DUP  */
+        content: "\E770";
+    }
+
+    &.icon-glyph-772:before { /* KEYWORDS - DUP  */
+        content: "\E772";
+    }
+
+    &.icon-glyph-773:before { /* KEYWORDS - DUP  */
+        content: "\E773";
+    }
+
+    &.icon-glyph-776:before { /* KEYWORDS - DUP  */
+        content: "\E776";
+    }
+
+    &.icon-glyph-777:before { /* KEYWORDS - DUP  */
+        content: "\E777";
+    }
+
+    &.icon-glyph-783:before { /* KEYWORDS - DUP  */
+        content: "\E783";
+    }
+
+    &.icon-glyph-784:before { /* KEYWORDS - DUP  */
+        content: "\E784";
+    }
+
+    &.icon-glyph-785:before { /* KEYWORDS - DUP  */
+        content: "\E785";
+    }
+
+    &.icon-glyph-788:before { /* KEYWORDS - DUP  */
+        content: "\E788";
+    }
+
+    &.icon-glyph-789:before { /* KEYWORDS - DUP  */
+        content: "\E789";
+    }
+
+    &.icon-glyph-78D:before { /* KEYWORDS - DUP  */
+        content: "\E78D";
+    }
+
+    &.icon-glyph-78E:before { /* KEYWORDS - DUP  */
+        content: "\E78E";
+    }
+
+    &.icon-glyph-78F:before { /* KEYWORDS - DUP  */
+        content: "\E78F";
+    }
+
+    &.icon-glyph-790:before { /* KEYWORDS - DUP  */
+        content: "\E790";
+    }
+
+    &.icon-glyph-791:before { /* KEYWORDS - DUP  */
+        content: "\E791";
+    }
+
+    &.icon-glyph-792:before { /* KEYWORDS - DUP  */
+        content: "\E792";
+    }
+
+    &.icon-glyph-793:before { /* KEYWORDS - DUP  */
+        content: "\E793";
+    }
+
+    &.icon-glyph-794:before { /* KEYWORDS - DUP  */
+        content: "\E794";
+    }
+
+    &.icon-glyph-795:before { /* KEYWORDS - DUP  */
+        content: "\E795";
+    }
+
+    &.icon-glyph-796:before { /* KEYWORDS - DUP  */
+        content: "\E796";
+    }
+
+    &.icon-glyph-7A5:before { /* KEYWORDS - DUP  */
+        content: "\E7A5";
+    }
+
+    &.icon-glyph-7B7:before { /* KEYWORDS - DUP  */
+        content: "\E7B7";
+    }
+
+    &.icon-glyph-7BA:before { /* KEYWORDS - DUP  */
+        content: "\E7BA";
+    }
+
+    &.icon-glyph-7C4:before { /* KEYWORDS - DUP  */
+        content: "\E7C4";
+    }
+
+    &.icon-glyph-7C8:before { /* KEYWORDS - DUP  */
+        content: "\E7C8";
+    }
+
+    &.icon-glyph-7DE:before { /* KEYWORDS - DUP  */
+        content: "\E7DE";
+    }
+
+    &.icon-glyph-7E8:before { /* KEYWORDS - DUP  */
+        content: "\E7E8";
+    }
+
+    &.icon-glyph-7E9:before { /* KEYWORDS - DUP  */
+        content: "\E7E9";
+    }
+
+    &.icon-glyph-7EA:before { /* KEYWORDS - DUP  */
+        content: "\E7EA";
+    }
+
+    &.icon-glyph-7EB:before { /* KEYWORDS - DUP  */
+        content: "\E7EB";
+    }
+
+    &.icon-glyph-7EC:before { /* KEYWORDS - DUP  */
+        content: "\E7EC";
+    }
+
+    &.icon-glyph-7ED:before { /* KEYWORDS - DUP  */
+        content: "\E7ED";
+    }
+
+    &.icon-glyph-7F1:before { /* KEYWORDS - DUP  */
+        content: "\E7F1";
+    }
+
+    &.icon-glyph-7F2:before { /* KEYWORDS - DUP  */
+        content: "\E7F2";
+    }
+
+    &.icon-glyph-7F3:before { /* KEYWORDS - DUP  */
+        content: "\E7F3";
+    }
+
+    &.icon-glyph-7F4:before { /* KEYWORDS - DUP  */
+        content: "\E7F4";
+    }
+
+    &.icon-glyph-7F5:before { /* KEYWORDS - DUP  */
+        content: "\E7F5";
+    }
+
+    &.icon-glyph-7F6:before { /* KEYWORDS - DUP  */
+        content: "\E7F6";
+    }
+
+    &.icon-glyph-7F7:before { /* KEYWORDS - DUP  */
+        content: "\E7F7";
+    }
+
+    &.icon-glyph-7F8:before { /* KEYWORDS - DUP  */
+        content: "\E7F8";
+    }
+
+    &.icon-glyph-7FB:before { /* KEYWORDS - DUP  */
+        content: "\E7FB";
+    }
+
+    &.icon-glyph-7FC:before { /* KEYWORDS - DUP  */
+        content: "\E7FC";
+    }
+
+    &.icon-glyph-7FD:before { /* KEYWORDS - DUP  */
+        content: "\E7FD";
+    }
+
+    &.icon-glyph-802:before { /* KEYWORDS - DUP  */
+        content: "\E802";
+    }
+
+    &.icon-glyph-803:before { /* KEYWORDS - DUP  */
+        content: "\E803";
+    }
+
+    &.icon-glyph-804:before { /* KEYWORDS - DUP  */
+        content: "\E804";
+    }
+
+    &.icon-glyph-805:before { /* KEYWORDS - DUP  */
+        content: "\E805";
+    }
+
+    &.icon-glyph-806:before { /* KEYWORDS - DUP  */
+        content: "\E806";
+    }
+
+    &.icon-glyph-809:before { /* KEYWORDS - DUP  */
+        content: "\E809";
+    }
+
+    &.icon-glyph-80A:before { /* KEYWORDS - DUP  */
+        content: "\E80A";
+    }
+
+    &.icon-glyph-80C:before { /* KEYWORDS - DUP  */
+        content: "\E80C";
+    }
+
+    &.icon-glyph-80D:before { /* KEYWORDS - DUP  */
+        content: "\E80D";
+    }
+
+    &.icon-glyph-811:before { /* KEYWORDS - DUP  */
+        content: "\E811";
+    }
+
+    &.icon-glyph-812:before { /* KEYWORDS - DUP  */
+        content: "\E812";
+    }
+
+    &.icon-glyph-813:before { /* KEYWORDS - DUP  */
+        content: "\E813";
+    }
+
+    &.icon-glyph-814:before { /* KEYWORDS - DUP  */
+        content: "\E814";
+    }
+
+    &.icon-glyph-815:before { /* KEYWORDS - DUP  */
+        content: "\E815";
+    }
+
+    &.icon-glyph-816:before { /* KEYWORDS - DUP  */
+        content: "\E816";
+    }
+
+    &.icon-glyph-817:before { /* KEYWORDS - LANG  */
+        content: "\E817";
+    }
+
+    &.icon-glyph-818:before { /* KEYWORDS - LANG  */
+        content: "\E818";
+    }
+
+    &.icon-glyph-819:before { /* KEYWORDS - DUP  */
+        content: "\E819";
+    }
+
+    &.icon-glyph-81A:before { /* KEYWORDS - DUP  */
+        content: "\E81A";
+    }
+
+    &.icon-glyph-81B:before { /* KEYWORDS - DUP  */
+        content: "\E81B";
+    }
+
+    &.icon-glyph-81C:before { /* KEYWORDS - DUP  */
+        content: "\E81C";
+    }
+
+    &.icon-glyph-81E:before { /* KEYWORDS - DUP  */
+        content: "\E81E";
+    }
+
+    &.icon-glyph-81F:before { /* KEYWORDS - DUP  */
+        content: "\E81F";
+    }
+
+    &.icon-glyph-820:before { /* KEYWORDS - LANG  */
+        content: "\E820";
+    }
+
+    &.icon-glyph-821:before { /* KEYWORDS - DUP  */
+        content: "\E821";
+    }
+
+    &.icon-glyph-822:before { /* KEYWORDS - DUP  */
+        content: "\E822";
+    }
+
+    &.icon-glyph-823:before { /* KEYWORDS - DUP  */
+        content: "\E823";
+    }
+
+    &.icon-glyph-824:before { /* KEYWORDS - LANG  */
+        content: "\E824";
+    }
+
+    &.icon-glyph-826:before { /* KEYWORDS - DUP  */
+        content: "\E826";
+    }
+
+    &.icon-glyph-827:before { /* KEYWORDS - LANG  */
+        content: "\E827";
+    }
+
+    &.icon-glyph-828:before { /* KEYWORDS - LANG  */
+        content: "\E828";
+    }
+
+    &.icon-glyph-829:before { /* KEYWORDS - DUP  */
+        content: "\E829";
+    }
+
+    &.icon-glyph-82A:before { /* KEYWORDS - DUP  */
+        content: "\E82A";
+    }
+
+    &.icon-glyph-82B:before { /* KEYWORDS - DUP  */
+        content: "\E82B";
+    }
+
+    &.icon-glyph-82C:before { /* KEYWORDS - DUP  */
+        content: "\E82C";
+    }
+
+    &.icon-glyph-82F:before { /* KEYWORDS - DUP  */
+        content: "\E82F";
+    }
+
+    &.icon-glyph-831:before { /* KEYWORDS - LANG  */
+        content: "\E831";
+    }
+
+    &.icon-glyph-832:before { /* KEYWORDS - LANG  */
+        content: "\E832";
+    }
+
+    &.icon-glyph-833:before { /* KEYWORDS - LANG  */
+        content: "\E833";
+    }
+
+    &.icon-glyph-834:before { /* KEYWORDS - LANG  */
+        content: "\E834";
+    }
+
+    &.icon-glyph-835:before { /* KEYWORDS - DUP  */
+        content: "\E835";
+    }
+
+    &.icon-glyph-836:before { /* KEYWORDS - DUP  */
+        content: "\E836";
+    }
+
+    &.icon-glyph-837:before { /* KEYWORDS - LANG  */
+        content: "\E837";
+    }
+
+    &.icon-glyph-838:before { /* KEYWORDS - LANG  */
+        content: "\E838";
+    }
+
+    &.icon-glyph-839:before { /* KEYWORDS - DUP  */
+        content: "\E839";
+    }
+
+    &.icon-glyph-83A:before { /* KEYWORDS - DUP  */
+        content: "\E83A";
+    }
+
+    &.icon-glyph-83C:before { /* KEYWORDS - DUP  */
+        content: "\E83C";
+    }
+
+    &.icon-glyph-840:before { /* KEYWORDS - DUP  */
+        content: "\E840";
+    }
+
+    &.icon-glyph-841:before { /* KEYWORDS - DUP  */
+        content: "\E841";
+    }
+
+    &.icon-glyph-842:before { /* KEYWORDS - DUP  */
+        content: "\E842";
+    }
+
+    &.icon-glyph-844:before { /* KEYWORDS - DUP  */
+        content: "\E844";
+    }
+
+    &.icon-glyph-845:before { /* KEYWORDS - DUP  */
+        content: "\E845";
+    }
+
+    &.icon-glyph-846:before { /* KEYWORDS - DUP  */
+        content: "\E846";
+    }
+
+    &.icon-glyph-847:before { /* KEYWORDS - DUP  */
+        content: "\E847";
+    }
+
+    &.icon-glyph-84A:before { /* KEYWORDS - DUP  */
+        content: "\E84A";
+    }
+
+    &.icon-glyph-84B:before { /* KEYWORDS - DUP  */
+        content: "\E84B";
+    }
+
+    &.icon-glyph-84C:before { /* KEYWORDS - DUP  */
+        content: "\E84C";
+    }
+
+    &.icon-glyph-84D:before { /* KEYWORDS - DUP  */
+        content: "\E84D";
+    }
+
+    &.icon-glyph-84E:before { /* KEYWORDS - DUP  */
+        content: "\E84E";
+    }
+
+    &.icon-glyph-84F:before { /* KEYWORDS - DUP  */
+        content: "\E84F";
+    }
+
+    &.icon-glyph-86C:before { /* KEYWORDS - DUP  */
+        content: "\E86C";
+    }
+
+    &.icon-glyph-86D:before { /* KEYWORDS - DUP  */
+        content: "\E86D";
+    }
+
+    &.icon-glyph-86E:before { /* KEYWORDS - DUP  */
+        content: "\E86E";
+    }
+
+    &.icon-glyph-86F:before { /* KEYWORDS - DUP  */
+        content: "\E86F";
+    }
+
+    &.icon-glyph-870:before { /* KEYWORDS - DUP  */
+        content: "\E870";
+    }
+
+    &.icon-glyph-871:before { /* KEYWORDS - DUP  */
+        content: "\E871";
+    }
+
+    &.icon-glyph-872:before { /* KEYWORDS - DUP  */
+        content: "\E872";
+    }
+
+    &.icon-glyph-873:before { /* KEYWORDS - DUP  */
+        content: "\E873";
+    }
+
+    &.icon-glyph-874:before { /* KEYWORDS - DUP  */
+        content: "\E874";
+    }
+
+    &.icon-glyph-875:before { /* KEYWORDS - DUP  */
+        content: "\E875";
+    }
+
+    &.icon-glyph-876:before { /* KEYWORDS - DUP  */
+        content: "\E876";
+    }
+
+    &.icon-glyph-877:before { /* KEYWORDS - DUP  */
+        content: "\E877";
+    }
+
+    &.icon-glyph-878:before { /* KEYWORDS - DUP  */
+        content: "\E878";
+    }
+
+    &.icon-glyph-879:before { /* KEYWORDS - DUP  */
+        content: "\E879";
+    }
+
+    &.icon-glyph-87A:before { /* KEYWORDS - DUP  */
+        content: "\E87A";
+    }
+
+    &.icon-glyph-87B:before { /* KEYWORDS - DUP  */
+        content: "\E87B";
+    }
+
+    &.icon-glyph-87C:before { /* KEYWORDS - LANG  */
+        content: "\E87C";
+    }
+
+    &.icon-glyph-87D:before { /* KEYWORDS - LANG  */
+        content: "\E87D";
+    }
+
+    &.icon-glyph-87E:before { /* KEYWORDS - LANG  */
+        content: "\E87E";
+    }
+
+    &.icon-glyph-87F:before { /* KEYWORDS - DUP  */
+        content: "\E87F";
+    }
+
+    &.icon-glyph-880:before { /* KEYWORDS - DUP  */
+        content: "\E880";
+    }
+
+    &.icon-glyph-881:before { /* KEYWORDS - DUP  */
+        content: "\E881";
+    }
+
+    &.icon-glyph-882:before { /* KEYWORDS - DUP  */
+        content: "\E882";
+    }
+
+    &.icon-glyph-883:before { /* KEYWORDS - DUP  */
+        content: "\E883";
+    }
+
+    &.icon-glyph-884:before { /* KEYWORDS - DUP  */
+        content: "\E884";
+    }
+
+    &.icon-glyph-885:before { /* KEYWORDS - DUP  */
+        content: "\E885";
+    }
+
+    &.icon-glyph-886:before { /* KEYWORDS - DUP  */
+        content: "\E886";
+    }
+
+    &.icon-glyph-887:before { /* KEYWORDS - DUP  */
+        content: "\E887";
+    }
+
+    &.icon-glyph-888:before { /* KEYWORDS - DUP  */
+        content: "\E888";
+    }
+
+    &.icon-glyph-889:before { /* KEYWORDS - DUP  */
+        content: "\E889";
+    }
+
+    &.icon-glyph-88A:before { /* KEYWORDS - DUP  */
+        content: "\E88A";
+    }
+
+    &.icon-glyph-88B:before { /* KEYWORDS - LANG  */
+        content: "\E88B";
+    }
+
+    &.icon-glyph-88C:before { /* KEYWORDS - LANG  */
+        content: "\E88C";
+    }
+
+    &.icon-glyph-88D:before { /* KEYWORDS - LANG  */
+        content: "\E88D";
+    }
+
+    &.icon-glyph-88F:before { /* KEYWORDS - DUP  */
+        content: "\E88F";
+    }
+
+    &.icon-glyph-891:before { /* KEYWORDS - DUP  */
+        content: "\E891";
+    }
+
+    &.icon-glyph-8A7:before { /* KEYWORDS - DUP  */
+        content: "\E8A7";
+    }
+
+    &.icon-glyph-8AE:before { /* KEYWORDS - DUP  */
+        content: "\E8AE";
+    }
+
+    &.icon-glyph-8B0:before { /* KEYWORDS - DUP  */
+        content: "\E8B0";
+    }
+
+    &.icon-glyph-8B9:before { /* KEYWORDS - DUP  */
+        content: "\E8B9";
+    }
+
+    &.icon-glyph-8BB:before { /* KEYWORDS - DUP  */
+        content: "\E8BB";
+    }
+
+    &.icon-glyph-8BE:before { /* KEYWORDS - DUP  */
+        content: "\E8BE";
+    }
+
+    &.icon-glyph-8C0:before { /* KEYWORDS - DUP  */
+        content: "\E8C0";
+    }
+
+    &.icon-glyph-8D5:before { /* KEYWORDS - DUP  */
+        content: "\E8D5";
+    }
+
+    &.icon-glyph-8F2:before { /* KEYWORDS - DUP  */
+        content: "\E8F2";
+    }
+
+    &.icon-glyph-914:before { /* KEYWORDS - DUP  */
+        content: "\E914";
+    }
+
+    &.icon-glyph-915:before { /* KEYWORDS - DUP  */
+        content: "\E915";
+    }
+
+    &.icon-glyph-916:before { /* KEYWORDS - DUP  */
+        content: "\E916";
+    }
+
+    &.icon-glyph-91B:before { /* KEYWORDS - DUP  */
+        content: "\E91B";
+    }
+
+    &.icon-glyph-91F:before { /* KEYWORDS - DUP  */
+        content: "\E91F";
+    }
+
+    &.icon-glyph-921:before { /* KEYWORDS - DUP  */
+        content: "\E921";
+    }
+
+    &.icon-glyph-922:before { /* KEYWORDS - DUP  */
+        content: "\E922";
+    }
+
+    &.icon-glyph-923:before { /* KEYWORDS - DUP  */
+        content: "\E923";
+    }
+
+    &.icon-glyph-925:before { /* KEYWORDS - DUP  */
+        content: "\E925";
+    }
+
+    &.icon-glyph-926:before { /* KEYWORDS - DUP  */
+        content: "\E926";
+    }
+
+    &.icon-glyph-927:before { /* KEYWORDS - DUP  */
+        content: "\E927";
+    }
+
+    &.icon-glyph-928:before { /* KEYWORDS - DUP  */
+        content: "\E928";
+    }
+
+    &.icon-glyph-92C:before { /* KEYWORDS - DUP  */
+        content: "\E92C";
+    }
+
+    &.icon-glyph-92D:before { /* KEYWORDS - DUP  */
+        content: "\E92D";
+    }
+
+    &.icon-glyph-92E:before { /* KEYWORDS - DUP  */
+        content: "\E92E";
+    }
+
+    &.icon-glyph-92F:before { /* KEYWORDS - DUP  */
+        content: "\E92F";
+    }
+
+    &.icon-glyph-930:before { /* KEYWORDS - DUP  */
+        content: "\E930";
+    }
+
+    &.icon-glyph-931:before { /* KEYWORDS - DUP  */
+        content: "\E931";
+    }
+
+    &.icon-glyph-933:before { /* KEYWORDS - DUP  */
+        content: "\E933";
+    }
+
+    &.icon-glyph-934:before { /* KEYWORDS - DUP  */
+        content: "\E934";
+    }
+
+    &.icon-glyph-935:before { /* KEYWORDS - DUP  */
+        content: "\E935";
+    }
+
+    &.icon-glyph-936:before { /* KEYWORDS - DUP  */
+        content: "\E936";
+    }
+
+    &.icon-glyph-937:before { /* KEYWORDS - DUP  */
+        content: "\E937";
+    }
+
+    &.icon-glyph-938:before { /* KEYWORDS - DUP  */
+        content: "\E938";
+    }
+
+    &.icon-glyph-939:before { /* KEYWORDS - DUP  */
+        content: "\E939";
+    }
+
+    &.icon-glyph-943:before { /* KEYWORDS - DUP  */
+        content: "\E943";
+    }
+
+    &.icon-glyph-944:before { /* KEYWORDS - DUP  */
+        content: "\E944";
+    }
+
+    &.icon-glyph-946:before { /* KEYWORDS - DUP  */
+        content: "\E946";
+    }
+
+    &.icon-glyph-947:before { /* KEYWORDS - DUP  */
+        content: "\E947";
+    }
+
+    &.icon-glyph-948:before { /* KEYWORDS - DUP  */
+        content: "\E948";
+    }
+
+    &.icon-glyph-949:before { /* KEYWORDS - DUP  */
+        content: "\E949";
+    }
+
+    &.icon-glyph-94A:before { /* KEYWORDS - DUP  */
+        content: "\E94A";
+    }
+
+    &.icon-glyph-94B:before { /* KEYWORDS - DUP  */
+        content: "\E94B";
+    }
+
+    &.icon-glyph-94C:before { /* KEYWORDS - DUP  */
+        content: "\E94C";
+    }
+
+    &.icon-glyph-94D:before { /* KEYWORDS - DUP  */
+        content: "\E94D";
+    }
+
+    &.icon-glyph-94E:before { /* KEYWORDS - DUP  */
+        content: "\E94E";
+    }
+
+    &.icon-glyph-94F:before { /* KEYWORDS - DUP  */
+        content: "\E94F";
+    }
+
+    &.icon-glyph-950:before { /* KEYWORDS - DUP  */
+        content: "\E950";
+    }
+
+    &.icon-glyph-952:before { /* KEYWORDS - DUP  */
+        content: "\E952";
+    }
+
+    &.icon-glyph-953:before { /* KEYWORDS - DUP  */
+        content: "\E953";
+    }
+
+    &.icon-glyph-954:before { /* KEYWORDS - DUP  */
+        content: "\E954";
+    }
+
+    &.icon-glyph-956:before { /* KEYWORDS - DUP  */
+        content: "\E956";
+    }
+
+    &.icon-glyph-957:before { /* KEYWORDS - DUP  */
+        content: "\E957";
+    }
+
+    &.icon-glyph-95B:before { /* KEYWORDS - DUP  */
+        content: "\E95B";
+    }
+
+    &.icon-glyph-95D:before { /* KEYWORDS - DUP  */
+        content: "\E95D";
+    }
+
+    &.icon-glyph-95E:before { /* KEYWORDS - DUP  */
+        content: "\E95E";
+    }
+
+    &.icon-glyph-960:before { /* KEYWORDS - DUP  */
+        content: "\E960";
+    }
+
+    &.icon-glyph-961:before { /* KEYWORDS - DUP  */
+        content: "\E961";
+    }
+
+    &.icon-glyph-962:before { /* KEYWORDS - DUP  */
+        content: "\E962";
+    }
+
+    &.icon-glyph-963:before { /* KEYWORDS - DUP  */
+        content: "\E963";
+    }
+
+    &.icon-glyph-966:before { /* KEYWORDS - DUP  */
+        content: "\E966";
+    }
+
+    &.icon-glyph-967:before { /* KEYWORDS - DUP  */
+        content: "\E967";
+    }
+
+    &.icon-glyph-968:before { /* KEYWORDS - DUP  */
+        content: "\E968";
+    }
+
+    &.icon-glyph-96A:before { /* KEYWORDS - DUP  */
+        content: "\E96A";
+    }
+
+    &.icon-glyph-96D:before { /* KEYWORDS - DUP  */
+        content: "\E96D";
+    }
+
+    &.icon-glyph-96E:before { /* KEYWORDS - DUP  */
+        content: "\E96E";
+    }
+
+    &.icon-glyph-96F:before { /* KEYWORDS - DUP  */
+        content: "\E96F";
+    }
+
+    &.icon-glyph-970:before { /* KEYWORDS - DUP  */
+        content: "\E970";
+    }
+
+    &.icon-glyph-971:before { /* KEYWORDS - DUP  */
+        content: "\E971";
+    }
+
+    &.icon-glyph-972:before { /* KEYWORDS - DUP  */
+        content: "\E972";
+    }
+
+    &.icon-glyph-973:before { /* KEYWORDS - DUP  */
+        content: "\E973";
+    }
+
+    &.icon-glyph-974:before { /* KEYWORDS - DUP  */
+        content: "\E974";
+    }
+
+    &.icon-glyph-975:before { /* KEYWORDS - DUP  */
+        content: "\E975";
+    }
+
+    &.icon-glyph-976:before { /* KEYWORDS - DUP  */
+        content: "\E976";
+    }
+
+    &.icon-glyph-977:before { /* KEYWORDS - DUP  */
+        content: "\E977";
+    }
+
+    &.icon-glyph-978:before { /* KEYWORDS - DUP  */
+        content: "\E978";
+    }
+
+    &.icon-glyph-979:before { /* KEYWORDS - DUP  */
+        content: "\E979";
+    }
+
+    &.icon-glyph-97A:before { /* KEYWORDS - DUP  */
+        content: "\E97A";
+    }
+
+    &.icon-glyph-97C:before { /* KEYWORDS - DUP  */
+        content: "\E97C";
+    }
+
+    &.icon-glyph-97D:before { /* KEYWORDS - LANG  */
+        content: "\E97D";
+    }
+
+    &.icon-glyph-97E:before { /* KEYWORDS - DUP  */
+        content: "\E97E";
+    }
+
+    &.icon-glyph-97F:before { /* KEYWORDS - DUP  */
+        content: "\E97F";
+    }
+
+    &.icon-glyph-980:before { /* KEYWORDS - LANG  */
+        content: "\E980";
+    }
+
+    &.icon-glyph-981:before { /* KEYWORDS - LANG  */
+        content: "\E981";
+    }
+
+    &.icon-glyph-982:before { /* KEYWORDS - LANG  */
+        content: "\E982";
+    }
+
+    &.icon-glyph-983:before { /* KEYWORDS - LANG  */
+        content: "\E983";
+    }
+
+    &.icon-glyph-984:before { /* KEYWORDS - LANG  */
+        content: "\E984";
+    }
+
+    &.icon-glyph-985:before { /* KEYWORDS - LANG  */
+        content: "\E985";
+    }
+
+    &.icon-glyph-986:before { /* KEYWORDS - LANG  */
+        content: "\E986";
+    }
+
+    &.icon-glyph-987:before { /* KEYWORDS - LANG  */
+        content: "\E987";
+    }
+
+    &.icon-glyph-988:before { /* KEYWORDS - LANG  */
+        content: "\E988";
+    }
+
+    &.icon-glyph-989:before { /* KEYWORDS - LANG  */
+        content: "\E989";
+    }
+
+    &.icon-glyph-98A:before { /* KEYWORDS - LANG  */
+        content: "\E98A";
+    }
+
+    &.icon-glyph-992:before { /* KEYWORDS - DUP  */
+        content: "\E992";
+    }
+
+    &.icon-glyph-993:before { /* KEYWORDS - DUP  */
+        content: "\E993";
+    }
+
+    &.icon-glyph-994:before { /* KEYWORDS - DUP  */
+        content: "\E994";
+    }
+
+    &.icon-glyph-995:before { /* KEYWORDS - DUP  */
+        content: "\E995";
+    }
+
+    &.icon-glyph-998:before { /* KEYWORDS - DUP  */
+        content: "\E998";
+    }
+
+    &.icon-glyph-9A8:before { /* KEYWORDS - DUP  */
+        content: "\E9A8";
+    }
+
+    &.icon-glyph-9A9:before { /* KEYWORDS - DUP  */
+        content: "\E9A9";
+    }
+
+    &.icon-glyph-9AA:before { /* KEYWORDS - DUP  */
+        content: "\E9AA";
+    }
+
+    &.icon-glyph-9AB:before { /* KEYWORDS - DUP  */
+        content: "\E9AB";
+    }
+
+    &.icon-glyph-9AC:before { /* KEYWORDS - DUP  */
+        content: "\E9AC";
+    }
+
+    &.icon-glyph-9AE:before { /* KEYWORDS - DUP  */
+        content: "\E9AE";
+    }
+
+    &.icon-glyph-9AF:before { /* KEYWORDS - LANG  */
+        content: "\E9AF";
+    }
+
+    &.icon-glyph-9B3:before { /* KEYWORDS - DUP  */
+        content: "\E9B3";
+    }
+
+    &.icon-glyph-9B4:before { /* KEYWORDS - DUP  */
+        content: "\E9B4";
+    }
+
+    &.icon-glyph-9B5:before { /* KEYWORDS - DUP  */
+        content: "\E9B5";
+    }
+
+    &.icon-glyph-9B6:before { /* KEYWORDS - DUP  */
+        content: "\E9B6";
+    }
+
+    &.icon-glyph-9B7:before { /* KEYWORDS - DUP  */
+        content: "\E9B7";
+    }
+
+    &.icon-glyph-9B8:before { /* KEYWORDS - DUP  */
+        content: "\E9B8";
+    }
+
+    &.icon-glyph-9B9:before { /* KEYWORDS - DUP  */
+        content: "\E9B9";
+    }
+
+    &.icon-glyph-9BA:before { /* KEYWORDS - DUP  */
+        content: "\E9BA";
+    }
+
+    &.icon-glyph-9BB:before { /* KEYWORDS - DUP  */
+        content: "\E9BB";
+    }
+
+    &.icon-glyph-9BC:before { /* KEYWORDS - DUP  */
+        content: "\E9BC";
+    }
+
+    &.icon-glyph-A1F:before { /* KEYWORDS - DUP  */
+        content: "\EA1F";
+    }
+
+    &.icon-glyph-A21:before { /* KEYWORDS - DUP  */
+        content: "\EA21";
+    }
+
+    &.icon-glyph-A24:before { /* KEYWORDS - DUP  */
+        content: "\EA24";
+    }
+
+    &.icon-glyph-A25:before { /* KEYWORDS - DUP  */
+        content: "\EA25";
+    }
+
+    &.icon-glyph-A26:before { /* KEYWORDS - DUP  */
+        content: "\EA26";
+    }
+
+    &.icon-glyph-A27:before { /* KEYWORDS - DUP  */
+        content: "\EA27";
+    }
+
+    &.icon-glyph-A28:before { /* KEYWORDS - DUP  */
+        content: "\EA28";
+    }
+
+    &.icon-glyph-A29:before { /* KEYWORDS - LANG  */
+        content: "\EA29";
+    }
+
+    &.icon-glyph-A2A:before { /* KEYWORDS - DUP  */
+        content: "\EA2A";
+    }
+
+    &.icon-glyph-A2B:before { /* KEYWORDS - DUP  */
+        content: "\EA2B";
+    }
+
+    &.icon-glyph-A2C:before { /* KEYWORDS - DUP  */
+        content: "\EA2C";
+    }
+
+    &.icon-glyph-A2D:before { /* KEYWORDS - DUP  */
+        content: "\EA2D";
+    }
+
+    &.icon-glyph-A2E:before { /* KEYWORDS - DUP  */
+        content: "\EA2E";
+    }
+
+    &.icon-glyph-A2F:before { /* KEYWORDS - DUP  */
+        content: "\EA2F";
+    }
+
+    &.icon-glyph-A30:before { /* KEYWORDS - DUP  */
+        content: "\EA30";
+    }
+
+    &.icon-glyph-A31:before { /* KEYWORDS - DUP  */
+        content: "\EA31";
+    }
+
+    &.icon-glyph-A32:before { /* KEYWORDS - DUP  */
+        content: "\EA32";
+    }
+
+    &.icon-glyph-A33:before { /* KEYWORDS - DUP  */
+        content: "\EA33";
+    }
+
+    &.icon-glyph-A34:before { /* KEYWORDS - DUP  */
+        content: "\EA34";
+    }
+
+    &.icon-glyph-A38:before { /* KEYWORDS - DUP  */
+        content: "\EA38";
+    }
+
+    &.icon-glyph-A39:before { /* KEYWORDS - DUP  */
+        content: "\EA39";
+    }
+
+    &.icon-glyph-A3A:before { /* KEYWORDS - DUP  */
+        content: "\EA3A";
+    }
+
+    &.icon-glyph-A3B:before { /* KEYWORDS - DUP  */
+        content: "\EA3B";
+    }
+
+    &.icon-glyph-A40:before { /* KEYWORDS - DUP  */
+        content: "\EA40";
+    }
+
+    &.icon-glyph-A42:before { /* KEYWORDS - DUP  */
+        content: "\EA42";
+    }
+
+    &.icon-glyph-A43:before { /* KEYWORDS - DUP  */
+        content: "\EA43";
+    }
+
+    &.icon-glyph-A44:before { /* KEYWORDS - DUP  */
+        content: "\EA44";
+    }
+
+    &.icon-glyph-A48:before { /* KEYWORDS - DUP  */
+        content: "\EA48";
+    }
+
+    &.icon-glyph-A49:before { /* KEYWORDS - DUP  */
+        content: "\EA49";
+    }
+
+    &.icon-glyph-A4A:before { /* KEYWORDS - DUP  */
+        content: "\EA4A";
+    }
+
+    &.icon-glyph-A4B:before { /* KEYWORDS - DUP  */
+        content: "\EA4B";
+    }
+
+    &.icon-glyph-A4C:before { /* KEYWORDS - DUP  */
+        content: "\EA4C";
+    }
+
+    &.icon-glyph-A4E:before { /* KEYWORDS - DUP  */
+        content: "\EA4E";
+    }
+
+    &.icon-glyph-A4F:before { /* KEYWORDS - DUP  */
+        content: "\EA4F";
+    }
+
+    &.icon-glyph-A50:before { /* KEYWORDS - DUP  */
+        content: "\EA50";
+    }
+
+    &.icon-glyph-A51:before { /* KEYWORDS - DUP  */
+        content: "\EA51";
+    }
+
+    &.icon-glyph-A52:before { /* KEYWORDS - DUP  */
+        content: "\EA52";
+    }
+
+    &.icon-glyph-A53:before { /* KEYWORDS - DUP  */
+        content: "\EA53";
+    }
+
+    &.icon-glyph-A54:before { /* KEYWORDS - DUP  */
+        content: "\EA54";
+    }
+
+    &.icon-glyph-A55:before { /* KEYWORDS - DUP  */
+        content: "\EA55";
+    }
+
+    &.icon-glyph-A57:before { /* KEYWORDS - DUP  */
+        content: "\EA57";
+    }
+
+    &.icon-glyph-A58:before { /* KEYWORDS - DUP  */
+        content: "\EA58";
+    }
+
+    &.icon-glyph-A5B:before { /* KEYWORDS - DUP  */
+        content: "\EA5B";
+    }
+
+    &.icon-glyph-A5C:before { /* KEYWORDS - DUP  */
+        content: "\EA5C";
+    }
+
+    &.icon-glyph-A5E:before { /* KEYWORDS - DUP  */
+        content: "\EA5E";
+    }
+
+    &.icon-glyph-A5F:before { /* KEYWORDS - DUP  */
+        content: "\EA5F";
+    }
+
+    &.icon-glyph-A60:before { /* KEYWORDS - DUP  */
+        content: "\EA60";
+    }
+
+    &.icon-glyph-A61:before { /* KEYWORDS - DUP  */
+        content: "\EA61";
+    }
+
+    &.icon-glyph-A62:before { /* KEYWORDS - DUP  */
+        content: "\EA62";
+    }
+
+    &.icon-glyph-A63:before { /* KEYWORDS - DUP  */
+        content: "\EA63";
+    }
+
+    &.icon-glyph-A64:before { /* KEYWORDS - DUP  */
+        content: "\EA64";
+    }
+
+    &.icon-glyph-A6A:before { /* KEYWORDS - DUP  */
+        content: "\EA6A";
+    }
+
+    &.icon-glyph-A6C:before { /* KEYWORDS - DUP  */
+        content: "\EA6C";
+    }
+
+    &.icon-glyph-A80:before { /* KEYWORDS - DUP  */
+        content: "\EA80";
+    }
+
+    &.icon-glyph-A81:before { /* KEYWORDS - DUP  */
+        content: "\EA81";
+    }
+
+    &.icon-glyph-A82:before { /* KEYWORDS - DUP  */
+        content: "\EA82";
+    }
+
+    &.icon-glyph-A83:before { /* KEYWORDS - DUP  */
+        content: "\EA83";
+    }
+
+    &.icon-glyph-A84:before { /* KEYWORDS - DUP  */
+        content: "\EA84";
+    }
+
+    &.icon-glyph-A86:before { /* KEYWORDS - DUP  */
+        content: "\EA86";
+    }
+
+    &.icon-glyph-A89:before { /* KEYWORDS - DUP  */
+        content: "\EA89";
+    }
+
+    &.icon-glyph-A8A:before { /* KEYWORDS - DUP  */
+        content: "\EA8A";
+    }
+
+    &.icon-glyph-A8B:before { /* KEYWORDS - DUP  */
+        content: "\EA8B";
+    }
+
+    &.icon-glyph-A8C:before { /* KEYWORDS - DUP  */
+        content: "\EA8C";
+    }
+
+    &.icon-glyph-A8D:before { /* KEYWORDS - DUP  */
+        content: "\EA8D";
+    }
+
+    &.icon-glyph-A8E:before { /* KEYWORDS - DUP  */
+        content: "\EA8E";
+    }
+
+    &.icon-glyph-A8F:before { /* KEYWORDS - DUP  */
+        content: "\EA8F";
+    }
+
+    &.icon-glyph-A92:before { /* KEYWORDS - DUP  */
+        content: "\EA92";
+    }
+
+    &.icon-glyph-A97:before { /* KEYWORDS - DUP  */
+        content: "\EA97";
+    }
+
+    &.icon-glyph-A99:before { /* KEYWORDS - DUP  */
+        content: "\EA99";
+    }
+
+    &.icon-glyph-B47:before { /* KEYWORDS - DUP  */
+        content: "\EB47";
+    }
+
+    &.icon-glyph-B4B:before { /* KEYWORDS - DUP  */
+        content: "\EB4B";
+    }
+
+    &.icon-glyph-B4C:before { /* KEYWORDS - DUP  */
+        content: "\EB4C";
+    }
+
+    &.icon-glyph-B4E:before { /* KEYWORDS - DUP  */
+        content: "\EB4E";
+    }
+
+    &.icon-glyph-B4F:before { /* KEYWORDS - DUP  */
+        content: "\EB4F";
+    }
+
+    &.icon-glyph-B50:before { /* KEYWORDS - DUP  */
+        content: "\EB50";
+    }
+
+    &.icon-glyph-B51:before { /* KEYWORDS - DUP  */
+        content: "\EB51";
+    }
+
+    &.icon-glyph-B52:before { /* KEYWORDS - DUP  */
+        content: "\EB52";
+    }
+
+    &.icon-glyph-B55:before { /* KEYWORDS - DUP  */
+        content: "\EB55";
+    }
+
+    &.icon-glyph-B56:before { /* KEYWORDS - DUP  */
+        content: "\EB56";
+    }
+
+    &.icon-glyph-B57:before { /* KEYWORDS - DUP  */
+        content: "\EB57";
+    }
+
+    &.icon-glyph-B58:before { /* KEYWORDS - DUP  */
+        content: "\EB58";
+    }
+
+    &.icon-glyph-B59:before { /* KEYWORDS - DUP  */
+        content: "\EB59";
+    }
+
+    &.icon-glyph-B5A:before { /* KEYWORDS - DUP  */
+        content: "\EB5A";
+    }
+
+    &.icon-glyph-B5B:before { /* KEYWORDS - DUP  */
+        content: "\EB5B";
+    }
+
+    &.icon-glyph-B5C:before { /* KEYWORDS - DUP  */
+        content: "\EB5C";
+    }
+
+    &.icon-glyph-B5D:before { /* KEYWORDS - DUP  */
+        content: "\EB5D";
+    }
+
+    &.icon-glyph-B5E:before { /* KEYWORDS - DUP  */
+        content: "\EB5E";
+    }
+
+    &.icon-glyph-B5F:before { /* KEYWORDS - DUP  */
+        content: "\EB5F";
+    }
+
+    &.icon-glyph-B60:before { /* KEYWORDS - DUP  */
+        content: "\EB60";
+    }
+
+    &.icon-glyph-B61:before { /* KEYWORDS - DUP  */
+        content: "\EB61";
+    }
+
+    &.icon-glyph-B62:before { /* KEYWORDS - DUP  */
+        content: "\EB62";
+    }
+
+    &.icon-glyph-B63:before { /* KEYWORDS - DUP  */
+        content: "\EB63";
+    }
+
+    &.icon-glyph-B66:before { /* KEYWORDS - DUP  */
+        content: "\EB66";
+    }
+
+    &.icon-glyph-B67:before { /* KEYWORDS - DUP  */
+        content: "\EB67";
+    }
+
+    &.icon-glyph-B68:before { /* KEYWORDS - DUP  */
+        content: "\EB68";
+    }
+
+    &.icon-glyph-B7E:before { /* KEYWORDS - DUP  */
+        content: "\EB7E";
+    }
+
+    &.icon-glyph-B82:before { /* KEYWORDS - DUP  */
+        content: "\EB82";
+    }
+
+    &.icon-glyph-B83:before { /* KEYWORDS - DUP  */
+        content: "\EB83";
+    }
+
+    &.icon-glyph-B84:before { /* KEYWORDS - DUP  */
+        content: "\EB84";
+    }
+
+    &.icon-glyph-B85:before { /* KEYWORDS - DUP  */
+        content: "\EB85";
+    }
+
+    &.icon-glyph-B86:before { /* KEYWORDS - DUP  */
+        content: "\EB86";
+    }
+
+    &.icon-glyph-B87:before { /* KEYWORDS - DUP  */
+        content: "\EB87";
+    }
+
+    &.icon-glyph-B88:before { /* KEYWORDS - DUP  */
+        content: "\EB88";
+    }
+
+    &.icon-glyph-B89:before { /* KEYWORDS - DUP  */
+        content: "\EB89";
+    }
+
+    &.icon-glyph-B8A:before { /* KEYWORDS - DUP  */
+        content: "\EB8A";
+    }
+
+    &.icon-glyph-B8B:before { /* KEYWORDS - DUP  */
+        content: "\EB8B";
+    }
+
+    &.icon-glyph-B8C:before { /* KEYWORDS - DUP  */
+        content: "\EB8C";
+    }
+
+    &.icon-glyph-B8D:before { /* KEYWORDS - DUP  */
+        content: "\EB8D";
+    }
+
+    &.icon-glyph-B90:before { /* KEYWORDS - DUP  */
+        content: "\EB90";
+    }
+
+    &.icon-glyph-B91:before { /* KEYWORDS - DUP  */
+        content: "\EB91";
+    }
+
+    &.icon-glyph-B95:before { /* KEYWORDS - DUP  */
+        content: "\EB95";
+    }
+
+    &.icon-glyph-B96:before { /* KEYWORDS - DUP  */
+        content: "\EB96";
+    }
+
+    &.icon-glyph-B97:before { /* KEYWORDS - DUP  */
+        content: "\EB97";
+    }
+
+    &.icon-glyph-B9D:before { /* KEYWORDS - DUP  */
+        content: "\EB9D";
+    }
+
+    &.icon-glyph-B9E:before { /* KEYWORDS - DUP  */
+        content: "\EB9E";
+    }
+
+    &.icon-glyph-BC2:before { /* KEYWORDS - LANG  */
+        content: "\EBC2";
+    }
+
+    &.icon-glyph-BC3:before { /* KEYWORDS - DUP  */
+        content: "\EBC3";
+    }
+
+    &.icon-go:before { /* KEYWORDS -  */
+        content: "\E8AD";
+    }
+
+    &.icon-goToStart:before { /* KEYWORDS -  */
+        content: "\E8FC";
+    }
+
+    &.icon-goToToday:before { /* KEYWORDS - calendar, date, today */
+        content: "\E8D1";
+    }
+
+    &.icon-halfStarLeft:before { /* KEYWORDS - star */
+        content: "\E7C6";
+    }
+
+    &.icon-halfStarRight:before { /* KEYWORDS - star */
+        content: "\E7C7";
+    }
+
+    &.icon-hamburger:before { /* KEYWORDS - DUP hamburger, mmm */
+        content: "\E700";
+    }
+
+    &.icon-hangup:before { /* KEYWORDS - phone */
+        content: "\E778";
+    }
+
+    &.icon-heartBrokenLegacy:before { /* KEYWORDS - legacy */
+        content: "\E007";
+    }
+
+    &.icon-heartBrokenZeroWidthLegacy:before { /* KEYWORDS - legacy, zero-width */
+        content: "\E00C";
+    }
+
+    &.icon-heartFillLegacy:before { /* KEYWORDS - legacy */
+        content: "\E0A5";
+    }
+
+    &.icon-heartFillZeroWidthLegacy:before { /* KEYWORDS - legacy, zero-width */
+        content: "\E00B";
+    }
+
+    &.icon-heartLegacy:before { /* KEYWORDS - legacy */
+        content: "\E006";
+    }
+
+    &.icon-help:before { /* KEYWORDS - questionmark */
+        content: "\E897";
+    }
+
+    &.icon-hideBCC:before { /* KEYWORDS - email */
+        content: "\E8C5";
+    }
+
+    &.icon-highlight:before { /* KEYWORDS -  */
+        content: "\E7E6";
+    }
+
+    &.icon-home:before { /* KEYWORDS - house */
+        content: "\E80F";
+    }
+
+    &.icon-house:before { /* KEYWORDS - DUP house */
+        content: "\E1C3";
+    }
+
+    &.icon-idea:before { /* KEYWORDS - DUP idea, cloud */
+        content: "\EA91";
+    }
+
+    &.icon-import:before { /* KEYWORDS -  */
+        content: "\E8B5";
+    }
+
+    &.icon-importAll:before { /* KEYWORDS -  */
+        content: "\E8B6";
+    }
+
+    &.icon-important:before { /* KEYWORDS - alert */
+        content: "\E8C9";
+    }
+
+    &.icon-italic:before { /* KEYWORDS - format */
+        content: "\E8DB";
+    }
+
+    &.icon-keyboard:before { /* KEYWORDS - DUP keyboard, split */
+        content: "\E08F";
+    }
+
+    &.icon-keyboardClassic:before { /* KEYWORDS -  */
+        content: "\E765";
+    }
+
+    &.icon-laptop:before { /* KEYWORDS - DUP laptop, tablet, mobile */
+        content: "\E212";
+    }
+
+    &.icon-leaveChat:before { /* KEYWORDS - chat, leave, message */
+        content: "\E89B";
+    }
+
+    &.icon-library:before { /* KEYWORDS - books */
+        content: "\E8F1";
+    }
+
+    &.icon-lightning:before { /* KEYWORDS - DUP lightning */
+        content: "\E945";
+    }
+
+    &.icon-like:before { /* KEYWORDS -  */
+        content: "\E8E1";
+    }
+
+    &.icon-likeDislike:before { /* KEYWORDS -  */
+        content: "\E8DF";
+    }
+
+    &.icon-likeDislikeLegacy:before { /* KEYWORDS - legacy */
+        content: "\E19D";
+    }
+
+    &.icon-likeLegacy:before { /* KEYWORDS - legacy */
+        content: "\E19F";
+    }
+
+    &.icon-link:before { /* KEYWORDS -  */
+        content: "\E71B";
+    }
+
+    &.icon-list:before { /* KEYWORDS - format */
+        content: "\EA37";
+    }
+
+    &.icon-location:before { /* KEYWORDS - gps */
+        content: "\E81D";
+    }
+
+    &.icon-mail:before { /* KEYWORDS - email */
+        content: "\E715";
+    }
+
+    &.icon-mailFill:before { /* KEYWORDS - email */
+        content: "\E8A8";
+    }
+
+    &.icon-mailForward:before { /* KEYWORDS - email, forward */
+        content: "\E89C";
+    }
+
+    &.icon-mailMessageLegacy:before { /* KEYWORDS - legacy */
+        content: "\E20B";
+    }
+
+    &.icon-mailReply:before { /* KEYWORDS - email, reply */
+        content: "\E8CA";
+    }
+
+    &.icon-mailReplyAll:before { /* KEYWORDS - email, reply all */
+        content: "\E8C2";
+    }
+
+    &.icon-manage:before { /* KEYWORDS - textbox, textfield, toolbox */
+        content: "\E912";
+    }
+
+    &.icon-map:before { /* KEYWORDS - DUP map, location, pin */
+        content: "\E1C4";
+    }
+
+    &.icon-map-pin-pause:before { /* KEYWORDS - DUP map-pin-pause */
+        content: "\EB4A";
+    }
+
+    &.icon-map-pin-play:before { /* KEYWORDS - DUP map-pin-play */
+        content: "\EB49";
+    }
+
+    &.icon-mapDrive:before { /* KEYWORDS - network, drive */
+        content: "\E8CE";
+    }
+
+    &.icon-mappin:before { /* KEYWORDS - map, pin */
+        content: "\E707";
+    }
+
+    &.icon-market:before { /* KEYWORDS - DUP market, shopping */
+        content: "\E14D";
+    }
+
+    &.icon-math-108:before { /* KEYWORDS - DUP math */
+        content: "\E108";
+    }
+
+    &.icon-math-109:before { /* KEYWORDS - DUP math */
+        content: "\E109";
+    }
+
+    &.icon-math-1D0:before { /* KEYWORDS - DUP math, equation */
+        content: "\E1D0";
+    }
+
+    &.icon-media-190:before { /* KEYWORDS - DUP media */
+        content: "\E190";
+    }
+
+    &.icon-media-1CA:before { /* KEYWORDS - DUP media, audio */
+        content: "\E1CA";
+    }
+
+    &.icon-memo:before { /* KEYWORDS -  */
+        content: "\E77C";
+    }
+
+    &.icon-menu:before { /* KEYWORDS - DUP menu */
+        content: "\E10C";
+    }
+
+    &.icon-message:before { /* KEYWORDS -  */
+        content: "\E8BD";
+    }
+
+    &.icon-microphone:before { /* KEYWORDS -  */
+        content: "\E720";
+    }
+
+    &.icon-mobBattery0:before { /* KEYWORDS -  */
+        content: "\EBA0";
+    }
+
+    &.icon-mobBattery1:before { /* KEYWORDS -  */
+        content: "\EBA1";
+    }
+
+    &.icon-mobBattery10:before { /* KEYWORDS -  */
+        content: "\EBAA";
+    }
+
+    &.icon-mobBattery2:before { /* KEYWORDS -  */
+        content: "\EBA2";
+    }
+
+    &.icon-mobBattery3:before { /* KEYWORDS -  */
+        content: "\EBA3";
+    }
+
+    &.icon-mobBattery4:before { /* KEYWORDS -  */
+        content: "\EBA4";
+    }
+
+    &.icon-mobBattery5:before { /* KEYWORDS -  */
+        content: "\EBA5";
+    }
+
+    &.icon-mobBattery6:before { /* KEYWORDS -  */
+        content: "\EBA6";
+    }
+
+    &.icon-mobBattery7:before { /* KEYWORDS -  */
+        content: "\EBA7";
+    }
+
+    &.icon-mobBattery8:before { /* KEYWORDS -  */
+        content: "\EBA8";
+    }
+
+    &.icon-mobBattery9:before { /* KEYWORDS -  */
+        content: "\EBA9";
+    }
+
+    &.icon-mobBatteryChargin10:before { /* KEYWORDS -  */
+        content: "\EBB5";
+    }
+
+    &.icon-mobBatteryCharging0:before { /* KEYWORDS -  */
+        content: "\EBAB";
+    }
+
+    &.icon-mobBatteryCharging1:before { /* KEYWORDS -  */
+        content: "\EBAC";
+    }
+
+    &.icon-mobBatteryCharging2:before { /* KEYWORDS -  */
+        content: "\EBAD";
+    }
+
+    &.icon-mobBatteryCharging3:before { /* KEYWORDS -  */
+        content: "\EBAE";
+    }
+
+    &.icon-mobBatteryCharging4:before { /* KEYWORDS -  */
+        content: "\EBAF";
+    }
+
+    &.icon-mobBatteryCharging5:before { /* KEYWORDS -  */
+        content: "\EBB0";
+    }
+
+    &.icon-mobBatteryCharging6:before { /* KEYWORDS -  */
+        content: "\EBB1";
+    }
+
+    &.icon-mobBatteryCharging7:before { /* KEYWORDS -  */
+        content: "\EBB2";
+    }
+
+    &.icon-mobBatteryCharging8:before { /* KEYWORDS -  */
+        content: "\EBB3";
+    }
+
+    &.icon-mobBatteryCharging9:before { /* KEYWORDS -  */
+        content: "\EBB4";
+    }
+
+    &.icon-mobBatterySaver0:before { /* KEYWORDS -  */
+        content: "\EBB6";
+    }
+
+    &.icon-mobBatterySaver1:before { /* KEYWORDS -  */
+        content: "\EBB7";
+    }
+
+    &.icon-mobBatterySaver10:before { /* KEYWORDS -  */
+        content: "\EBC0";
+    }
+
+    &.icon-mobBatterySaver2:before { /* KEYWORDS -  */
+        content: "\EBB8";
+    }
+
+    &.icon-mobBatterySaver3:before { /* KEYWORDS -  */
+        content: "\EBB9";
+    }
+
+    &.icon-mobBatterySaver4:before { /* KEYWORDS -  */
+        content: "\EBBA";
+    }
+
+    &.icon-mobBatterySaver5:before { /* KEYWORDS -  */
+        content: "\EBBB";
+    }
+
+    &.icon-mobBatterySaver6:before { /* KEYWORDS -  */
+        content: "\EBBC";
+    }
+
+    &.icon-mobBatterySaver7:before { /* KEYWORDS -  */
+        content: "\EBBD";
+    }
+
+    &.icon-mobBatterySaver8:before { /* KEYWORDS -  */
+        content: "\EBBE";
+    }
+
+    &.icon-mobBatterySaver9:before { /* KEYWORDS -  */
+        content: "\EBBF";
+    }
+
+    &.icon-mobBatteryUnknown:before { /* KEYWORDS -  */
+        content: "\EC02";
+    }
+
+    &.icon-mobile-70A:before { /* KEYWORDS - DUP mobile */
+        content: "\E70A";
+    }
+
+    &.icon-mobile-8CC:before { /* KEYWORDS - DUP mobile */
+        content: "\E8CC";
+    }
+
+    &.icon-mobileContactLegacy:before { /* KEYWORDS - legacy */
+        content: "\E25A";
+    }
+
+    &.icon-monitor:before { /* KEYWORDS - DUP monitor */
+        content: "\E1E4";
+    }
+
+    &.icon-monitor-left:before { /* KEYWORDS - DUP monitor-left */
+        content: "\E7F9";
+    }
+
+    &.icon-monitor-right:before { /* KEYWORDS - DUP monitor-right */
+        content: "\E7FA";
+    }
+
+    &.icon-monument:before { /* KEYWORDS - DUP monument, government */
+        content: "\E825";
+    }
+
+    &.icon-more:before { /* KEYWORDS - ellipse */
+        content: "\E712";
+    }
+
+    &.icon-moveToFolder:before { /* KEYWORDS - folder */
+        content: "\E8DE";
+    }
+
+    &.icon-mp3-player:before { /* KEYWORDS - DUP mp3-player */
+        content: "\E955";
+    }
+
+    &.icon-musicInfo:before { /* KEYWORDS - audio */
+        content: "\E90B";
+    }
+
+    &.icon-mute:before { /* KEYWORDS - volume, sound */
+        content: "\E74F";
+    }
+
+    &.icon-newFolder:before { /* KEYWORDS - folder, new, plus, add */
+        content: "\E8F4";
+    }
+
+    &.icon-newWindow:before { /* KEYWORDS - open, window */
+        content: "\E78B";
+    }
+
+    &.icon-next:before { /* KEYWORDS - media, controls */
+        content: "\E893";
+    }
+
+    &.icon-night:before { /* KEYWORDS - DUP night */
+        content: "\E708";
+    }
+
+    &.icon-notes:before { /* KEYWORDS - DUP notes */
+        content: "\E12F";
+    }
+
+    &.icon-notification:before { /* KEYWORDS - DUP notification */
+        content: "\E781";
+    }
+
+    &.icon-oneBar:before { /* KEYWORDS - wifi, signal */
+        content: "\E905";
+    }
+
+    &.icon-openFile:before { /* KEYWORDS - file, document, open, up */
+        content: "\E8E5";
+    }
+
+    &.icon-openLocal:before { /* KEYWORDS - folder, up */
+        content: "\E8DA";
+    }
+
+    &.icon-openPane:before { /* KEYWORDS -  */
+        content: "\E8A0";
+    }
+
+    &.icon-openWith:before { /* KEYWORDS -  */
+        content: "\E7AC";
+    }
+
+    &.icon-orientation:before { /* KEYWORDS -  */
+        content: "\E8B4";
+    }
+
+    &.icon-otherUser:before { /* KEYWORDS -  */
+        content: "\E7EE";
+    }
+
+    &.icon-outlineStarLegacy:before { /* KEYWORDS - legacy */
+        content: "\E1CE";
+    }
+
+    &.icon-page:before { /* KEYWORDS - document */
+        content: "\E7C3";
+    }
+
+    &.icon-pages:before { /* KEYWORDS - DUP pages */
+        content: "\E16F";
+    }
+
+    &.icon-paste:before { /* KEYWORDS - content */
+        content: "\E77F";
+    }
+
+    &.icon-pause:before { /* KEYWORDS - media, controls */
+        content: "\E769";
+    }
+
+    &.icon-pencil:before { /* KEYWORDS - DUP pencil */
+        content: "\E104";
+    }
+
+    &.icon-people:before { /* KEYWORDS -  */
+        content: "\E716";
+    }
+
+    &.icon-permissions:before { /* KEYWORDS -  */
+        content: "\E8D7";
+    }
+
+    &.icon-phone-1C9:before { /* KEYWORDS - DUP phone */
+        content: "\E1C9";
+    }
+
+    &.icon-phone-717:before { /* KEYWORDS -  */
+        content: "\E717";
+    }
+
+    &.icon-phoneBook:before { /* KEYWORDS - phone, call */
+        content: "\E780";
+    }
+
+    &.icon-picture:before { /* KEYWORDS - DUP picture */
+        content: "\EB9F";
+    }
+
+    &.icon-pin:before { /* KEYWORDS -  */
+        content: "\E718";
+    }
+
+    &.icon-play:before { /* KEYWORDS - media, controls */
+        content: "\E768";
+    }
+
+    &.icon-pointer:before { /* KEYWORDS - DUP pointer */
+        content: "\E1E3";
+    }
+
+    &.icon-postUpdate:before { /* KEYWORDS -  */
+        content: "\E8F3";
+    }
+
+    &.icon-presenceChickletLegacy:before { /* KEYWORDS - legacy */
+        content: "\E25E";
+    }
+
+    &.icon-presenceChickletVideoLegacy:before { /* KEYWORDS - legacy */
+        content: "\E25D";
+    }
+
+    &.icon-preview:before { /* KEYWORDS - document, file */
+        content: "\E8FF";
+    }
+
+    &.icon-previewLink:before { /* KEYWORDS -  */
+        content: "\E8A1";
+    }
+
+    &.icon-previous:before { /* KEYWORDS - media, controls */
+        content: "\E892";
+    }
+
+    &.icon-priority:before { /* KEYWORDS -  */
+        content: "\E8D0";
+    }
+
+    &.icon-profile:before { /* KEYWORDS - DUP profile, details */
+        content: "\E12A";
+    }
+
+    &.icon-protectedDocument:before { /* KEYWORDS - file, protected, lock */
+        content: "\E8A6";
+    }
+
+    &.icon-questionmark:before { /* KEYWORDS - DUP questionmark */
+        content: "\E11B";
+    }
+
+    &.icon-ratingStarFillLegacy:before { /* KEYWORDS - legacy */
+        content: "\E0B4";
+    }
+
+    &.icon-ratingStarFillReducedPaddingHTMLLegacy:before { /* KEYWORDS - legacy */
+        content: "\E082";
+    }
+
+    &.icon-ratingStarFillSmallLegacy:before { /* KEYWORDS - DUP duplicate */
+        content: "\E0B5";
+    }
+
+    &.icon-ratingStarFillZeroWidthLegacy:before { /* KEYWORDS - legacy, zero-width */
+        content: "\E00A";
+    }
+
+    &.icon-ratingStarLegacy:before { /* KEYWORDS - legacy */
+        content: "\E224";
+    }
+
+    &.icon-read:before { /* KEYWORDS - email, read */
+        content: "\E8C3";
+    }
+
+    &.icon-redo:before { /* KEYWORDS -  */
+        content: "\E7A6";
+    }
+
+    &.icon-refresh:before { /* KEYWORDS - reload */
+        content: "\E72C";
+    }
+
+    &.icon-region:before { /* KEYWORDS - DUP region */
+        content: "\E164";
+    }
+
+    &.icon-region-settings:before { /* KEYWORDS - DUP region-settings */
+        content: "\E775";
+    }
+
+    &.icon-reload:before { /* KEYWORDS - DUP reload, refresh */
+        content: "\E1CD";
+    }
+
+    &.icon-remote:before { /* KEYWORDS - chevron */
+        content: "\E8AF";
+    }
+
+    &.icon-remove:before { /* KEYWORDS - minus, math */
+        content: "\E738";
+    }
+
+    &.icon-rename:before { /* KEYWORDS -  */
+        content: "\E8AC";
+    }
+
+    &.icon-repair:before { /* KEYWORDS -  */
+        content: "\E90F";
+    }
+
+    &.icon-repeatAll:before { /* KEYWORDS -  */
+        content: "\E8EE";
+    }
+
+    &.icon-repeatOne:before { /* KEYWORDS -  */
+        content: "\E8ED";
+    }
+
+    &.icon-replyLegacy:before { /* KEYWORDS - legacy */
+        content: "\E248";
+    }
+
+    &.icon-report:before { /* KEYWORDS - DUP report */
+        content: "\E82D";
+    }
+
+    &.icon-reportHacked:before { /* KEYWORDS -  */
+        content: "\E730";
+    }
+
+    &.icon-reshare:before { /* KEYWORDS - retweet */
+        content: "\E8EB";
+    }
+
+    &.icon-rotate-14F:before { /* KEYWORDS - DUP rotate */
+        content: "\E14F";
+    }
+
+    &.icon-rotate-7AD:before { /* KEYWORDS - rotate right */
+        content: "\E7AD";
+    }
+
+    &.icon-rotateCamera:before { /* KEYWORDS -  */
+        content: "\E89E";
+    }
+
+    &.icon-rtl-175:before { /* KEYWORDS - DUP rtl */
+        content: "\E175";
+    }
+
+    &.icon-rtl-1EC:before { /* KEYWORDS - DUP rtl */
+        content: "\E1EC";
+    }
+
+    &.icon-rtl-1ED:before { /* KEYWORDS - DUP rtl */
+        content: "\E1ED";
+    }
+
+    &.icon-rtl-1F3:before { /* KEYWORDS - DUP rtl */
+        content: "\E1F3";
+    }
+
+    &.icon-rtl-A41:before { /* KEYWORDS - DUP rtl */
+        content: "\EA41";
+    }
+
+    &.icon-rtl-A56:before { /* KEYWORDS - DUP rtl */
+        content: "\EA56";
+    }
+
+    &.icon-rtl-A65:before { /* KEYWORDS - DUP rtl */
+        content: "\EA65";
+    }
+
+    &.icon-rtl-A98:before { /* KEYWORDS - DUP rtl */
+        content: "\EA98";
+    }
+
+    &.icon-save-105:before { /* KEYWORDS - DUP save */
+        content: "\E105";
+    }
+
+    &.icon-save-74E:before { /* KEYWORDS -  */
+        content: "\E74E";
+    }
+
+    &.icon-save-all:before { /* KEYWORDS - DUP save-all */
+        content: "\EA35";
+    }
+
+    &.icon-saveLocal:before { /* KEYWORDS -  */
+        content: "\E78C";
+    }
+
+    &.icon-scan-294:before { /* KEYWORDS - DUP scan */
+        content: "\E294";
+    }
+
+    &.icon-scan-8FE:before { /* KEYWORDS - device */
+        content: "\E8FE";
+    }
+
+    &.icon-scan-95A:before { /* KEYWORDS - DUP scan, weather */
+        content: "\E95A";
+    }
+
+    &.icon-scrollChevronDownBoldLegacy:before { /* KEYWORDS - legacy */
+        content: "\E019";
+    }
+
+    &.icon-scrollChevronDownLegacy:before { /* KEYWORDS - legacy */
+        content: "\E011";
+    }
+
+    &.icon-scrollChevronLeftBoldLegacy:before { /* KEYWORDS - legacy */
+        content: "\E016";
+    }
+
+    &.icon-scrollChevronLeftLegacy:before { /* KEYWORDS - legacy */
+        content: "\E00E";
+    }
+
+    &.icon-scrollChevronRightBoldLegacy:before { /* KEYWORDS - legacy */
+        content: "\E017";
+    }
+
+    &.icon-scrollChevronRightLegacy:before { /* KEYWORDS - legacy */
+        content: "\E00F";
+    }
+
+    &.icon-scrollChevronUpBoldLegacy:before { /* KEYWORDS - legacy */
+        content: "\E018";
+    }
+
+    &.icon-scrollChevronUpLegacy:before { /* KEYWORDS - legacy */
+        content: "\E010";
+    }
+
+    &.icon-search-minus:before { /* KEYWORDS - DUP search-minus */
+        content: "\E1A4";
+    }
+
+    &.icon-search-plus:before { /* KEYWORDS - DUP search-plus */
+        content: "\E12E";
+    }
+
+    &.icon-select:before { /* KEYWORDS - DUP select, undo */
+        content: "\E1C5";
+    }
+
+    &.icon-selectAll:before { /* KEYWORDS - DUP duplicate */
+        content: "\E8B3";
+    }
+
+    &.icon-selection-scissor:before { /* KEYWORDS - DUP selection-scissor */
+        content: "\E924";
+    }
+
+    &.icon-send:before { /* KEYWORDS - DUP duplicate */
+        content: "\E724";
+    }
+
+    &.icon-setLockScreen:before { /* KEYWORDS -  */
+        content: "\E7B5";
+    }
+
+    &.icon-setTile:before { /* KEYWORDS -  */
+        content: "\E97B";
+    }
+
+    &.icon-settings:before { /* KEYWORDS - cog */
+        content: "\E713";
+    }
+
+    &.icon-share-72D:before { /* KEYWORDS -  */
+        content: "\E72D";
+    }
+
+    &.icon-share-9A1:before { /* KEYWORDS - DUP share */
+        content: "\E9A1";
+    }
+
+    &.icon-shop:before { /* KEYWORDS -  */
+        content: "\E719";
+    }
+
+    &.icon-showBCC:before { /* KEYWORDS - email */
+        content: "\E8C4";
+    }
+
+    &.icon-showResults:before { /* KEYWORDS -  */
+        content: "\E8BC";
+    }
+
+    &.icon-shuffle:before { /* KEYWORDS -  */
+        content: "\E8B1";
+    }
+
+    &.icon-slideshow:before { /* KEYWORDS -  */
+        content: "\E786";
+    }
+
+    &.icon-smiley:before { /* KEYWORDS - DUP smiley, emoticon */
+        content: "\E170";
+    }
+
+    &.icon-solidStarLegacy:before { /* KEYWORDS - legacy, star */
+        content: "\E1CF";
+    }
+
+    &.icon-sort:before { /* KEYWORDS -  */
+        content: "\E8CB";
+    }
+
+    &.icon-stop:before { /* KEYWORDS -  */
+        content: "\E71A";
+    }
+
+    &.icon-street:before { /* KEYWORDS -  */
+        content: "\E913";
+    }
+
+    &.icon-switch-8AB:before { /* KEYWORDS -  */
+        content: "\E8AB";
+    }
+
+    &.icon-switch-965:before { /* KEYWORDS - DUP switch */
+        content: "\E965";
+    }
+
+    &.icon-switch-wireless:before { /* KEYWORDS - DUP switch-wireless */
+        content: "\E969";
+    }
+
+    &.icon-switchApps:before { /* KEYWORDS -  */
+        content: "\E8F9";
+    }
+
+    &.icon-sync:before { /* KEYWORDS -  */
+        content: "\E895";
+    }
+
+    &.icon-syncFolder:before { /* KEYWORDS -  */
+        content: "\E8F7";
+    }
+
+    &.icon-table:before { /* KEYWORDS - DUP table, select */
+        content: "\E14E";
+    }
+
+    &.icon-tag:before { /* KEYWORDS -  */
+        content: "\E8EC";
+    }
+
+    &.icon-theme:before { /* KEYWORDS - DUP theme */
+        content: "\E771";
+    }
+
+    &.icon-threeBars:before { /* KEYWORDS - wifi, signal */
+        content: "\E907";
+    }
+
+    &.icon-touchPointer:before { /* KEYWORDS -  */
+        content: "\E7C9";
+    }
+
+    &.icon-train:before { /* KEYWORDS - DUP train */
+        content: "\EB4D";
+    }
+
+    &.icon-train-outline:before { /* KEYWORDS - DUP train-outline */
+        content: "\E7C0";
+    }
+
+    &.icon-transcribe:before { /* KEYWORDS - DUP transcribe */
+        content: "\E929";
+    }
+
+    &.icon-trash:before { /* KEYWORDS - DUP trash */
+        content: "\E107";
+    }
+
+    &.icon-trim:before { /* KEYWORDS -  */
+        content: "\E78A";
+    }
+
+    &.icon-tv:before { /* KEYWORDS - DUP tv */
+        content: "\E951";
+    }
+
+    &.icon-twitter:before { /* KEYWORDS - DUP twitter */
+        content: "\E168";
+    }
+
+    &.icon-twoBars:before { /* KEYWORDS - wifi, signal */
+        content: "\E906";
+    }
+
+    &.icon-twoPage:before { /* KEYWORDS - page, view, document */
+        content: "\E89A";
+    }
+
+    &.icon-typingIndicatorLegacy:before { /* KEYWORDS - legacy */
+        content: "\E25C";
+    }
+
+    &.icon-unPin:before { /* KEYWORDS - pin */
+        content: "\E77A";
+    }
+
+    &.icon-unSyncFolder:before { /* KEYWORDS - sync */
+        content: "\E8F6";
+    }
+
+    &.icon-underline:before { /* KEYWORDS - format */
+        content: "\E8DC";
+    }
+
+    &.icon-undo:before { /* KEYWORDS -  */
+        content: "\E7A7";
+    }
+
+    &.icon-unfavorite:before { /* KEYWORDS - star, block */
+        content: "\E8D9";
+    }
+
+    &.icon-unfavorite2Legacy:before { /* KEYWORDS - legacy */
+        content: "\E24E";
+    }
+
+    &.icon-unfavoriteLegacy:before { /* KEYWORDS - legacy */
+        content: "\E195";
+    }
+
+    &.icon-up:before { /* KEYWORDS - arrow, up */
+        content: "\E74A";
+    }
+
+    &.icon-upload:before { /* KEYWORDS -  */
+        content: "\E898";
+    }
+
+    &.icon-url:before { /* KEYWORDS - DUP url */
+        content: "\E167";
+    }
+
+    &.icon-user-status:before { /* KEYWORDS - DUP user-status */
+        content: "\E181";
+    }
+
+    &.icon-users:before { /* KEYWORDS - DUP users, people */
+        content: "\E125";
+    }
+
+    &.icon-video:before { /* KEYWORDS -  */
+        content: "\E714";
+    }
+
+    &.icon-videoChat:before { /* KEYWORDS -  */
+        content: "\E8AA";
+    }
+
+    &.icon-videoLegacy:before { /* KEYWORDS - legacy */
+        content: "\E116";
+    }
+
+    &.icon-view:before { /* KEYWORDS -  */
+        content: "\E890";
+    }
+
+    &.icon-viewAll:before { /* KEYWORDS -  */
+        content: "\E8A9";
+    }
+
+    &.icon-volume:before { /* KEYWORDS -  */
+        content: "\E767";
+    }
+
+    &.icon-webcam:before { /* KEYWORDS -  */
+        content: "\E8B8";
+    }
+
+    &.icon-world:before { /* KEYWORDS -  */
+        content: "\E909";
+    }
+
+    &.icon-zeroBars:before { /* KEYWORDS -  */
+        content: "\E904";
+    }
+
+    &.icon-zoom:before { /* KEYWORDS -  */
+        content: "\E71E";
+    }
+
+    &.icon-zoomIn:before { /* KEYWORDS - magnify */
+        content: "\E8A3";
+    }
+
+    &.icon-zoomOut:before { /* KEYWORDS - magnify */
+        content: "\E71F";
+    }
+}

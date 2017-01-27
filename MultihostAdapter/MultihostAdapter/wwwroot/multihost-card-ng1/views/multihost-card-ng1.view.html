@@ -1,0 +1,59 @@
+﻿<md-card class="assignment-card" ng-controller="Multihost.Card.Controllers.MainController as CardCtrl" ng-attr-id="{{cardId}}">
+    <md-card-custom-progress ng-hide="CardCtrl.hideProgress">
+        <div class="overlay"></div>
+        <div layout="row" layout-sm="column" layout-align="space-around">
+            <md-progress-circular md-mode="indeterminate" md-diameter="33"></md-progress-circular>
+        </div>
+    </md-card-custom-progress>
+    <md-card-title ng-show="CardCtrl.showPanel">
+        <md-card-title-text>
+            <span class="md-headline" ng-bind="CardCtrl.card.title"></span>
+            <span class="assignment-card-hostapp" ng-bind="CardCtrl.card.hostApp"></span>
+        </md-card-title-text>
+    </md-card-title>
+    <md-card-content ng-show="CardCtrl.showPanel">
+        <div class="assignment-card-content">
+            <div class="assignment-card-content-item">
+                <div class="assignment-card-content-item-header">Name</div>
+                <div class="assignment-card-content-item-value" >Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
+            </div>
+            <div class="assignment-card-content-item w50">
+                <div class="assignment-card-content-item-header">Start Date</div>
+                <div class="assignment-card-content-item-value">XX/XX/XXXX</div>
+            </div>
+            <div class="assignment-card-content-item w50">
+                <div class="assignment-card-content-item-header">End Date</div>
+                <div class="assignment-card-content-item-value">XX/XX/XXXX</div>
+            </div>
+            <div class="assignment-card-content-item w50">
+                <div class="assignment-card-content-item-header">Type</div>
+                <div class="assignment-card-content-item-value">XXX-XX</div>
+            </div>
+            <div class="assignment-card-content-item w50">
+                <div class="assignment-card-content-item-header">Time Rem.</div>
+                <div class="assignment-card-content-item-value">XX:XX</div>
+            </div>
+            <div ng-show="CardCtrl.card.$show == true">
+                <div class="assignment-card-content-item">
+                    <div class="assignment-card-content-item-header">Customer</div>
+                    <div class="assignment-card-content-item-value" >XXXXXX XXX XXXXXXXX</div>
+                </div>
+                <div class="assignment-card-content-item">
+                    <div class="assignment-card-content-item-header">Company</div>
+                    <div class="assignment-card-content-item-value" >XXXX XXX XXXXXXXXXX</div>
+                </div>
+                <div class="assignment-card-content-item">
+                    <div class="assignment-card-content-item-header">Product</div>
+                    <div class="assignment-card-content-item-value">XXXX XXXX XXXX XXXX</div>
+                </div>
+            </div>
+            <div class="assignment-card-content-action-container">
+                <button class="assignment-card-action pull-left" ng-click="CardCtrl.decline()">Remove Card</button>
+                <div class="icon-container assignment-card-showmore pull-right" ng-click="CardCtrl.card.$show = !CardCtrl.card.$show">
+                    <i class="icon icon-scrollChevronDownLegacy" ng-show="CardCtrl.card.$show != true"></i>
+                    <i class="icon icon-scrollChevronUpLegacy" ng-show="CardCtrl.card.$show == true"></i>
+                </div>
+            </div>
+        </div>
+    </md-card-content>
+</md-card>

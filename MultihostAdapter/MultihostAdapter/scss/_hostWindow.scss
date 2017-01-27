@@ -1,0 +1,819 @@
+﻿@import 'vars';
+
+body {
+
+    &._CORDOVA {
+    }
+
+    &.hostWindow {
+        width: 100%;
+        height: 100%;
+        border: 0;
+        padding: 0;
+        margin: 0;
+        font-family: 'Quicksand';
+        font-size: $base-font-size;
+        overflow: hidden;
+        background-color: rgb(250,250,250);
+
+        .hostmast-header {
+            height: 24px;
+            width: 100%;
+            background: darken($quick-access-bg, 3);
+            color: #fff;
+
+            &-title {
+                font-family: SegoeUI;
+                float: left;
+                line-height: 24px;
+                margin-bottom: 0;
+                font-weight: 400;
+                font-size: small;
+                padding-left: 10px;
+            }
+
+            &-close {
+                height: 24px;
+                width: 24px;
+                line-height: 26px;
+                font-size: small;
+
+                @include _CORDOVA_ONLY(&) {
+                    display: none;
+                }
+            }
+
+            &-minimize {
+                height: 24px;
+                width: 24px;
+                line-height: 36px;
+                font-size: small;
+
+                @include _CORDOVA_ONLY(&) {
+                    display: none;
+                }
+            }
+        }
+
+        .host-view {
+
+            &.hide-window {
+                display: none;
+            }
+
+            width: 100%;
+            height: 100vh;
+            box-sizing: border-box;
+            border-bottom: 3px solid $quick-access-bg;
+            position: relative;
+            overflow: hidden;
+
+            &-header {
+                height: 72px;
+                width: 100%;
+                box-sizing: border-box;
+                border-bottom-style: solid;
+                border-bottom-width: 1px;
+                border-bottom-color: $quick-access-bg;
+                background-color: $quick-access-bg;
+                color: #fff;
+                box-shadow: 0 1px 2px 0 rgba(0,0,0,.26);
+
+                @include _CORDOVA_EXCEPT_IOS(&) {
+                    height: 60px;
+                }
+
+                @include _CORDOVA_IOS_ONLY(&) {
+                    height: 84px;
+                }
+
+                md-bottom-sheet {
+                    padding-left: 10px;
+                    padding-right: 10px;
+                    /*padding-bottom: 10px;*/
+                    background-color: lighten($bgColor, 50);
+                    border: none;
+
+                    .md-subheader {
+                        color: #fff;
+                        line-height: 60px;
+                        margin-bottom: 10px;
+
+                        ._md-subheader-inner {
+                            color: #303030;
+                            line-height: 60px;
+                            padding: 0;
+                            box-sizing: border-box;
+                            border-bottom: 1px solid rgba(0,0,0,0.1);
+                            font-family: SegoeUI;
+                            font-size: medium;
+                        }
+                    }
+
+                    md-list {
+                        padding: 0;
+
+                        md-list-item {
+
+                            @include _CORDOVA_EXCEPT_IOS(&) {
+                                height: 60px;
+                            }
+
+                            .md-button {
+                                padding: 0;
+                            }
+
+                            @include focus-states();
+
+                            .icon-container-label {
+                                width: calc(100% - 48px);
+                                height: 48px;
+                                line-height: 48px;
+                                float: right;
+                                font-family: SegoeUI;
+                                font-size: medium;
+
+                                @include _CORDOVA_EXCEPT_IOS(&) {
+                                    height: 60px;
+                                    line-height: 60px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            &-content {
+                height: calc(100vh - 75px);
+                width: 100%;
+                overflow-y: auto;
+                padding-bottom: 5px;
+                -webkit-overflow-scrolling: touch;
+                -ms-overflow-style: -ms-autohiding-scrollbar;
+                box-sizing: border-box;
+                border-left: 3px solid $quick-access-bg;
+                border-right: 3px solid $quick-access-bg;
+                position: relative;
+                z-index: 1;
+                background: transparent;
+
+                @include _CORDOVA_EXCEPT_IOS(&) {
+                    height: calc(100vh - 60px);
+                    border: none;
+                }
+
+                md-content {
+                    padding: 0 0 5px 0;
+                    background: transparent;
+                }
+            }
+
+            &-move-around {
+                -webkit-app-region: drag;
+                cursor: move;
+            }
+
+            &-contact {
+                border: none;
+                background: #fff;
+                color: $quick-access-bg;
+                border-radius: 50%;
+                width: 30px;
+                height: 30px;
+                line-height: 30px;
+                position: relative;
+                top: 9px;
+                left: 9px;
+
+                .icon {
+                    font-size: small;
+                }
+
+                @include _CORDOVA_ONLY(&) {
+                    width: 44px;
+                    height: 44px;
+                    line-height: 44px;
+                    top: 8px;
+                    left: 8px;
+                }
+            }
+
+            &-notification-holder {
+                position: relative;
+
+                span.notification-number {
+                    position: absolute;
+                    padding: 4px;
+                    border-radius: 50%;
+                    background: $bgColor;
+                    color: #fff;
+                    right: 5px;
+                    top: 19px;
+                    width: 20px;
+                    height: 20px;
+                    background: lighten($bgColor, 40);
+                    box-sizing: border-box;
+                    border: 1px solid $bgColor;
+                    color: $bgColor;
+                    line-height: 11px;
+                    font-family: SegoeUI;
+                    font-size: small;
+                }
+            }
+        }
+
+        .host-notifications {
+
+            .hostmast-header-close {
+                opacity: 0.50;
+                line-height: 26px;
+            }
+
+            &-action {
+                width: 48px;
+                float: left;
+                opacity: 0.50;
+                font-size: medium;
+                text-shadow: none;
+
+                &.close {
+                    color: #fff;
+
+                    &.active {
+                        border-bottom: none !important;
+                    }
+                }
+
+                &.search {
+                    width: calc(100% - 192px);
+                    position: relative;
+
+                    &:hover,
+                    &:active {
+                        opacity: 1;
+                    }
+
+                    input {
+                        width: calc(100% - 12px);
+                        float: left;
+                        height: 36px;
+                        position: relative;
+                        top: 6px;
+                        left: 6px;
+                        border: 1px solid #fff;
+                        background-color: transparent;
+                        padding: 0 36px 0 10px;
+                    }
+
+                    .icon {
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        width: 48px;
+                        height: 48px;
+                        line-height: 48px;
+                    }
+                }
+
+                &.active {
+                    opacity: 1;
+                    border-bottom: 2px solid rgba(255,255,255, 0.90);
+                }
+            }
+
+            &-close {
+                height: 48px;
+                width: 48px;
+                float: right;
+                text-align: center;
+                line-height: 48px;
+                color: #fff;
+                position: absolute;
+                right: 0;
+                font-size: medium;
+            }
+
+            md-sidenav {
+                width: calc(100% - 24px);
+                max-width: calc(100% - 24px);
+                min-width: calc(100% - 24px);
+
+                ng-include {
+                    height: 100%;
+
+                    & > div {
+                        height: 100%;
+                    }
+                }
+
+                @include _CORDOVA_ONLY(&) {
+                    width: 100%;
+                    max-width: 100%;
+                    min-width: 100%;
+                    overflow: hidden;
+                }
+
+                md-toolbar {
+                    min-height: 48px;
+                    height: 48px;
+                    background-color: $quick-access-bg;
+                    color: #fff;
+                    box-shadow: 0 1px 2px 0 rgba(0,0,0,.26);
+
+                    @include _CORDOVA_ONLY(&) {
+                        height: 60px;
+
+                        .host-notifications-action {
+                            height: 60px;
+                            line-height: 60px;
+
+                            &.search {
+                                input {
+                                    height: 48px;
+                                }
+
+                                .icon {
+                                    height: 60px;
+                                    line-height: 60px;
+                                }
+                            }
+                        }
+                    }
+
+                    h1.md-toolbar-tools {
+                        min-height: 48px;
+                        height: 48px;
+                        font-family: SegoeUI;
+                        font-size: small;
+                        position: absolute;
+                    }
+                }
+            }
+
+            md-content {
+                padding: 0;
+                height: calc(100% - 72px);
+                width: 100%;
+                overflow-y: auto;
+                background-color: #f6f6f6;
+
+                @include _CORDOVA_ONLY(&) {
+                    height: calc(100% - 84px);
+                }
+            }
+
+            &-bar {
+                padding: 10px 0 0 0;
+
+                &-item {
+                    position: relative;
+                    padding: 12px;
+                    box-sizing: border-box;
+                    background: #fff;
+                    box-shadow: 0 1px 3px 0 rgba(0,0,0,.2),0 1px 1px 0 rgba(0,0,0,.14),0 2px 1px -1px rgba(0,0,0,.12);
+                    border-left-style: solid;
+                    border-left-width: 3px;
+                    border-left-color: transparent;
+
+                    &.unread {
+                        border-left-color: $quick-access-bg;
+                    }
+
+                    &.marked {
+                        border-left-color: lighten(#e74c3c, 10);
+
+                        .host-notifications-bar-item-logo-circle {
+
+                            span.hostapp {
+                                background: lighten(#e74c3c, 30);
+                                color: #000;
+                                box-shadow: 0 1px 2px 0 rgba(0,0,0,.26);
+                            }
+                        }
+
+                        .host-notifications-bar-item-content-action {
+                            color: #e74c3c;
+                            border-color: lighten(#e74c3c, 30);
+
+                            &:hover {
+                                background: #e74c3c;
+                                color: #fff;
+                                border-color: #e74c3c;
+                                box-shadow: 0 1px 2px 0 rgba(0,0,0,.26);
+                            }
+                        }
+                    }
+
+                    &.highlighted {
+                        background: $quick-access-bg;
+                        border-left-color: $quick-access-bg;
+
+                        .host-notifications-bar-item-logo-circle {
+
+                            span.hostapp {
+                                background: darken($quick-access-bg, 15);
+                                color: #fff;
+                                box-shadow: 0 1px 2px 0 rgba(0,0,0,.26);
+                            }
+
+                            span.time-elapsed {
+                                color: #fff;
+                            }
+                        }
+
+                        .host-notifications-bar-item-content-text p {
+                            color: #fff;
+                        }
+
+                        .host-notifications-bar-item-content-action {
+                            color: #fff;
+
+                            &:hover {
+                                background: lighten($quick-access-bg, 30);
+                                color: #000;
+                                border-color: lighten($quick-access-bg, 30);
+                                box-shadow: 0 1px 2px 0 rgba(0,0,0,.26);
+                            }
+                        }
+
+
+                        &.system {
+                            background: #e74c3c;
+                            border-left-color: #e74c3c;
+
+                            .host-notifications-bar-item-logo-circle {
+
+                                span.hostapp {
+                                    background: darken(#e74c3c, 15);
+                                    color: #fff;
+                                    box-shadow: 0 1px 2px 0 rgba(0,0,0,.26);
+                                }
+
+                                span.time-elapsed {
+                                    color: #fff;
+                                }
+                            }
+
+                            .host-notifications-bar-item-content-text p {
+                                color: #fff;
+                            }
+
+                            .host-notifications-bar-item-content-action {
+                                color: #fff;
+
+                                &:hover {
+                                    background: lighten(#e74c3c, 30);
+                                    color: #000;
+                                    border-color: lighten(#e74c3c, 30);
+                                    box-shadow: 0 1px 2px 0 rgba(0,0,0,.26);
+                                }
+                            }
+                        }
+                    }
+
+                    &-holder {
+                        padding: 0 10px;
+                        margin-bottom: 12px;
+                    }
+
+                    &-logo {
+                        display: inline-block;
+                        vertical-align: top;
+                        position: relative;
+                        width: 100%;
+                        margin-bottom: 12px;
+
+                        &-circle {
+                            width: 100%;
+
+                            span.hostapp {
+                                background: lighten($bgColor, 55);
+                                font-family: SegoeUI;
+                                font-size: x-small;
+                                color: #000;
+                                display: inline-block;
+                                text-align: center;
+                                padding: 4px 8px;
+                                letter-spacing: 1px;
+                                margin-bottom: 15px;
+                                position: absolute;
+                                right: 0;
+                            }
+
+                            span.time-elapsed {
+                                padding: 4px 0;
+                                font-family: SegoeUI;
+                                font-size: small;
+                                color: #000;
+                                display: inline-block;
+                                opacity: 0.60;
+                            }
+                        }
+                    }
+
+                    &-content {
+                        width: 100%;
+                        padding: 0;
+                        display: inline-block;
+                        vertical-align: top;
+
+                        &-text {
+                            p {
+                                font-family: SegoeUI;
+                                font-size: small;
+                                color: #303030;
+                                margin-bottom: 0;
+                            }
+                        }
+
+                        &-action {
+                            display: block;
+                            min-width: 100px;
+                            line-height: 36px;
+                            background: transparent;
+                            border: 2px solid lighten($quick-access-bg, 30);
+                            text-align: center;
+                            padding: 0 15px;
+                            color: $quick-access-bg;
+                            letter-spacing: 1px;
+                            text-transform: uppercase;
+                            border-radius: 0px;
+                            box-shadow: none;
+                            font-size: small;
+                            line-height: 30px;
+                            height: 36px;
+                            border-radius: 2px;
+                            margin: 15px 0 0 0;
+                            font-family: SegoeUI;
+                            transition: all .3s cubic-bezier(.55,0,.55,.2);
+
+                            &:hover {
+                                background: $quick-access-bg;
+                                color: #fff;
+                                border-color: $quick-access-bg;
+                                box-shadow: 0 1px 2px 0 rgba(0,0,0,.26);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .host-profile {
+            .icon-container {
+                color: #fff;
+            }
+
+            &-close {
+                height: 48px;
+                width: 48px;
+                float: right;
+                text-align: center;
+                line-height: 48px;
+                color: #fff;
+                position: absolute;
+                right: 0;
+                font-size: medium;
+                z-index: 999;
+            }
+
+            md-sidenav {
+                width: calc(100% - 24px);
+                max-width: calc(100% - 24px);
+                min-width: calc(100% - 24px);
+                background-color: #fff;
+
+                @include _CORDOVA_ONLY(&) {
+                    width: 100%;
+                    max-width: 100%;
+                    min-width: 100%;
+                }
+
+                ng-include {
+                    padding: 0;
+                }
+            }
+
+            md-content {
+                padding: 0;
+                height: 100%;
+                width: 100%;
+                overflow-y: auto;
+                background: transparent;
+            }
+
+            &-bar {
+                position: relative;
+                width: 100%;
+                height: 100%;
+                overflow-y: auto;
+                z-index: 998;
+                padding: 0;
+
+                &-top {
+                    height: 48px;
+                    width: 100%;
+                    float: left;
+                    background-color: $quick-access-bg;
+
+                    @include _CORDOVA_IOS_ONLY(&) {
+                        height: 72px;
+                        padding-top: 24px;
+                    }
+                }
+
+                &-bottom {
+                    height: calc(100% - 48px);
+                    width: 100%;
+                    float: left;
+                    overflow-y: auto;
+                    -webkit-overflow-scrolling: touch;
+                    -ms-overflow-style: -ms-autohiding-scrollbar;
+
+                    @include _CORDOVA_IOS_ONLY(&) {
+                        height: calc(100% - 72px);
+                    }
+                }
+
+                &-info {
+                    padding: 10px 20px;
+                    background: #fff;
+                    margin-top: 8px;
+
+                    &.info-first {
+                        -webkit-box-shadow: 0 3px 6px rgba(0,0,0,.1),0 1px 4px rgba(0,0,0,.10);
+                        -moz-box-shadow: 0 3px 6px rgba(0,0,0,.1),0 1px 4px rgba(0,0,0,.10);
+                        box-shadow: 0 3px 6px rgba(0,0,0,.1),0 1px 4px rgba(0,0,0,.10);
+                        background-color: $quick-access-bg;
+                        margin-top: 0;
+                        margin-bottom: 15px;
+                        padding-bottom: 30px;
+                    }
+
+                    &.mt100 {
+                        margin-top: 100px;
+                    }
+
+                    &-pic {
+                        width: 120px;
+                        height: 120px;
+                        margin: 30px auto 30px auto;
+                        border: 5px solid #fff;
+                        border-radius: 50%;
+                        background-color: #fff;
+                        color: $quick-access-bg;
+                        box-shadow: 0 3px 6px rgba(0,0,0,.1);
+
+                        &-circle {
+                            border-radius: 50%;
+                            width: 100%;
+                            height: 100%;
+                            background-color: #fff;
+                            text-align: center;
+
+                            i.icon {
+                                line-height: 120px;
+                                font-size: 40px;
+                                font-weight: 100;
+                            }
+                        }
+                    }
+
+                    &-name {
+                        width: 100%;
+                        font-family: Quicksand;
+                        font-size: large;
+                        color: #303030;
+                        text-align: center;
+                        margin: 0;
+                        font-weight: 400;
+
+                        &.wf {
+                            color: #fff;
+                        }
+                    }
+
+                    &-title {
+                        width: 100%;
+                        font-family: SegoeUI;
+                        font-size: small;
+                        color: #A0A0A0;
+                        text-align: center;
+                        margin: 5px 0 0 0;
+                        font-weight: 400;
+
+                        &.wf {
+                            color: #fff;
+                        }
+
+                        &.align-right {
+                            text-align: left;
+                        }
+                    }
+
+                    &-item {
+                        width: 100%;
+                        display: inline-block;
+
+                        md-chips-wrap {
+                            box-shadow: none;
+                            padding: 0;
+                            margin-bottom: 5px;
+
+                            md-chip {
+                                font-family: SegoeUI;
+                                font-size: small;
+                                min-width: 54px;
+                                text-align: center;
+                                background: lighten($bgColor, 50);
+                            }
+                        }
+
+                        &.w50 {
+                            width: 49%;
+                        }
+
+                        &-title {
+                            width: 100%;
+                            font-family: SegoeUI;
+                            font-size: small;
+                            color: #303030;
+                            text-align: left;
+                            margin: 20px 0 0 0;
+                            font-weight: 400;
+                            opacity: 0.75;
+
+                            &.wf {
+                                color: #fff;
+                            }
+                        }
+
+                        &-value {
+                            width: 100%;
+                            font-family: SegoeUI;
+                            font-size: large;
+                            color: #303030;
+                            text-align: left;
+                            margin: 0;
+                            font-weight: 300;
+
+                            &.wf {
+                                color: #fff;
+                            }
+
+                            &.large {
+                                font-size: xx-large;
+                                font-weight: 300;
+                            }
+                        }
+
+                        &-btn {
+                            -moz-box-shadow: 0px 0px 0px 0px $quick-access-bg;
+                            -webkit-box-shadow: 0px 0px 0px 0px $quick-access-bg;
+                            box-shadow: 0px 0px 0px 0px $quick-access-bg;
+                            background-color: transparent;
+                            color: $quick-access-bg;
+                            -moz-border-radius: 41px;
+                            -webkit-border-radius: 41px;
+                            border-radius: 41px;
+                            display: inline-block;
+                            cursor: pointer;
+                            font-family: SegoeUI;
+                            font-size: small;
+                            padding: 20px 25px;
+                            text-decoration: none;
+                            border: 2px solid $quick-access-bg;
+                            display: block;
+                            margin: 30px auto;
+                            outline: none;
+                            -moz-transition: transform 0.1s linear 0s, background 0.3s linear 0s, color 0.3s linear 0s;
+                            -o-transition: transform 0.1s linear 0s, background 0.3s linear 0s, color 0.3s linear 0s;
+                            -webkit-transition: transform 0.1s linear 0s, background 0.3s linear 0s, color 0.3s linear 0s;
+                            transition: transform 0.1s linear 0s, background 0.3s linear 0s, color 0.3s linear 0s;
+                            opacity: 1;
+                            min-width: 100px;
+
+                            &:active {
+                                -moz-transform: scale(0.95,0.95);
+                                -ms-transform: scale(0.95,0.95);
+                                -o-transform: scale(0.95,0.95);
+                                -webkit-transform: scale(0.95,0.95);
+                                transform: scale(0.95,0.95);
+                            }
+
+                            &:hover,
+                            &:active,
+                            &.active,
+                            &:focus,
+                            &:active:focus,
+                            &.active:focus {
+                                background-color: $quick-access-bg;
+                                color: #fff;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
