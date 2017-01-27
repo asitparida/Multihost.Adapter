@@ -10,16 +10,8 @@
             self.timeout = setTimeout;
             self.card = {
                 id: 1,
-                title: 'New Request Assignment 1',
-                hostApp: 'GCM-REACT',
-                projectName: 'MS State Auditors - 999630',
-                customerName: 'MS State Auditors',
-                demandSourceId: 'ROSSXXXX0000SSS',
-                productOffering: '[LocASIA][LanEN] - Rights Management Service Workshop',
-                startDate: '06/06/2016',
-                endDate: '06/06/2016',
-                type: 'MIP',
-                timeRemaning: '30:29'
+                title: 'New Card #R',
+                hostApp: 'React'
             };
             return self;
         },
@@ -77,72 +69,72 @@
                         { className: 'quick-access-cards-card-content' },
                         React.createElement(
                             'div',
-                            { className: 'quick-access-cards-card-content-item' },
+                            { 'class': 'assignment-card-content-item' },
                             React.createElement(
                                 'div',
-                                { className: 'quick-access-cards-card-content-item-header' },
-                                'Project Name'
+                                { 'class': 'assignment-card-content-item-header' },
+                                'Name'
                             ),
                             React.createElement(
                                 'div',
-                                { className: 'quick-access-cards-card-content-item-value' },
-                                this.state.card.projectName
+                                { 'class': 'assignment-card-content-item-value' },
+                                'Lorem ipsum dolor sit amet, consectetur adipiscing elit'
                             )
                         ),
                         React.createElement(
                             'div',
-                            { className: 'quick-access-cards-card-content-item w50' },
+                            { 'class': 'assignment-card-content-item w50' },
                             React.createElement(
                                 'div',
-                                { className: 'quick-access-cards-card-content-item-header' },
+                                { 'class': 'assignment-card-content-item-header' },
                                 'Start Date'
                             ),
                             React.createElement(
                                 'div',
-                                { className: 'quick-access-cards-card-content-item-value' },
-                                this.state.card.startDate
+                                { 'class': 'assignment-card-content-item-value' },
+                                'XX/XX/XXXX'
                             )
                         ),
                         React.createElement(
                             'div',
-                            { className: 'quick-access-cards-card-content-item w50' },
+                            { 'class': 'assignment-card-content-item w50' },
                             React.createElement(
                                 'div',
-                                { className: 'quick-access-cards-card-content-item-header' },
+                                { 'class': 'assignment-card-content-item-header' },
                                 'End Date'
                             ),
                             React.createElement(
                                 'div',
-                                { className: 'quick-access-cards-card-content-item-value' },
-                                this.state.card.endDate
+                                { 'class': 'assignment-card-content-item-value' },
+                                'XX/XX/XXXX'
                             )
                         ),
                         React.createElement(
                             'div',
-                            { className: 'quick-access-cards-card-content-item w50' },
+                            { 'class': 'assignment-card-content-item w50' },
                             React.createElement(
                                 'div',
-                                { className: 'quick-access-cards-card-content-item-header' },
+                                { 'class': 'assignment-card-content-item-header' },
                                 'Type'
                             ),
                             React.createElement(
                                 'div',
-                                { className: 'quick-access-cards-card-content-item-value' },
-                                this.state.card.type
+                                { 'class': 'assignment-card-content-item-value' },
+                                'XXX-XX'
                             )
                         ),
                         React.createElement(
                             'div',
-                            { className: 'quick-access-cards-card-content-item w50' },
+                            { 'class': 'assignment-card-content-item w50' },
                             React.createElement(
                                 'div',
-                                { className: 'quick-access-cards-card-content-item-header' },
+                                { 'class': 'assignment-card-content-item-header' },
                                 'Time Rem.'
                             ),
                             React.createElement(
                                 'div',
-                                { className: 'quick-access-cards-card-content-item-value' },
-                                this.state.card.timeRemaning
+                                { 'class': 'assignment-card-content-item-value' },
+                                'XX:XX'
                             )
                         ),
                         this.state.card.$show == true ? React.createElement(
@@ -150,44 +142,44 @@
                             null,
                             React.createElement(
                                 'div',
-                                { className: 'quick-access-cards-card-content-item' },
+                                { 'class': 'assignment-card-content-item' },
                                 React.createElement(
                                     'div',
-                                    { className: 'quick-access-cards-card-content-item-header' },
-                                    'Customer Name'
+                                    { 'class': 'assignment-card-content-item-header' },
+                                    'Customer'
                                 ),
                                 React.createElement(
                                     'div',
-                                    { className: 'quick-access-cards-card-content-item-value' },
-                                    this.state.card.customerName
+                                    { 'class': 'assignment-card-content-item-value' },
+                                    'XXXXXX XXX XXXXXXXX'
                                 )
                             ),
                             React.createElement(
                                 'div',
-                                { className: 'quick-access-cards-card-content-item' },
+                                { 'class': 'assignment-card-content-item' },
                                 React.createElement(
                                     'div',
-                                    { className: 'quick-access-cards-card-content-item-header' },
-                                    'Demand Source'
+                                    { 'class': 'assignment-card-content-item-header' },
+                                    'Company'
                                 ),
                                 React.createElement(
                                     'div',
-                                    { className: 'quick-access-cards-card-content-item-value' },
-                                    this.state.card.demandSourceId
+                                    { 'class': 'assignment-card-content-item-value' },
+                                    'XXXX XXX XXXXXXXXXX'
                                 )
                             ),
                             React.createElement(
                                 'div',
-                                { className: 'quick-access-cards-card-content-item' },
+                                { 'class': 'assignment-card-content-item' },
                                 React.createElement(
                                     'div',
-                                    { className: 'quick-access-cards-card-content-item-header' },
-                                    'Product / Offering'
+                                    { 'class': 'assignment-card-content-item-header' },
+                                    'Product'
                                 ),
                                 React.createElement(
                                     'div',
-                                    { className: 'quick-access-cards-card-content-item-value' },
-                                    this.state.card.productOffering
+                                    { 'class': 'assignment-card-content-item-value' },
+                                    'XXXX XXXX XXXX XXXX'
                                 )
                             )
                         ) : null,
@@ -197,7 +189,7 @@
                             React.createElement(
                                 'button',
                                 { className: 'quick-access-cards-card-action pull-left', onClick: this.onDecline },
-                                'Decline'
+                                'Remove Card'
                             ),
                             React.createElement(
                                 'div',
