@@ -48,39 +48,39 @@
                         : null } 
                         { this.state.showPanel == true ? 
                             <div className="quick-access-cards-card-content">
-                        <div class="assignment-card-content-item">
-                <div class="assignment-card-content-item-header">Name</div>
-                <div class="assignment-card-content-item-value">Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
+                        <div className="assignment-card-content-item">
+                <div className="assignment-card-content-item-header">Name</div>
+                <div className="assignment-card-content-item-value">Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
                         </div>
-            <div class="assignment-card-content-item w50">
-                <div class="assignment-card-content-item-header">Start Date</div>
-                <div class="assignment-card-content-item-value">XX/XX/XXXX</div>
+            <div className="assignment-card-content-item w50">
+                <div className="assignment-card-content-item-header">Start Date</div>
+                <div className="assignment-card-content-item-value">XX/XX/XXXX</div>
             </div>
-            <div class="assignment-card-content-item w50">
-                <div class="assignment-card-content-item-header">End Date</div>
-                <div class="assignment-card-content-item-value">XX/XX/XXXX</div>
+            <div className="assignment-card-content-item w50">
+                <div className="assignment-card-content-item-header">End Date</div>
+                <div className="assignment-card-content-item-value">XX/XX/XXXX</div>
             </div>
-            <div class="assignment-card-content-item w50">
-                <div class="assignment-card-content-item-header">Type</div>
-                <div class="assignment-card-content-item-value">XXX-XX</div>
+            <div className="assignment-card-content-item w50">
+                <div className="assignment-card-content-item-header">Type</div>
+                <div className="assignment-card-content-item-value">XXX-XX</div>
             </div>
-            <div class="assignment-card-content-item w50">
-                <div class="assignment-card-content-item-header">Time Rem.</div>
-                <div class="assignment-card-content-item-value">XX:XX</div>
+            <div className="assignment-card-content-item w50">
+                <div className="assignment-card-content-item-header">Time Rem.</div>
+                <div className="assignment-card-content-item-value">XX:XX</div>
             </div>
                                 { this.state.card.$show == true ?
                             <div>
-                               <div class="assignment-card-content-item">
-                    <div class="assignment-card-content-item-header">Customer</div>
-                    <div class="assignment-card-content-item-value">XXXXXX XXX XXXXXXXX</div>
+                               <div className="assignment-card-content-item">
+                    <div className="assignment-card-content-item-header">Customer</div>
+                    <div className="assignment-card-content-item-value">XXXXXX XXX XXXXXXXX</div>
                                </div>
-                <div class="assignment-card-content-item">
-                    <div class="assignment-card-content-item-header">Company</div>
-                    <div class="assignment-card-content-item-value">XXXX XXX XXXXXXXXXX</div>
+                <div className="assignment-card-content-item">
+                    <div className="assignment-card-content-item-header">Company</div>
+                    <div className="assignment-card-content-item-value">XXXX XXX XXXXXXXXXX</div>
                 </div>
-                <div class="assignment-card-content-item">
-                    <div class="assignment-card-content-item-header">Product</div>
-                    <div class="assignment-card-content-item-value">XXXX XXXX XXXX XXXX</div>
+                <div className="assignment-card-content-item">
+                    <div className="assignment-card-content-item-header">Product</div>
+                    <div className="assignment-card-content-item-value">XXXX XXXX XXXX XXXX</div>
                 </div>
                             </div>
                                 : null }

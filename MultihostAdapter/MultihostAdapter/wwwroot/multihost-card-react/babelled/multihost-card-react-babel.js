@@ -69,71 +69,71 @@
                         { className: 'quick-access-cards-card-content' },
                         React.createElement(
                             'div',
-                            { 'class': 'assignment-card-content-item' },
+                            { className: 'assignment-card-content-item' },
                             React.createElement(
                                 'div',
-                                { 'class': 'assignment-card-content-item-header' },
+                                { className: 'assignment-card-content-item-header' },
                                 'Name'
                             ),
                             React.createElement(
                                 'div',
-                                { 'class': 'assignment-card-content-item-value' },
+                                { className: 'assignment-card-content-item-value' },
                                 'Lorem ipsum dolor sit amet, consectetur adipiscing elit'
                             )
                         ),
                         React.createElement(
                             'div',
-                            { 'class': 'assignment-card-content-item w50' },
+                            { className: 'assignment-card-content-item w50' },
                             React.createElement(
                                 'div',
-                                { 'class': 'assignment-card-content-item-header' },
+                                { className: 'assignment-card-content-item-header' },
                                 'Start Date'
                             ),
                             React.createElement(
                                 'div',
-                                { 'class': 'assignment-card-content-item-value' },
+                                { className: 'assignment-card-content-item-value' },
                                 'XX/XX/XXXX'
                             )
                         ),
                         React.createElement(
                             'div',
-                            { 'class': 'assignment-card-content-item w50' },
+                            { className: 'assignment-card-content-item w50' },
                             React.createElement(
                                 'div',
-                                { 'class': 'assignment-card-content-item-header' },
+                                { className: 'assignment-card-content-item-header' },
                                 'End Date'
                             ),
                             React.createElement(
                                 'div',
-                                { 'class': 'assignment-card-content-item-value' },
+                                { className: 'assignment-card-content-item-value' },
                                 'XX/XX/XXXX'
                             )
                         ),
                         React.createElement(
                             'div',
-                            { 'class': 'assignment-card-content-item w50' },
+                            { className: 'assignment-card-content-item w50' },
                             React.createElement(
                                 'div',
-                                { 'class': 'assignment-card-content-item-header' },
+                                { className: 'assignment-card-content-item-header' },
                                 'Type'
                             ),
                             React.createElement(
                                 'div',
-                                { 'class': 'assignment-card-content-item-value' },
+                                { className: 'assignment-card-content-item-value' },
                                 'XXX-XX'
                             )
                         ),
                         React.createElement(
                             'div',
-                            { 'class': 'assignment-card-content-item w50' },
+                            { className: 'assignment-card-content-item w50' },
                             React.createElement(
                                 'div',
-                                { 'class': 'assignment-card-content-item-header' },
+                                { className: 'assignment-card-content-item-header' },
                                 'Time Rem.'
                             ),
                             React.createElement(
                                 'div',
-                                { 'class': 'assignment-card-content-item-value' },
+                                { className: 'assignment-card-content-item-value' },
                                 'XX:XX'
                             )
                         ),
@@ -142,43 +142,43 @@
                             null,
                             React.createElement(
                                 'div',
-                                { 'class': 'assignment-card-content-item' },
+                                { className: 'assignment-card-content-item' },
                                 React.createElement(
                                     'div',
-                                    { 'class': 'assignment-card-content-item-header' },
+                                    { className: 'assignment-card-content-item-header' },
                                     'Customer'
                                 ),
                                 React.createElement(
                                     'div',
-                                    { 'class': 'assignment-card-content-item-value' },
+                                    { className: 'assignment-card-content-item-value' },
                                     'XXXXXX XXX XXXXXXXX'
                                 )
                             ),
                             React.createElement(
                                 'div',
-                                { 'class': 'assignment-card-content-item' },
+                                { className: 'assignment-card-content-item' },
                                 React.createElement(
                                     'div',
-                                    { 'class': 'assignment-card-content-item-header' },
+                                    { className: 'assignment-card-content-item-header' },
                                     'Company'
                                 ),
                                 React.createElement(
                                     'div',
-                                    { 'class': 'assignment-card-content-item-value' },
+                                    { className: 'assignment-card-content-item-value' },
                                     'XXXX XXX XXXXXXXXXX'
                                 )
                             ),
                             React.createElement(
                                 'div',
-                                { 'class': 'assignment-card-content-item' },
+                                { className: 'assignment-card-content-item' },
                                 React.createElement(
                                     'div',
-                                    { 'class': 'assignment-card-content-item-header' },
+                                    { className: 'assignment-card-content-item-header' },
                                     'Product'
                                 ),
                                 React.createElement(
                                     'div',
-                                    { 'class': 'assignment-card-content-item-value' },
+                                    { className: 'assignment-card-content-item-value' },
                                     'XXXX XXXX XXXX XXXX'
                                 )
                             )
