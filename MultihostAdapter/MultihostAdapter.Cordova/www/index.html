@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html style="background-color:#29b6f6;">
+<head>
+    <!--
+        Customize the content security policy in the meta tag below as needed. Add 'unsafe-inline' to default-src to enable inline JavaScript.
+        For details, see http://go.microsoft.com/fwlink/?LinkID=617521
+    -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://appsforoffice.microsoft.com https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
+
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <title>PS.Cordova.QuickAccess</title>
+    <link rel="stylesheet" href="dist/css/lib.min.css" />
+    <link rel="stylesheet" href="dist/css/app.min.css" />
+</head>
+<body class="hostWindow">
+    <div class="launchWindow" id="launchContextAdapter"></div>
+    <div class="host-view" id="hostViewContainer">
+        <div class="host-view-header" id="hostContextAdapter"></div>
+        <div class="host-view-content" id="hostViewContent"></div>
+        <div class="host-view-context" id="hostContextContent"></div>
+    </div>
+
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="scripts/platformOverrides.js"></script>
+    <script type="text/javascript" src="scripts/index.js"></script>
+
+    <script type="text/javascript" src="scripts/app.project-cor.js"></script>
+    <script type="text/javascript" src="dist/min/base.lib.min.js"></script>
+    <script type="text/javascript" src="dist/min/@angular1.lib.min.js"></script>
+    <script type="text/javascript" src="dist/min/@angular2.lib.min.js"></script>
+    <script type="text/javascript" src="dist/min/react.lib.min.js"></script>
+    <script type="text/javascript" src="dist/min/host.min.js"></script>
+    <script type="text/javascript" src="dist/min/launch.min.js"></script>
+</body>
+</html>
