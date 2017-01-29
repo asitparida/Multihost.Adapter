@@ -2,9 +2,10 @@
 An adapter for running ui client apps belonging to different frameworks together
 
 ##Currently Supported
-#####Angular 1.x
-#####Angular 2.x
-#####React
+####Angular 1.x
+####Angular 2.x
+####React
+####Mithril JS
 
 ## Electron Desktop
 <img src="MultihostAdapter/multi-host.jpg" style="height:1080px;width:1920px;" />

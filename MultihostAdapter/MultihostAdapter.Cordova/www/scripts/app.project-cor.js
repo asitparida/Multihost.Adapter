@@ -3,6 +3,14 @@ window['APP_PLATFORM_CORDOVA'] = true;
 var _clientConfigData =
 [
   {
+    "id": "client-config-mithril",
+    "name": "GCM Request Assignment Mithril",
+    "ng-module": "Multihost.Card.Mithril",
+    "js": "multihost-card-mithril.min.js",
+    "boot": "mithril",
+    "client-id": "mithril-app"
+  },
+  {
       "id": "client-config-10",
       "name": "GCM Request Assignment React",
       "ng-module": "Multihost.Card.React",
