@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', function (e) {
         document.addEventListener('deviceready', function () {
             window['_clientConfigs'] = _clientConfigData;
             addWidgets(window['_clientConfigs']);
-        }, false);        
+        }, false);
     }
     else {
         if (require) {
@@ -41,13 +41,13 @@ document.addEventListener('DOMContentLoaded', function (e) {
                 _electron.ipcRenderer.removeAllListeners(['app-get-host-config-reply']);
                 _electron.ipcRenderer.send('app-get-host-config');
                 _electron.ipcRenderer.on('app-get-host-config-reply', function (event, args) {
-                    window['_clientConfigs'] = args;                    
+                    window['_clientConfigs'] = args;
                     addWidgets(window['_clientConfigs']);
                 });
             }
         }
     }
-    
+
     //TODO : REMOVE TEST ONLY OR CONFIGURE IT FOR TEST ONLY INSTEAD OF COMMENTING/UNCOMMENTING
     //document.querySelector('html').classList.add('_CORDOVA');
     //document.querySelector('html').classList.add('_IOS');
@@ -72,6 +72,12 @@ function addWidgets(args) {
             else if (args[i]['boot'] === 'react') {
                 _tmpl = '<div><md-content class="md-padding" layout="column"><APP_ID id="REACT_APP_ID"></APP_ID></md-content></div>';
                 _tmpl = _tmpl.replaceAll('REACT_APP_ID', _.uniqueId('_react_app_'));
+                _tmpl = _tmpl.replaceAll('APP_ID', args[i]['client-id']);
+                _hostContainer.append(_tmpl);
+            }
+            else if (args[i]['boot'] === 'mithril') {
+                _tmpl = '<div><md-content class="md-padding" layout="column"><APP_ID id="MITHRIL_APP_ID"></APP_ID></md-content></div>';
+                _tmpl = _tmpl.replaceAll('MITHRIL_APP_ID', _.uniqueId('_mithril_app_'));
                 _tmpl = _tmpl.replaceAll('APP_ID', args[i]['client-id']);
                 _hostContainer.append(_tmpl);
             }
@@ -109,7 +115,7 @@ function removeWindowBootstrapForClient(id) {
             scaleX: 0, scaleY: 0, height: 0, opacity: 0, transformOrigin: "center", onComplete: function () {
                 removeDOMElement(_mdContentElement);
             }
-        });        
+        });
     }
     else
         removeDOMElement(_mdContentElement);
@@ -126,7 +132,7 @@ function addWindowBootstrapForClient(_clientConfig) {
             for (var i = 0; i < _elements.length; i++) {
                 if (angular) {
                     var _ngLoaded = _elements[i]['_ngLoaded'] || false;
-                    if (!_ngLoaded) {                        
+                    if (!_ngLoaded) {
                         var _uid = _.uniqueId(_clientConfig['client-id']);
                         _elements[i].setAttribute('id', _uid);
                         angular.module('appConfig', []).value('appView', _uid);
@@ -166,7 +172,23 @@ function addWindowBootstrapForClient(_clientConfig) {
             }
             if (ReactDOM) {
                 _componentSelectors.forEach(function (_component) {
-                    ReactDOM.render(React.createElement(window[_clientConfig['ng-module']], {appView: _component.selector}), document.getElementById(_component.selector));
+                    ReactDOM.render(React.createElement(window[_clientConfig['ng-module']], { appView: _component.selector }), document.getElementById(_component.selector));
+                })
+            }
+        }
+
+        function bootStrapClientMithril() {
+            var _componentSelectors = [];
+            var _selector = _clientConfig['client-id'];
+            var _elements = document.querySelectorAll(_selector);
+            console.log(_elements);
+            for (var i = 0; i < _elements.length; i++) {
+                var _id = _elements[i].getAttribute('id')
+                _componentSelectors.push({ 'selector': _id });
+            }
+            if (typeof window.m !== 'undefined' && window.m) {
+                _componentSelectors.forEach(function (_component) {                    
+                    window.m.mount(document.getElementById(_component.selector), window[_clientConfig['ng-module']]);
                 })
             }
         }
@@ -176,5 +198,7 @@ function addWindowBootstrapForClient(_clientConfig) {
             window.bootStrapClient[_clientConfig['client-id']] = bootStrapClientNg2;
         else if (_clientConfig['boot'] === 'react')
             window.bootStrapClient[_clientConfig['client-id']] = bootStrapClientReact;
+        else if (_clientConfig['boot'] === 'mithril')
+            window.bootStrapClient[_clientConfig['client-id']] = bootStrapClientMithril;
     }
 }

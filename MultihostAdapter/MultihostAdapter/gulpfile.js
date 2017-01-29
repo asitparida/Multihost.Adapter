@@ -7,7 +7,8 @@
     htmlToJsCompiler = require('gulp-html-to-js'),
     uglify = require('gulp-uglify'),
     pump = require('pump'),
-    babel = require('gulp-babel');
+    babel = require('gulp-babel'),
+    msx = require('gulp-msx');
 
 var errorHandler = function (error) {
     console.log(error);
@@ -119,6 +120,23 @@ gulp.task('minify:lib:react', function (cb) {
           ]),
           //uglify(),
           concat('react.lib.min.js'),
+          gulp.dest('dist/min')
+    ],
+      cb
+    );
+});
+
+/*
+ * MITHRIL RELATED MINIFIED FILES
+ */
+
+gulp.task('minify:lib:mithril', function (cb) {
+    pump([
+          gulp.src([
+              'lib/mithril/mithril.js',
+          ]),
+          uglify(),
+          concat('mithril.lib.min.js'),
           gulp.dest('dist/min')
     ],
       cb
@@ -280,4 +298,43 @@ gulp.task('default:watch:multihost-card-react', function () {
         'wwwroot/multihost-card-react/**/*.js',
         'wwwroot/multihost-card-react/**/*.jsx'
     ], ['minify:js:multihost-card-react']);
+});
+
+/*
+ * multihost-card MITHRIL FILES
+ */
+
+gulp.task("babel:js:multihost-card-mithril", function (cb) {
+    pump([
+          gulp.src([
+              'wwwroot/multihost-card-mithril/**/*.jsx',
+          ]),
+          babel(),
+          concat('multihost-card-mithril-babel.js'),
+          gulp.dest('wwwroot/multihost-card-mithril/babelled')
+    ],
+      cb
+    );
+});
+
+gulp.task('minify:js:multihost-card-mithril', ['babel:js:multihost-card-mithril'], function (cb) {
+    pump([
+          gulp.src([
+              'wwwroot/multihost-card-mithril/**/*.js'
+          ]),
+          uglify(),
+          concat('multihost-card-mithril.min.js'),
+          gulp.dest('dist/min')
+    ],
+      cb
+    );
+});
+
+gulp.task('default:watch:multihost-card-mithril', function () {
+    gulp.watch([
+        'wwwroot/multihost-card-mithril/templates/**/*.html',
+        'wwwroot/multihost-card-mithril/views/**/*.html',
+        'wwwroot/multihost-card-mithril/**/*.js',
+        'wwwroot/multihost-card-mithril/**/*.jsx'
+    ], ['minify:js:multihost-card-mithril']);
 });
