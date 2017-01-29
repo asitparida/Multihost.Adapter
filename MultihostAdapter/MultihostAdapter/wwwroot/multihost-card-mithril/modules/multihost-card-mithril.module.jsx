@@ -1,16 +1,43 @@
 ﻿(function () {
-
     window['Multihost.Card.Mithril'] = {
         controller() {
-            this.hideProgress = m.prop(false)
-            this.showPanel = m.prop(false)
-            this.who = m.prop('World');
-            this.card = {
-                id: 1,
-                title: 'New Card #M',
-                hostApp: 'Mithril',
-                $show: false
+            var self = this;
+            window.m = m;
+            self.hideProgress = m.prop(false)
+            self.showPanel = m.prop(false)
+            self.who = m.prop('World');
+            self.card = {
+                id: m.prop(1),
+                title: m.prop('New Card #Mithril'),
+                hostApp: m.prop('Mithril'),
+                $show: m.prop(false)
             };
+
+            self.onToggleDetails = function () {
+                self.card.$show(!self.card.$show());
+                m.redraw();
+            }
+
+            self.onDecline = function () {
+                if (typeof removeWindowBootstrapForClient !== 'undefined' && typeof removeWindowBootstrapForClient === 'function')
+                    removeWindowBootstrapForClient(self.appViewId);
+            }
+            
+            var timeoutAsync = function () {
+                var deferred = m.deferred();
+                setTimeout(function () {
+                    deferred.resolve();
+                }, 2000);
+                return deferred.promise;
+            };
+
+            timeoutAsync()
+            .then(function () {
+                self.hideProgress(true);
+                self.showPanel(true);
+            }).then(function () {
+                m.redraw()
+            })
         },
         view(ctrl) {
             return <div className="quick-access-cards">
@@ -27,8 +54,8 @@
                         { ctrl.showPanel() == true ?
                             <div className="quick-access-cards-card-title">
                                 <div className="quick-access-cards-card-title-text">
-                                    <span className="md-headline">{ctrl.card.title}</span>
-                                    <span className="quick-access-cards-card-hostapp">{ctrl.card.hostApp}</span>
+                                    <span className="md-headline">{ctrl.card.title()}</span>
+                                    <span className="quick-access-cards-card-hostapp">{ctrl.card.hostApp()}</span>
                                 </div>
                             </div>
                         : null }
@@ -71,8 +98,8 @@
                                 </div>
                                 : null }
                             <div className="quick-access-cards-card-content-action-container">
-                                <button className="quick-access-cards-card-action pull-left" onClick={this.onDecline}>Remove Card</button>
-                                <div className="icon-container quick-access-cards-card-showmore pull-right" onClick={this.onToggleDetails}>
+                                <button className="quick-access-cards-card-action pull-left" onclick={ctrl.onDecline.bind(ctrl)}>Remove Card</button>
+                                <div className="icon-container quick-access-cards-card-showmore pull-right" onclick={ctrl.onToggleDetails.bind(ctrl)}>
                                     { ctrl.card.$show() != true ? <i className="icon icon-scrollChevronDownLegacy"></i> : <i className="icon icon-scrollChevronUpLegacy"></i> }
                                 </div>
                             </div>

@@ -188,7 +188,8 @@ function addWindowBootstrapForClient(_clientConfig) {
             }
             if (typeof window.m !== 'undefined' && window.m) {
                 _componentSelectors.forEach(function (_component) {                    
-                    window.m.mount(document.getElementById(_component.selector), window[_clientConfig['ng-module']]);
+                    var _mounted = window.m.mount(document.getElementById(_component.selector), window[_clientConfig['ng-module']]);
+                    _mounted.appViewId = _component.selector;
                 })
             }
         }
