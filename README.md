@@ -6,6 +6,7 @@ An adapter for running ui client apps belonging to different frameworks together
 ####Angular 2.x
 ####React
 ####Mithril JS
+####Vue JS
 
 ## Electron Desktop
 <img src="MultihostAdapter/multi-host.jpg" style="height:1080px;width:1920px;" />
