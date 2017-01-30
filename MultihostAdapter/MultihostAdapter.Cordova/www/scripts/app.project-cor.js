@@ -2,13 +2,21 @@
 window['APP_PLATFORM_CORDOVA'] = true;
 var _clientConfigData =
 [
+    {
+        "id": "client-config-vue",
+        "name": "GCM Request Assignment Vue",
+        "ng-module": "multihost-card-vue",
+        "js": "multihost-card-vue.min.js",
+        "boot": "vue",
+        "client-id": "multihost-card-vue-app"
+    },
   {
-    "id": "client-config-mithril",
-    "name": "GCM Request Assignment Mithril",
-    "ng-module": "Multihost.Card.Mithril",
-    "js": "multihost-card-mithril.min.js",
-    "boot": "mithril",
-    "client-id": "mithril-app"
+      "id": "client-config-mithril",
+      "name": "GCM Request Assignment Mithril",
+      "ng-module": "Multihost.Card.Mithril",
+      "js": "multihost-card-mithril.min.js",
+      "boot": "mithril",
+      "client-id": "mithril-app"
   },
   {
       "id": "client-config-10",

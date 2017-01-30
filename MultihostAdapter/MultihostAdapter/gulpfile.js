@@ -8,7 +8,8 @@
     uglify = require('gulp-uglify'),
     pump = require('pump'),
     babel = require('gulp-babel'),
-    msx = require('gulp-msx');
+    msx = require('gulp-msx'),
+    vueify = require('gulp-vueify');
 
 var errorHandler = function (error) {
     console.log(error);
@@ -144,6 +145,23 @@ gulp.task('minify:lib:mithril', function (cb) {
 });
 
 /*
+ * MITHRIL RELATED MINIFIED FILES
+ */
+
+gulp.task('minify:lib:vue', function (cb) {
+    pump([
+          gulp.src([
+              'lib/vue/vue.min.js',
+          ]),
+          //uglify(),
+          concat('vue.lib.min.js'),
+          gulp.dest('dist/min')
+    ],
+      cb
+    );
+});
+
+/*
  * LAUNCH RELATED MINIFIED FILES
  */
 
@@ -270,7 +288,9 @@ gulp.task("babel:js:multihost-card-react", function (cb) {
           gulp.src([
               'wwwroot/multihost-card-react/**/*.jsx',              
           ]),
-          babel(),
+          babel({
+              "presets": ["react", "es2015", "stage-2"],
+          }),
           concat('multihost-card-react-babel.js'),
           gulp.dest('wwwroot/multihost-card-react/babelled')
     ],
@@ -309,7 +329,10 @@ gulp.task("babel:js:multihost-card-mithril", function (cb) {
           gulp.src([
               'wwwroot/multihost-card-mithril/**/*.jsx',
           ]),
-          babel(),
+          babel({
+              "presets": ["es2015", "stage-2"],
+              "plugins": ["mjsx"]
+          }),
           concat('multihost-card-mithril-babel.js'),
           gulp.dest('wwwroot/multihost-card-mithril/babelled')
     ],
@@ -337,4 +360,43 @@ gulp.task('default:watch:multihost-card-mithril', function () {
         'wwwroot/multihost-card-mithril/**/*.js',
         'wwwroot/multihost-card-mithril/**/*.jsx'
     ], ['minify:js:multihost-card-mithril']);
+});
+
+/*
+ * multihost-card VUE FILES
+ */
+
+gulp.task("babel:js:multihost-card-vue", function (cb) {
+    pump([
+          gulp.src([
+              'wwwroot/multihost-card-vue/**/*.jsx',
+          ]),
+          babel({
+              "presets": ["es2015"],
+              "plugins": ["transform-vue-jsx"]
+          }),
+          concat('multihost-card-vue-babel.js'),
+          gulp.dest('wwwroot/multihost-card-vue/babelled')
+    ],
+      cb
+    );
+});
+
+gulp.task('minify:js:multihost-card-vue', ['babel:js:multihost-card-vue'], function (cb) {
+    pump([
+          gulp.src([
+              'wwwroot/multihost-card-vue/**/*.js'
+          ]),
+          uglify(),
+          concat('multihost-card-vue.min.js'),
+          gulp.dest('dist/min')
+    ],
+      cb
+    );
+});
+
+gulp.task('default:watch:multihost-card-vue', function () {
+    gulp.watch([        
+        'wwwroot/multihost-card-vue/**/*.jsx'
+    ], ['minify:js:multihost-card-vue']);
 });

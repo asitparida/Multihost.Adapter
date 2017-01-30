@@ -1,5 +1,13 @@
 ﻿[
   {
+    "id": "client-config-vue",
+    "name": "GCM Request Assignment Vue",
+    "ng-module": "multihost-card-vue",
+    "js": "multihost-card-vue.min.js",
+    "boot": "vue",
+    "client-id": "multihost-card-vue-app"
+  },
+  {
     "id": "client-config-mithril",
     "name": "GCM Request Assignment Mithril",
     "ng-module": "Multihost.Card.Mithril",

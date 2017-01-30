@@ -82,6 +82,8 @@
     <Content Include="dist\min\multihost-card-ng1.min.js" />
     <Content Include="dist\min\multihost-card-ng2.min.js" />
     <Content Include="dist\min\multihost-card-react.min.js" />
+    <Content Include="dist\min\multihost-card-vue.min.js" />
+    <Content Include="dist\min\vue.lib.min.js" />
     <Content Include="lib\base\TweenMax.min.js" />
     <Content Include="lib\css\angular-material.min.css" />
     <Content Include="lib\css\anim-in-out.css" />
@@ -140,6 +142,7 @@
     <Content Include="lib\react\react.min.js" />
     <Content Include="lib\ui-bootstrap-tpls-1.1.1.min.js" />
     <Content Include="lib\base\underscore-min.js" />
+    <Content Include="lib\vue\vue.min.js" />
     <Content Include="packages.config" />
     <Content Include="package.json" />
     <Content Include="host-launch.html" />
@@ -170,6 +173,7 @@
     <Content Include="dist\fonts\regular\segoeui.woff" />
     <Content Include="wwwroot\multihost-card-mithril\babelled\multihost-card-mithril-babel.js" />
     <Content Include="wwwroot\multihost-card-mithril\modules\multihost-card-mithril.module.jsx" />
+    <Content Include="wwwroot\multihost-card-vue\babelled\multihost-card-vue-babel.js" />
     <None Include="wwwroot\multihost-card-react\modules\multihost-card-react.module.jsx" />
     <Content Include="wwwroot\multihost-card-react\babelled\multihost-card-react-babel.js" />
     <Content Include="wwwroot\multihost-card-ng1\configs\multihost-card-ng1.config.js" />
@@ -204,13 +208,13 @@
     <Content Include="scss\_assignmentCard.scss" />
     <Content Include="dist\configs\client-configs.json" />
     <Content Include="scss\_notifications.scss" />
-    <Content Include=".babelrc" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+    <None Include="wwwroot\multihost-card-vue\modules\multihost-card-vue.module.jsx" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="main.js" />
