@@ -81,6 +81,13 @@ function addWidgets(args) {
                 _tmpl = _tmpl.replaceAll('APP_ID', args[i]['client-id']);
                 _hostContainer.append(_tmpl);
             }
+            else if (args[i]['boot'] === 'vue') {
+                _tmpl = '<div><md-content class="md-padding" layout="column"><APP_RECOG_ID id="VUE_APP_ID"><APP_ID></APP_ID></APP_RECOG_ID></md-content></div>';
+                _tmpl = _tmpl.replaceAll('VUE_APP_ID', _.uniqueId('_vue_app_'));
+                _tmpl = _tmpl.replaceAll('APP_ID', args[i]['ng-module']);
+                _tmpl = _tmpl.replaceAll('APP_RECOG_ID', args[i]['client-id']);
+                _hostContainer.append(_tmpl);
+            }
             var _fileUrl = 'dist/min/' + args[i]['js'];
             var _fileExists = false;
             var _fileExistsSelector = 'script[src="' + _fileUrl + '"]';
@@ -161,11 +168,11 @@ function addWindowBootstrapForClient(_clientConfig) {
               ])
               .bootstrapModule(window[_clientConfig['ng-module']].AppModule);
         }
+
         function bootStrapClientReact() {
             var _componentSelectors = [];
             var _selector = _clientConfig['client-id'];
-            var _elements = document.querySelectorAll(_selector);
-            console.log(_elements);
+            var _elements = document.querySelectorAll(_selector);            
             for (var i = 0; i < _elements.length; i++) {
                 var _id = _elements[i].getAttribute('id')
                 _componentSelectors.push({ 'selector': _id });
@@ -180,8 +187,7 @@ function addWindowBootstrapForClient(_clientConfig) {
         function bootStrapClientMithril() {
             var _componentSelectors = [];
             var _selector = _clientConfig['client-id'];
-            var _elements = document.querySelectorAll(_selector);
-            console.log(_elements);
+            var _elements = document.querySelectorAll(_selector);            
             for (var i = 0; i < _elements.length; i++) {
                 var _id = _elements[i].getAttribute('id')
                 _componentSelectors.push({ 'selector': _id });
@@ -193,6 +199,23 @@ function addWindowBootstrapForClient(_clientConfig) {
                 })
             }
         }
+
+        function bootStrapClienVue() {
+            var _componentSelectors = [];
+            var _selector = _clientConfig['client-id'];
+            var _elements = document.querySelectorAll(_selector);
+            for (var i = 0; i < _elements.length; i++) {
+                var _id = _elements[i].getAttribute('id')
+                _componentSelectors.push({ 'selector': _id });
+            }
+            if (typeof Vue !== 'undefined' && Vue) {                
+                _componentSelectors.forEach(function (_component) {
+                    var _mounted = new Vue({ el: '#' + _component.selector });                    
+                    _mounted.$data.appViewId = _component.selector;
+                })
+            }
+        }
+
         if (_clientConfig['boot'] === 'ng1')
             window.bootStrapClient[_clientConfig['client-id']] = bootStrapClientNg1;
         else if (_clientConfig['boot'] === 'ng2')
@@ -201,5 +224,7 @@ function addWindowBootstrapForClient(_clientConfig) {
             window.bootStrapClient[_clientConfig['client-id']] = bootStrapClientReact;
         else if (_clientConfig['boot'] === 'mithril')
             window.bootStrapClient[_clientConfig['client-id']] = bootStrapClientMithril;
+        else if (_clientConfig['boot'] === 'vue')
+            window.bootStrapClient[_clientConfig['client-id']] = bootStrapClienVue;
     }
 }

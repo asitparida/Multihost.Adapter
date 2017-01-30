@@ -48,6 +48,10 @@
         font-size: x-small;
         letter-spacing: 1px;
         border-top-right-radius: 2px;
+
+        @include _ELECTRON_ONLY(&) {
+            font-size: small;
+        }
     }
 
     md-card-title,
@@ -162,6 +166,10 @@
             font-size: x-small;
             letter-spacing: 1px;
             border-top-right-radius: 2px;
+
+            @include _ELECTRON_ONLY(&) {
+                font-size: small;
+            }
         }
 
         &-title {

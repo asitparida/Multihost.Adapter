@@ -64,6 +64,12 @@ $quick-access-bg: darken(#29b6f6, 5);
     }
 }
 
+@mixin _ELECTRON_ONLY($name) {    
+    @at-root html:not(._CORDOVA) #{$name} {
+        @content;
+    }
+}
+
 html._CORDOVA [HIDE-CORDOVA], 
 html._CORDOVA [hide-cordova],
 html._CORDOVA._IOS [hide-cordova-ios-only],

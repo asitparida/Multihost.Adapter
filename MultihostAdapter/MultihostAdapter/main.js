@@ -35,13 +35,13 @@ function createHostWindow(debugMode) {
     let posX = waSize.width - 400 - 15;
     let posY = waSize.height - _height - 15;
     hostWindow = new BrowserWindow({
-        width: 1400, height: _height, icon: 'dist/images/multi-host-adapter-x64.png',
-        //x: posX, y: posY,
+        width: 400, height: _height, icon: 'dist/images/multi-host-adapter-x64.png',
+        x: posX, y: posY,
         resizable: true, movable: true, minimizable: true, maximizable: true, alwaysOnTop: false, frame: false, backgroundColor: '#29b6f6', title: 'Not So Grey', show: true
     });
     hostWindow.loadURL('file://' + __dirname + '/host-launch.html');
     hostWindow.debugMode = debugMode;    
-    hostWindow.webContents.openDevTools()
+    //hostWindow.webContents.openDevTools()
     hostWindow.on('closed', function () {                
         app.quit();
     });    
